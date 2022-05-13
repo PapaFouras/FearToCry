@@ -14,10 +14,10 @@ namespace Valve.VR.InteractionSystem.Sample
         public Hand hand;
 
         [SerializeField]
-        private GameObject plane1;
+        private GameObject room1;
        
         [SerializeField]
-        private GameObject plane2;
+        private GameObject room2;
 
         [SerializeField]
 
@@ -56,13 +56,13 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public void Teleport()
         {
-            var dist1 = Vector3.Distance(player.transform.position,plane1.transform.position);
-            var dist2 = Vector3.Distance(player.transform.position,plane2.transform.position);
+            var dist1 = Vector3.Distance(player.transform.position,room1.transform.position);
+            var dist2 = Vector3.Distance(player.transform.position,room2.transform.position);
            if(dist1 < dist2){
-               player.transform.position = plane2.transform.position;
+               player.transform.position = room2.transform.position + player.transform.position - room1.transform.position;
            }
            else{
-               player.transform.position = plane1.transform.position;
+               player.transform.position = room1.transform.position + player.transform.position - room2.transform.position;
            }
         }
 
