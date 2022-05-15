@@ -23,7 +23,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private GameObject player;
 
-        private int roomNb = 0;
+        private int roomNb = 1;
 
 
         

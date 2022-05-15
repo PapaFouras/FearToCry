@@ -12,12 +12,13 @@ public class Room : MonoBehaviour
     private List<GameObject> objectsInRoom = new List<GameObject>();
 
     private void Awake() {
+        objectsInRoom.Clear();
         objectsInRoom.Add(ball);
         objectsInRoom.Add(cube);
-        //objectsInRoom.Add(drawer);
     }
 
     public List<GameObject> GetObjectsInRoom(){
+        
         return objectsInRoom;
     }
 }

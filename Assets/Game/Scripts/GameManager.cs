@@ -49,18 +49,24 @@ public static GameManager instance;
     }
     public void ChangeRoom(Room room){
 
-        //Set position
-        _player.transform.position = room.transform.position + _relativeStartingPosition;
+        
          if(_currentRoom == null){
+             //Set position
+            _player.transform.position = room.transform.position + _relativeStartingPosition;
             _currentRoom = room;
             return;
         }
+
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();
         for(int i = 0; i<objectsOfNextRoom.Count; i++){
-            objectsOfNextRoom[i].transform.position = objectsOfCurrentRoom[i].transform.position;
+            objectsOfNextRoom[i].transform.localPosition = objectsOfCurrentRoom[i].transform.localPosition;
+            objectsOfNextRoom[i].transform.rotation = objectsOfCurrentRoom[i].transform.rotation;
+            objectsOfNextRoom[i].GetComponent<Rigidbody>().velocity = objectsOfCurrentRoom[i].GetComponent<Rigidbody>().velocity;
+
         }
 
+         _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
         _currentRoom = room;
     }
 }
