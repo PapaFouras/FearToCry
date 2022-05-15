@@ -23,6 +23,9 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private GameObject player;
 
+        private int roomNb = 0;
+
+
         
 
 
@@ -56,14 +59,16 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public void Teleport()
         {
-            var dist1 = Vector3.Distance(player.transform.position,room1.transform.position);
-            var dist2 = Vector3.Distance(player.transform.position,room2.transform.position);
-           if(dist1 < dist2){
-               player.transform.position = room2.transform.position + player.transform.position - room1.transform.position;
-           }
-           else{
-               player.transform.position = room1.transform.position + player.transform.position - room2.transform.position;
-           }
+            if(roomNb%3 == 0){
+                GameManager.instance.ChangeRoom(GameManager.instance._room1);
+            }
+            else if(roomNb%3 == 1){
+                GameManager.instance.ChangeRoom(GameManager.instance._room2);
+            }
+            else if (roomNb%3 == 2){
+                GameManager.instance.ChangeRoom(GameManager.instance._room3);
+            }
+            roomNb ++;
         }
 
         
