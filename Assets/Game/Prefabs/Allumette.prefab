@@ -2631,11 +2631,11 @@ GameObject:
   - component: {fileID: 7091763914169792210}
   - component: {fileID: 5892424401719786838}
   - component: {fileID: 1766886634751736684}
-  - component: {fileID: 1090467433325326757}
   - component: {fileID: 916932788637907923}
   - component: {fileID: 916932788637907921}
   - component: {fileID: 916932788637907922}
   - component: {fileID: 916932788637907924}
+  - component: {fileID: 7814254157678695057}
   m_Layer: 0
   m_Name: Allumette
   m_TagString: Untagged
@@ -2925,20 +2925,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550870005930926920}
   m_Mesh: {fileID: 0}
---- !u!64 &1090467433325326757
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550870005930926920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &916932788637907923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3090,6 +3076,19 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!65 &7814254157678695057
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550870005930926920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.08, z: 0.01}
+  m_Center: {x: 0.005, y: 0.04, z: -0.005}
 --- !u!1 &6032842853503709148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,6 +3102,7 @@ GameObject:
   - component: {fileID: 5552060692291137750}
   - component: {fileID: 1849358105450415192}
   - component: {fileID: 6950141942250947992}
+  - component: {fileID: 1387095752}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3397,8 +3397,25 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6032842853503709148}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.012, y: 0.012, z: 0.012}
   m_Center: {x: 0.006, y: 0.006, z: -0.006}
+--- !u!114 &1387095752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032842853503709148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6237aaa5c341b4eb11c660c979eec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scraper1: {fileID: 0}
+  scraper2: {fileID: 0}
+  scraper3: {fileID: 0}
+  boiteAllumette: {fileID: 0}
+  allumette: {fileID: 1550870005930926920}
