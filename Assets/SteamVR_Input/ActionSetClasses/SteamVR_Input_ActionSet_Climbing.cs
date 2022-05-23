@@ -17,7 +17,7 @@ namespace Valve.VR
     public class SteamVR_Input_ActionSet_Climbing : Valve.VR.SteamVR_ActionSet
     {
         
-        public virtual SteamVR_Action_Single Climb
+        public virtual SteamVR_Action_Boolean Climb
         {
             get
             {

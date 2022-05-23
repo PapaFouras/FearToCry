@@ -101,20 +101,20 @@
          "sources" : [
             {
                "inputs" : {
-                  "pull" : {
+                  "click" : {
                      "output" : "/actions/climbing/in/climb"
                   }
                },
-               "mode" : "trigger",
+               "mode" : "button",
                "path" : "/user/hand/left/input/trigger"
             },
             {
                "inputs" : {
-                  "pull" : {
+                  "click" : {
                      "output" : "/actions/climbing/in/climb"
                   }
                },
-               "mode" : "trigger",
+               "mode" : "button",
                "path" : "/user/hand/right/input/trigger"
             }
          ]
@@ -359,7 +359,7 @@
    "category" : "steamvr_input",
    "controller_type" : "oculus_touch",
    "description" : "",
-   "name" : "oculus_touch",
+   "name" : "Configuration « [Testing] FearToCry » enregistrée pour Oculus Touch",
    "options" : {},
    "simulated_actions" : []
 }

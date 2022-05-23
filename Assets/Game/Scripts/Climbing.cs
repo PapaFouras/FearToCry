@@ -13,11 +13,21 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public Hand hand;
 
+        public GameObject player;
+        private PlayerController playerController;
+
+
+        bool _isClimbing = false;
+
 
         private void OnEnable()
         {
             if (hand == null)
                 hand = this.GetComponent<Hand>();
+
+
+            playerController = player.GetComponent<PlayerController>();
+
 
             if (climbingAction == null)
             {
@@ -39,13 +49,25 @@ namespace Valve.VR.InteractionSystem.Sample
             Debug.Log("value trigger : "+ newValue);
             if (newValue)
             {
-                Climb();
+                StartClimb();
+            }
+            if(!newValue){
+                StopClimb();
             }
         }
 
-        public void Climb()
+        public void StartClimb()
         {
             Debug.Log("ShouldClimb");
+            playerController.climbingHand = hand;
+            _isClimbing = true;
+        }
+
+        public void StopClimb(){
+            if(playerController.climbingHand == hand){
+                _isClimbing = false;
+                playerController.climbingHand = null;
+            }
         }
 
         

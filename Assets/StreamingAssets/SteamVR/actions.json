@@ -88,7 +88,7 @@
     },
     {
       "name": "/actions/Climbing/in/Climb",
-      "type": "vector1"
+      "type": "boolean"
     }
   ],
   "action_sets": [
