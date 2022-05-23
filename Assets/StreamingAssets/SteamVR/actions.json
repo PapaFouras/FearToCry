@@ -85,6 +85,10 @@
     {
       "name": "/actions/Teleporting/in/Teleport",
       "type": "boolean"
+    },
+    {
+      "name": "/actions/Climbing/in/Climb",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -106,6 +110,10 @@
     },
     {
       "name": "/actions/Teleporting",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Climbing",
       "usage": "single"
     }
   ],
