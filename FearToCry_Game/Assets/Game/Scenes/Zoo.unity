@@ -8785,6 +8785,8 @@ MonoBehaviour:
   climbingAction:
     actionPath: /actions/Climbing/in/Climb
     needsReinit: 0
+  climbingActionSet:
+    actionSetPath: /actions/Climbing
   hand: {fileID: 0}
   player: {fileID: 1476413355}
 --- !u!114 &1074266030
@@ -10752,6 +10754,8 @@ MonoBehaviour:
   climbingAction:
     actionPath: /actions/Climbing/in/Climb
     needsReinit: 0
+  climbingActionSet:
+    actionSetPath: /actions/Climbing
   hand: {fileID: 0}
   player: {fileID: 1476413355}
 --- !u!114 &1290856304

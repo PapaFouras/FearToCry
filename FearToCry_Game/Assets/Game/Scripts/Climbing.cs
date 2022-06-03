@@ -10,6 +10,8 @@ namespace Valve.VR.InteractionSystem.Sample
     public class Climbing : MonoBehaviour
     {
         public SteamVR_Action_Boolean climbingAction;
+        
+        public SteamVR_ActionSet climbingActionSet;
 
         public Hand hand;
 
@@ -50,6 +52,12 @@ namespace Valve.VR.InteractionSystem.Sample
             if (newValue)
             {
                 StartClimb();
+                if(inputSource == SteamVR_Input_Sources.LeftHand){
+                    climbingActionSet.Deactivate(SteamVR_Input_Sources.RightHand);
+                }
+                if(inputSource == SteamVR_Input_Sources.RightHand){
+                    climbingActionSet.Deactivate(SteamVR_Input_Sources.LeftHand);
+                }
             }
             if(!newValue){
                 StopClimb();
@@ -60,6 +68,7 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             Debug.Log("ShouldClimb");
             playerController.climbingHand = hand;
+            
             _isClimbing = true;
         }
 
@@ -67,6 +76,9 @@ namespace Valve.VR.InteractionSystem.Sample
             if(playerController.climbingHand == hand){
                 _isClimbing = false;
                 playerController.climbingHand = null;
+                climbingActionSet.Deactivate(SteamVR_Input_Sources.LeftHand);
+                climbingActionSet.Deactivate(SteamVR_Input_Sources.RightHand);
+
             }
         }
 
