@@ -89,6 +89,10 @@
     {
       "name": "/actions/Climbing/in/Climb",
       "type": "boolean"
+    },
+    {
+      "name": "/actions/TakingMedicine/in/TakeMedicine",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -114,6 +118,10 @@
     },
     {
       "name": "/actions/Climbing",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/TakingMedicine",
       "usage": "single"
     }
   ],

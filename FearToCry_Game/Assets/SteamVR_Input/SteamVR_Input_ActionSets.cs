@@ -29,6 +29,8 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_Climbing p_Climbing;
         
+        private static SteamVR_Input_ActionSet_TakingMedicine p_TakingMedicine;
+        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -77,6 +79,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Input_ActionSet_TakingMedicine TakingMedicine
+        {
+            get
+            {
+                return SteamVR_Actions.p_TakingMedicine.GetCopy<SteamVR_Input_ActionSet_TakingMedicine>();
+            }
+        }
+        
         private static void StartPreInitActionSets()
         {
             SteamVR_Actions.p__default = ((SteamVR_Input_ActionSet_default)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_default>("/actions/default")));
@@ -85,13 +95,15 @@ namespace Valve.VR
             SteamVR_Actions.p_mixedreality = ((SteamVR_Input_ActionSet_mixedreality)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_mixedreality>("/actions/mixedreality")));
             SteamVR_Actions.p_Teleporting = ((SteamVR_Input_ActionSet_Teleporting)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_Teleporting>("/actions/Teleporting")));
             SteamVR_Actions.p_Climbing = ((SteamVR_Input_ActionSet_Climbing)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_Climbing>("/actions/Climbing")));
+            SteamVR_Actions.p_TakingMedicine = ((SteamVR_Input_ActionSet_TakingMedicine)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_TakingMedicine>("/actions/TakingMedicine")));
             Valve.VR.SteamVR_Input.actionSets = new Valve.VR.SteamVR_ActionSet[] {
                     SteamVR_Actions._default,
                     SteamVR_Actions.platformer,
                     SteamVR_Actions.buggy,
                     SteamVR_Actions.mixedreality,
                     SteamVR_Actions.Teleporting,
-                    SteamVR_Actions.Climbing};
+                    SteamVR_Actions.Climbing,
+                    SteamVR_Actions.TakingMedicine};
         }
     }
 }
