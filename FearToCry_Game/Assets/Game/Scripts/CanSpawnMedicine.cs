@@ -17,8 +17,7 @@ namespace Valve.VR.InteractionSystem
 	{
         public SteamVR_ActionSet actionSet = SteamVR_Input.GetActionSet("default");
 
-        private SteamVR_Input_Sources leftHandSource = SteamVR_Input_Sources.LeftHand;
-        private SteamVR_Input_Sources rightHandSource = SteamVR_Input_Sources.RightHand;
+        public SteamVR_Input_Sources source;
 
         public bool disableAllOtherActionSets = false;
         public int initialPriority = 0;
@@ -33,17 +32,15 @@ namespace Valve.VR.InteractionSystem
 
 			onHandHoverBegin.Invoke();
             Debug.Log("hovering hand : " + hand.name);
-            if(hand.name == "LeftHand"){
+
+            if(hand.name == "LeftHand" && source ==  SteamVR_Input_Sources.LeftHand){
                 
-                actionSet.Activate(leftHandSource, initialPriority, disableAllOtherActionSets);
-
+                actionSet.Activate(source, initialPriority, disableAllOtherActionSets);
             }
-            if(hand.name == "RightHand"){
+            if(hand.name == "RightHand" && source == SteamVR_Input_Sources.RightHand){
 
-                actionSet.Activate(rightHandSource, initialPriority, disableAllOtherActionSets);
+                actionSet.Activate(source, initialPriority, disableAllOtherActionSets);
             }
-            
-
 		}
 
 
@@ -53,11 +50,11 @@ namespace Valve.VR.InteractionSystem
 			onHandHoverEnd.Invoke();
             Debug.Log("hovering hand : " + hand.name);
             if(hand.name == "LeftHand"){
-                    actionSet.Deactivate(leftHandSource);
+                    actionSet.Deactivate(SteamVR_Input_Sources.LeftHand);
                     hand.GetComponent<TakingMedicine>().isGrabbing = false;
             }
             if(hand.name == "RightHand"){
-                actionSet.Deactivate(rightHandSource);
+                actionSet.Deactivate(SteamVR_Input_Sources.RightHand);
                 hand.GetComponent<TakingMedicine>().isGrabbing = false;
 
             }

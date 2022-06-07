@@ -92,7 +92,8 @@
     },
     {
       "name": "/actions/TakingMedicine/in/TakeMedicine",
-      "type": "boolean"
+      "type": "boolean",
+      "requirement": "suggested"
     }
   ],
   "action_sets": [

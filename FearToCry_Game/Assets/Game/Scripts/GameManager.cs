@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -57,6 +58,14 @@ public static GameManager instance;
             return;
         }
 
+        
+        
+        foreach (var hand in _player.GetComponent<Player>().hands)
+        {
+            if(hand.currentAttachedObject != null){
+                hand.DetachObject(hand.currentAttachedObject);   
+            }
+        };
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();
         for(int i = 0; i<objectsOfNextRoom.Count; i++){
@@ -68,5 +77,22 @@ public static GameManager instance;
 
          _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
         _currentRoom = room;
+    }
+
+    public void ChangeRoom(int roomNumber){
+        switch (roomNumber){
+             case 1: 
+                ChangeRoom(_room1);
+                break;
+            case 2: 
+                ChangeRoom(_room2);
+                break;
+            case 3: 
+                ChangeRoom(_room3);
+                break;
+             default : Debug.Log("room number not valid");
+                break;
+        }
+        
     }
 }

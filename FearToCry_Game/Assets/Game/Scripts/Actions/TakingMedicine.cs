@@ -64,10 +64,20 @@ namespace Valve.VR.InteractionSystem.Sample
         public void SpawnAndAttachMedicine()
         {
             Debug.Log("ShouldSpawnMedicine");
+
+            if(hand.currentAttachedObject == null){
+                SpawnAndAttachToHand spawnAndAttachToHand = prefab.GetComponent<SpawnAndAttachToHand>();
+                spawnAndAttachToHand.prefab = prefab;
+                spawnAndAttachToHand.hand = hand;
+                spawnAndAttachToHand.SpawnAndAttach(hand);
+            }
+            else{
+                hand.DetachObject(hand.currentAttachedObject);
+            }
             
-            GameObject prefabObject = Instantiate( prefab ) as GameObject;
-			hand.AttachObject( prefabObject, GrabTypes.Grip );
+			
         }
+
         
     }
 }
