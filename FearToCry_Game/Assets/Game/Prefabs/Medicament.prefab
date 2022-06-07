@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 6700013328567022}
   - component: {fileID: 6700013328567023}
   - component: {fileID: 6700013328567056}
-  - component: {fileID: 1500295104}
   - component: {fileID: 6700013328567058}
+  - component: {fileID: 4235811156155697155}
+  - component: {fileID: 1500295105}
   m_Layer: 0
   m_Name: Medicament
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6700013328567059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2151, y: 0.54, z: 0.5770568}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.18055174, y: 0.18055174, z: 0.18055174}
   m_Children:
   - {fileID: 6332429781445196196}
@@ -119,7 +120,7 @@ MonoBehaviour:
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
-  setRangeOfMotionOnPickup: 0
+  setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
   attachEaseIn: 1
   snapAttachEaseInCurve:
@@ -150,7 +151,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!54 &6700013328567056
@@ -169,20 +170,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1500295104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6700013328567059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4a03a51c550b92478a559cf694ce118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: {fileID: 0}
-  prefab: {fileID: 0}
 --- !u!114 &6700013328567058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +199,55 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
+--- !u!114 &4235811156155697155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700013328567059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9231d8f47a652346ad4f2aea5e80fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 0}
+--- !u!114 &1500295105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700013328567059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4153b26428ccf041950b92c057812a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHandHoverBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  onHandHoverEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onAttachedToHand:
+    m_PersistentCalls:
+      m_Calls: []
+  onDetachedFromHand:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4235811156155697155}
+        m_TargetAssemblyTypeName: Medicine, Assembly-CSharp
+        m_MethodName: OnDetached
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &138855317327797709
 GameObject:
   m_ObjectHideFlags: 0
