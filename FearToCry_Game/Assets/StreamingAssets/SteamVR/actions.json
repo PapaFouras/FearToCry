@@ -94,6 +94,10 @@
       "name": "/actions/TakingMedicine/in/TakeMedicine",
       "type": "boolean",
       "requirement": "suggested"
+    },
+    {
+      "name": "/actions/TakingMatchStick/in/TakeMatchStick",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -123,6 +127,10 @@
     },
     {
       "name": "/actions/TakingMedicine",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/TakingMatchStick",
       "usage": "single"
     }
   ],

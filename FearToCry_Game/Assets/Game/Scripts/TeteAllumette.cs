@@ -13,6 +13,17 @@ public class TeteAllumette : MonoBehaviour
     private bool isScraper2OK = false;
     private bool isScraper3OK = false;
 
+    public ParticleSystem fire;
+
+    private bool _isTurnedOn = false;
+
+    public bool GetIsTurnedOn(){
+        return _isTurnedOn;
+    }
+
+    public void SetIsTurnedOn(bool isTurnedOn){
+        _isTurnedOn = isTurnedOn;
+    }
 
     private void OnTriggerEnter(Collider other) {
        if(other == scraper1){
@@ -35,11 +46,13 @@ public class TeteAllumette : MonoBehaviour
        }
        if (GetShouldTurnOnAllumette()){
            Debug.Log("L'allumette doit s'allumer !");
+           _isTurnedOn = true;
+           fire.Play();
        }
    }
 
    private IEnumerator StartTimerAllumette(){
-       yield return new WaitForSeconds(.4f);
+       yield return new WaitForSeconds(.6f);
        isScraper1OK = false;
        isScraper2OK = false;
        isScraper3OK = false;
@@ -48,4 +61,5 @@ public class TeteAllumette : MonoBehaviour
    private bool GetShouldTurnOnAllumette(){
        return isScraper1OK && isScraper2OK && isScraper3OK;
    }
+
 }

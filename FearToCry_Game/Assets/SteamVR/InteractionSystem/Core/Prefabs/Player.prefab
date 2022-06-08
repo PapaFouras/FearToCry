@@ -542,7 +542,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121078}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.12
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highLightMaterial: {fileID: 2100000, guid: 7b939e5e799d98a469f594828ebab52e, type: 2}
-  fireHapticsOnHightlight: 1
+  fireHapticsOnHightlight: 0
 --- !u!1 &133480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
     needsReinit: 0
   takingMedicineActionSet:
     actionSetPath: /actions/TakingMedicine
-  prefab: {fileID: 0}
+  prefab: {fileID: 6700013328567059, guid: e60b9658be2a3624682ab04852910f8b, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
 --- !u!1 &160596
@@ -1284,7 +1284,7 @@ MonoBehaviour:
     needsReinit: 0
   takingMedicineActionSet:
     actionSetPath: /actions/TakingMedicine
-  prefab: {fileID: 0}
+  prefab: {fileID: 6700013328567059, guid: e60b9658be2a3624682ab04852910f8b, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
 --- !u!1 &165334
@@ -1748,8 +1748,8 @@ GameObject:
   - component: {fileID: 1238350719}
   - component: {fileID: 1238350718}
   - component: {fileID: 1238350717}
-  - component: {fileID: 1238350721}
-  - component: {fileID: 1238350720}
+  - component: {fileID: 49253162}
+  - component: {fileID: 49253165}
   m_Layer: 0
   m_Name: rightHip
   m_TagString: Untagged
@@ -1765,8 +1765,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238350715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.7, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 3.2}
   m_Children: []
   m_Father: {fileID: 1199420897}
   m_RootOrder: 1
@@ -1833,7 +1833,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1238350721
+--- !u!114 &49253162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
---- !u!114 &1238350720
+--- !u!114 &49253165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1899,6 +1899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionSet:
     actionSetPath: /actions/TakingMedicine
+  source: 2
   disableAllOtherActionSets: 0
   initialPriority: 0
   onHandHoverBegin:
@@ -1936,8 +1937,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521582953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.7, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 3.2}
   m_Children: []
   m_Father: {fileID: 1199420897}
   m_RootOrder: 0
@@ -2070,6 +2071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionSet:
     actionSetPath: /actions/TakingMedicine
+  source: 1
   disableAllOtherActionSets: 0
   initialPriority: 0
   onHandHoverBegin:
