@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
+using UnityEngine.UI;
+using Valve.VR;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +14,8 @@ public class GameManager : MonoBehaviour
     public Room _room3;
 
     private Room _currentRoom;
+
+    public SteamVR_Fade fade;
 
     [Header("Player")]
     public GameObject _player;
@@ -49,12 +54,17 @@ public static GameManager instance;
         }        
     }
     public void ChangeRoom(Room room){
-
-        
          if(_currentRoom == null){
              //Set position
-            _player.transform.position = room.transform.position + _relativeStartingPosition;
-            _currentRoom = room;
+             StartCoroutine(FadeOutFadeIn(.2f,1f,1.5f,()=>{
+                _player.transform.position = room.transform.position + _relativeStartingPosition;
+                _currentRoom = room;    
+             }));
+           
+            return;
+        }
+
+        if(room == _currentRoom){
             return;
         }
 
@@ -63,7 +73,7 @@ public static GameManager instance;
         foreach (var hand in _player.GetComponent<Player>().hands)
         {
             if(hand.currentAttachedObject != null){
-                hand.DetachObject(hand.currentAttachedObject);   
+                hand.DetachObject(hand.currentAttachedObject);  
             }
         };
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
@@ -74,10 +84,21 @@ public static GameManager instance;
             objectsOfNextRoom[i].GetComponent<Rigidbody>().velocity = objectsOfCurrentRoom[i].GetComponent<Rigidbody>().velocity;
 
         }
-
-         _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
-        _currentRoom = room;
+        StartCoroutine(FadeOutFadeIn(.2f,.4F,1.5f,()=>{
+             _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
+            _currentRoom = room;
+        }));
+        
     }
+
+    IEnumerator FadeOutFadeIn(float fadeInDuration, float timeBetweenFadeInAndFadeOut,float fadeOutDuration, Action whenInBetween){
+        SteamVR_Fade.View(new Color(0,0,0,1),fadeInDuration);
+        yield return new WaitForSeconds(fadeInDuration);
+        whenInBetween?.Invoke();
+        yield return new WaitForSeconds(timeBetweenFadeInAndFadeOut);
+        SteamVR_Fade.View(new Color(0,0,0,0),fadeOutDuration);
+    }
+
 
     public void ChangeRoom(int roomNumber){
         switch (roomNumber){

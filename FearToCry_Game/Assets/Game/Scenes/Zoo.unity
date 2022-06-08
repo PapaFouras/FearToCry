@@ -704,16 +704,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1856476820}
-    - target: {fileID: 6096617326398388632, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: m_SelectedVertices.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6096617326398388632, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: m_SelectedVertices.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7117052778982344509, guid: d741a48d872aa62419e188259984ed5c,
         type: 3}
       propertyPath: m_Mesh
@@ -728,26 +718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MatchStickBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727507775409058723, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: outlineWidth
-      value: 3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727507775409058723, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: outlineColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727507775409058723, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: outlineColor.g
-      value: 0.20682117
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727507775409058723, guid: d741a48d872aa62419e188259984ed5c,
-        type: 3}
-      propertyPath: outlineColor.r
-      value: 0.8396226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d741a48d872aa62419e188259984ed5c, type: 3}
@@ -801,6 +771,8 @@ MonoBehaviour:
   _room1: {fileID: 473866871}
   _room2: {fileID: 823573642}
   _room3: {fileID: 762333374}
+  transitionDuration: 0.1
+  backgroundImage: {fileID: 0}
   _player: {fileID: 1476413355}
   _roomName: 0
   _relativeStartingPosition: {x: 2.5, y: 0, z: 2.5}
@@ -2148,6 +2120,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1369962765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &555607126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555607124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!136 &555607128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2258,7 +2248,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62962
+  m_Name: pb_Mesh28722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2687,6 +2677,7 @@ GameObject:
   - component: {fileID: 622339464}
   - component: {fileID: 622339463}
   - component: {fileID: 622339462}
+  - component: {fileID: 622339468}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Climbable
@@ -3067,6 +3058,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &622339468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622339460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!43 &674798138
 Mesh:
   m_ObjectHideFlags: 0
@@ -3803,7 +3812,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-104964
+  m_Name: pb_Mesh-1226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5356,6 +5365,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0020583635, y: 0.0018650409, z: 0.0033718317}
   m_Center: {x: -0.008364405, y: -0.00020891565, z: 0.00019393109}
+--- !u!114 &926217686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926217682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &926217688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5454,6 +5481,7 @@ GameObject:
   - component: {fileID: 953118595}
   - component: {fileID: 953118594}
   - component: {fileID: 953118593}
+  - component: {fileID: 953118599}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Climbable
@@ -5834,6 +5862,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &953118599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953118591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!43 &970007212
 Mesh:
   m_ObjectHideFlags: 0
@@ -7595,6 +7641,7 @@ GameObject:
   - component: {fileID: 1312877971}
   - component: {fileID: 1312877972}
   - component: {fileID: 1312877967}
+  - component: {fileID: 1312877973}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Climbable
@@ -7975,6 +8022,24 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &1312877973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312877965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &1348188173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010733554458, guid: e0b086fbb874df143b6ac8f53cea5424,
@@ -8717,6 +8782,7 @@ GameObject:
   - component: {fileID: 1472687302}
   - component: {fileID: 1472687301}
   - component: {fileID: 1472687300}
+  - component: {fileID: 1472687306}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Climbable
@@ -9097,6 +9163,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1472687306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472687298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1476413355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -9407,7 +9491,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1552254950}
   - component: {fileID: 1552254949}
-  - component: {fileID: 1552254951}
   m_Layer: 0
   m_Name: ActivateTeleport
   m_TagString: Untagged
@@ -9448,25 +9531,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1552254951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552254948}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27991c206a5e66147bb8ee3ef31c8bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionSet:
-    actionSetPath: /actions/TakingMedicine
-  forSources: 2
-  disableAllOtherActionSets: 0
-  activateOnStart: 1
-  deactivateOnDestroy: 1
-  initialPriority: 0
 --- !u!1 &1562746866
 GameObject:
   m_ObjectHideFlags: 0
@@ -9733,6 +9797,7 @@ GameObject:
   - component: {fileID: 1618461030}
   - component: {fileID: 1618461029}
   - component: {fileID: 1618461028}
+  - component: {fileID: 1618461034}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Climbable
@@ -10113,6 +10178,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1618461034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618461026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1626951802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012660339372, guid: e0b086fbb874df143b6ac8f53cea5424,
@@ -10617,6 +10700,7 @@ GameObject:
   - component: {fileID: 1732025247}
   - component: {fileID: 1732025246}
   - component: {fileID: 1732025245}
+  - component: {fileID: 1732025251}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Climbable
@@ -10997,6 +11081,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1732025251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732025243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!43 &1741072104
 Mesh:
   m_ObjectHideFlags: 0
@@ -11971,7 +12073,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62490
+  m_Name: pb_Mesh28250
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13077,7 +13179,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-106136
+  m_Name: pb_Mesh-2420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13964,11 +14066,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2078809212}
-    - target: {fileID: 5892424401719786838, guid: 79ec091f8e6f5b148871dc6a583fe0b2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3f5766a8b67794141ac19c1a51d27083, type: 2}
     - target: {fileID: 7091763914169792210, guid: 79ec091f8e6f5b148871dc6a583fe0b2,
         type: 3}
       propertyPath: m_Mesh
@@ -14229,6 +14326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7280160534285736245}
   - component: {fileID: 3746911835971691406}
+  - component: {fileID: 3746911835971691405}
   m_Layer: 0
   m_Name: HingesWings.Movable.Armature
   m_TagString: Untagged
@@ -14236,6 +14334,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3746911835971691405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746911835971691404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &3746911835971691406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14773,6 +14889,7 @@ GameObject:
   - component: {fileID: 8251201962587127031}
   - component: {fileID: 8251201962587127030}
   - component: {fileID: 8251201962587127033}
+  - component: {fileID: 8251201962587127034}
   m_Layer: 0
   m_Name: EscutcheonPlate.Above.Knob
   m_TagString: Untagged
@@ -14932,6 +15049,24 @@ MonoBehaviour:
   onDetachedFromHand:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8251201962587127034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251201962587127029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &8529754509498380860
 MeshRenderer:
   m_ObjectHideFlags: 0

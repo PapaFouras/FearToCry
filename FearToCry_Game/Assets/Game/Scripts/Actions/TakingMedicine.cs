@@ -68,7 +68,7 @@ namespace Valve.VR.InteractionSystem.Sample
             if(hand.currentAttachedObject == null){
                 
                 GameObject prefabObject = Instantiate(prefab,hand.transform.position, hand.transform.rotation);
-                hand.AttachObject(prefabObject,GrabTypes.Grip,Hand.AttachmentFlags.ParentToHand|Hand.AttachmentFlags.SnapOnAttach);
+                hand.AttachObject(prefabObject,GrabTypes.Grip,Hand.AttachmentFlags.ParentToHand|Hand.AttachmentFlags.SnapOnAttach| Hand.AttachmentFlags.TurnOffGravity);
                 prefabObject.GetComponent<Medicine>().hand = hand;
             }
             else{
