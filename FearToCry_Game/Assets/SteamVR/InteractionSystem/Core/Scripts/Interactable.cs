@@ -8,12 +8,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Linq;
+ 
 
 namespace Valve.VR.InteractionSystem
 {
+    [RequireComponent(typeof(Outline))]
     //-------------------------------------------------------------------------
     public class Interactable : MonoBehaviour
-    {
+    {    
         [Tooltip("Activates an action set on attach and deactivates on detach")]
         public SteamVR_ActionSet activateActionSetOnAttach;
 
@@ -93,9 +97,12 @@ namespace Valve.VR.InteractionSystem
         public bool wasHovering { get; protected set; }
 
 
+        private Outline outline;
         private void Awake()
         {
             skeletonPoser = GetComponent<SteamVR_Skeleton_Poser>();
+            outline = GetComponent<Outline>();
+            outline.enabled = false;
         }
 
         protected virtual void Start()
@@ -255,8 +262,9 @@ namespace Valve.VR.InteractionSystem
 
             if (highlightOnHover == true && wasHovering == false)
             {
-                CreateHighlightRenderers();
-                UpdateHighlightRenderers();
+               outline.enabled = true;
+               // CreateHighlightRenderers();
+                //UpdateHighlightRenderers();
             }
         }
 
@@ -273,9 +281,10 @@ namespace Valve.VR.InteractionSystem
             if (hoveringHands.Count == 0)
             {
                 isHovering = false;
+                outline.enabled = false;
 
-                if (highlightOnHover && highlightHolder != null)
-                    Destroy(highlightHolder);
+                // if (highlightOnHover && highlightHolder != null)
+                //     Destroy(highlightHolder);
             }
         }
 
