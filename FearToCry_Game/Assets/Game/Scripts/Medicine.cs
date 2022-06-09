@@ -8,7 +8,9 @@ public class Medicine : MonoBehaviour
     public Hand hand;
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.name == "HeadCollider"){
+            OnDetached();
             GameManager.instance.ChangeRoom(1);
+            
         }
     }
 
