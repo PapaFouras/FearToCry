@@ -48,16 +48,13 @@ namespace Valve.VR.InteractionSystem.Sample
             Debug.Log("value trigger : "+ newValue);
             if (newValue)
             {
-                if(!isGrabbing){
+               
                    
-                        SpawnAndAttachMatchStick();
-                        isGrabbing = true;
+                SpawnAndAttachMatchStick();
                     
-                } 
+         
             }
-            else{
-                isGrabbing = false;
-            }
+
         }
 
 

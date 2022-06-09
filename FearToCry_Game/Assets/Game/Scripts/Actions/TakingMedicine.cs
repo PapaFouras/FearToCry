@@ -48,16 +48,12 @@ namespace Valve.VR.InteractionSystem.Sample
             Debug.Log("value trigger : "+ newValue);
             if (newValue)
             {
-                if(!isGrabbing){
                    
-                        SpawnAndAttachMedicine();
-                        isGrabbing = true;
-                    
-                } 
+                SpawnAndAttachMedicine();
+ 
+          
             }
-            else{
-                isGrabbing = false;
-            }
+
         }
 
 
