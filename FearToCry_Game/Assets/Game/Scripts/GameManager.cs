@@ -92,11 +92,11 @@ public static GameManager instance;
     }
 
     IEnumerator FadeOutFadeIn(float fadeInDuration, float timeBetweenFadeInAndFadeOut,float fadeOutDuration, Action whenInBetween){
-        SteamVR_Fade.View(new Color(0,0,0,1),fadeInDuration);
+        SteamVR_Fade.View(Color.black,fadeInDuration);
         yield return new WaitForSeconds(fadeInDuration);
         whenInBetween?.Invoke();
         yield return new WaitForSeconds(timeBetweenFadeInAndFadeOut);
-        SteamVR_Fade.View(new Color(0,0,0,0),fadeOutDuration);
+        SteamVR_Fade.View(Color.clear,fadeOutDuration);
     }
 
 

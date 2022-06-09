@@ -75,6 +75,8 @@ namespace Valve.VR.InteractionSystem
 		[Tooltip( "The output angle value of the drive in degrees, unlimited will increase or decrease without bound, take the 360 modulus to find number of rotations" )]
 		public float outAngle;
 
+		public bool maintainMomemntum = true;
+
 		private Quaternion start;
 
 		private Vector3 worldPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
@@ -104,6 +106,8 @@ namespace Valve.VR.InteractionSystem
 		private Hand handHoverLocked = null;
 
         private Interactable interactable;
+
+		public bool repositionGameObject = true;
 
 		//-------------------------------------------------
 		private void Freeze( Hand hand )
@@ -261,6 +265,8 @@ namespace Valve.VR.InteractionSystem
 
 				ComputeAngle( hand );
 				UpdateAll();
+				UpdateLinearMapping(hand.transform);
+
 
                 hand.HideGrabHint();
 			}
@@ -275,12 +281,83 @@ namespace Valve.VR.InteractionSystem
 
                 driving = false;
                 grabbedWithType = GrabTypes.None;
+				
+				OnDetachedFromHand(hand);
+				
+
+
             }
 
             if ( driving && isGrabEnding == false && hand.hoveringInteractable == this.interactable )
 			{
 				ComputeAngle( hand );
 				UpdateAll();
+			}
+
+			if ( maintainMomemntum && mappingChangeRate != 0.0f )
+			{
+				//Dampen the mapping change rate and apply it to the mapping
+				mappingChangeRate = Mathf.Lerp( mappingChangeRate, 0.0f, momemtumDampenRate * Time.deltaTime );
+				linearMapping.value = Mathf.Clamp01( linearMapping.value + ( mappingChangeRate * Time.deltaTime ) );
+
+				if ( repositionGameObject )
+				{
+					Vector3 direction = new Vector3();
+					switch(axisOfRotation){
+						case Axis_t.XAxis:
+							direction = Vector3.right;
+							break;
+						case Axis_t.YAxis:
+							direction = Vector3.up;
+							break;
+						case Axis_t.ZAxis:
+							direction = Vector3.forward;
+							break;
+
+					}
+					transform.localRotation = Quaternion.Lerp( Quaternion.AngleAxis(minAngle,direction), Quaternion.AngleAxis(maxAngle,direction), linearMapping.value );
+				}
+			}
+		}
+
+		protected void UpdateLinearMapping( Transform updateTransform )
+		{
+			prevMapping = linearMapping.value;
+
+			mappingChangeSamples[sampleCount % mappingChangeSamples.Length] = ( 1.0f / Time.deltaTime ) * ( linearMapping.value - prevMapping );
+			sampleCount++;
+		}
+
+	
+ 		protected virtual void OnDetachedFromHand(Hand hand)
+        {
+            CalculateMappingChangeRate();
+        }
+
+
+		public float momemtumDampenRate = 5.0f;
+
+        protected Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.DetachFromOtherHand;
+
+        protected float initialMappingOffset;
+        protected int numMappingChangeSamples = 5;
+        protected float[] mappingChangeSamples;
+        protected float prevMapping = 0.0f;
+        protected float mappingChangeRate;
+        protected int sampleCount = 0;
+
+		private void CalculateMappingChangeRate()
+		{
+			//Compute the mapping change rate
+			mappingChangeRate = 0.0f;
+			int mappingSamplesCount = Mathf.Min( sampleCount, mappingChangeSamples.Length );
+			if ( mappingSamplesCount != 0 )
+			{
+				for ( int i = 0; i < mappingSamplesCount; ++i )
+				{
+					mappingChangeRate += mappingChangeSamples[i];
+				}
+				mappingChangeRate /= mappingSamplesCount;
 			}
 		}
 
