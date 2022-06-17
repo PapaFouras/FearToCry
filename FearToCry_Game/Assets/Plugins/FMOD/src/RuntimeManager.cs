@@ -1129,22 +1129,23 @@ retry:
             }
         }
 
-        public static void PlayOneShot(string path, Vector3 position = new Vector3())
+        public static void PlayOneShot(string path, string parameterName, float parameterValue, Vector3 position = new Vector3())
         {
             try
             {
-                PlayOneShot(PathToGUID(path), position);
+                PlayOneShot(PathToGUID(path), parameterName, parameterValue, position);
             }
             catch (EventNotFoundException)
             {
-                RuntimeUtils.DebugLogWarning("[FMOD] Event not found: " + path);
+                Debug.LogWarning("[FMOD] Event not found: " + path);
             }
         }
 
-        public static void PlayOneShot(FMOD.GUID guid, Vector3 position = new Vector3())
+        public static void PlayOneShot(Guid guid, string parameterName, float parameterValue, Vector3 position = new Vector3())
         {
             var instance = CreateInstance(guid);
             instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
+            instance.setParameterByName(parameterName, parameterValue);
             instance.start();
             instance.release();
         }
