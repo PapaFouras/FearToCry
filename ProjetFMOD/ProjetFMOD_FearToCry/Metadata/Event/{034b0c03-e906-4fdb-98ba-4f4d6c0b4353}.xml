@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{034b0c03-e906-4fdb-98ba-4f4d6c0b4353}">
 		<property name="name">
-			<value>Folie_Ambiance</value>
+			<value>Folie_AmbianceGeneral</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

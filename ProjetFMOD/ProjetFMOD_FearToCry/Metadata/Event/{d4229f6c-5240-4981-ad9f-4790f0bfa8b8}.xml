@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d4229f6c-5240-4981-ad9f-4790f0bfa8b8}">
 		<property name="name">
-			<value>Normal_Ambiance</value>
+			<value>Normal_AmbianceGeneral</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
