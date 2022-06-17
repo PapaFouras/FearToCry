@@ -1,5 +1,679 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7898594770573607321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_PosLivre
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_PosLivre
+  Guid:
+    Data1: 1918327009
+    Data2: 1138639660
+    Data3: -1636529519
+    Data4: 400066427
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7676417307845508365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Orage
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Orage
+  Guid:
+    Data1: -1917569576
+    Data2: 1079470407
+    Data3: 106766988
+    Data4: 322777231
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7675443435134086699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Crypto_SuccessDelock
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Crypto_SuccessDelock
+  Guid:
+    Data1: -1983288217
+    Data2: 1221421972
+    Data3: 1601255817
+    Data4: -1175920486
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7035371595941157748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Transition/Transition_IntoNormal
+  m_EditorClassIdentifier: 
+  Path: event:/Transition/Transition_IntoNormal
+  Guid:
+    Data1: -1729267383
+    Data2: 1142595801
+    Data3: -1958332233
+    Data4: 1628533706
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6573474136406979703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Meuble_Porte_Ferme
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Meuble_Porte_Ferme
+  Guid:
+    Data1: -1376880646
+    Data2: 1080575380
+    Data3: -1495465288
+    Data4: -1463371665
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6375327441239447091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Allumette_Allumage
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Allumette_Allumage
+  Guid:
+    Data1: 236544257
+    Data2: 1119047250
+    Data3: 1590859141
+    Data4: 1297949441
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6046275539128086408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Oiseau
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Oiseau
+  Guid:
+    Data1: 1485288259
+    Data2: 1089030874
+    Data3: 1987545278
+    Data4: -1799293254
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5876756971208367895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Meuble_Tirroir_Ferme
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Meuble_Tirroir_Ferme
+  Guid:
+    Data1: 31647760
+    Data2: 1174578056
+    Data3: -293203290
+    Data4: 1491805404
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5580925235330337937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_AmbianceGeneral
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_AmbianceGeneral
+  Guid:
+    Data1: 55249923
+    Data2: 1339812102
+    Data3: 1297070744
+    Data4: 1396902764
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5037258696743786566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Horloge_Beep
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Horloge_Beep
+  Guid:
+    Data1: 1127280253
+    Data2: 1146365131
+    Data3: 26445969
+    Data4: 1553242078
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1416754229639175674}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4392846606787605529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Crypto_SecourOuvrir
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Crypto_SecourOuvrir
+  Guid:
+    Data1: -1151688453
+    Data2: 1232216189
+    Data3: 778515350
+    Data4: 238453666
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4097466575335346309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_JumpScare1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_JumpScare1
+  Guid:
+    Data1: 1562301273
+    Data2: 1144038811
+    Data3: 374360480
+    Data4: 1219516805
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3343033178567395366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Pomme_Prendre
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Pomme_Prendre
+  Guid:
+    Data1: -1357758756
+    Data2: 1094353410
+    Data3: -1958555220
+    Data4: -1957139193
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3257444153775110485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_AmbianceGeneral
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_AmbianceGeneral
+  Guid:
+    Data1: -735928468
+    Data2: 1233211968
+    Data3: -1874354259
+    Data4: -1196900368
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3231768216593208920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Medoc_Prendre
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Medoc_Prendre
+  Guid:
+    Data1: 1937296732
+    Data2: 1274195345
+    Data3: -1002194037
+    Data4: 972610739
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2904672376378514740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Transition/Transition_IntoReel
+  m_EditorClassIdentifier: 
+  Path: event:/Transition/Transition_IntoReel
+  Guid:
+    Data1: 1541344244
+    Data2: 1088432090
+    Data3: -214195322
+    Data4: 1619983225
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2574766186146473625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Horloge_Desactivation
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Horloge_Desactivation
+  Guid:
+    Data1: 325942206
+    Data2: 1282517240
+    Data3: 1844323753
+    Data4: 1918738156
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2113359834706075468}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2167984787902283835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_CraquementPlancher
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_CraquementPlancher
+  Guid:
+    Data1: 165230199
+    Data2: 1294063857
+    Data3: -1157458499
+    Data4: 1323430833
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2092027064862174065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Frigo
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Frigo
+  Guid:
+    Data1: 2114359918
+    Data2: 1094302341
+    Data3: -515254600
+    Data4: 1009784551
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2089567590851146898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Rushhour_BlocDepla
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Rushhour_BlocDepla
+  Guid:
+    Data1: 6043642
+    Data2: 1312080952
+    Data3: -995776105
+    Data4: -973946811
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1416754229639175674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Horloge_Beep/Notes_Xylo
+  m_EditorClassIdentifier: 
+  Name: Notes_Xylo
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 20835100
+    data2: 3775936804
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1092116984172448732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Meuble_Porte_Drag
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Meuble_Porte_Drag
+  Guid:
+    Data1: -1207678847
+    Data2: 1299956028
+    Data3: 1793428638
+    Data4: 875954526
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-554011195238207972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Reel/Reel_Ambiance
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Reel/Reel_Ambiance
+  Guid:
+    Data1: 1300183205
+    Data2: 1267108710
+    Data3: -518125919
+    Data4: 764011760
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-334233797433650074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Collision
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Collision
+  Guid:
+    Data1: -726260998
+    Data2: 1241727240
+    Data3: 2047630727
+    Data4: -1279338194
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-329327209455676199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_JumpScare2
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_JumpScare2
+  Guid:
+    Data1: -907758915
+    Data2: 1320022843
+    Data3: 1450765230
+    Data4: 887316107
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-328780442328273131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +689,66 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637910516646537734
+  lastModified: 637910741840246761
   FileSizes:
   - Name: Desktop
-    Value: 95840
+    Value: 134816
   Exists: 1
+--- !u!114 &-234621082219317977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Peinture_Brule
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Peinture_Brule
+  Guid:
+    Data1: -201033558
+    Data2: 1191013307
+    Data3: -674717526
+    Data4: -676399056
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-234208681852616450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Xylo_Notes
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Xylo_Notes
+  Guid:
+    Data1: 1881280411
+    Data2: 1156897555
+    Data3: -272613233
+    Data4: 271378532
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4587753246254639877}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,13 +766,239 @@ MonoBehaviour:
   - {fileID: -328780442328273131}
   EditorEvents:
   - {fileID: 4024811747687280309}
+  - {fileID: -6375327441239447091}
+  - {fileID: -5580925235330337937}
+  - {fileID: -5876756971208367895}
+  - {fileID: 7442509260381752131}
+  - {fileID: 3542303677993996781}
+  - {fileID: 6088676444843222756}
+  - {fileID: -6046275539128086408}
+  - {fileID: 817798183069537466}
+  - {fileID: -7035371595941157748}
+  - {fileID: 6031421484253640653}
+  - {fileID: -4097466575335346309}
+  - {fileID: -3231768216593208920}
+  - {fileID: -7675443435134086699}
+  - {fileID: 4791043899245935071}
+  - {fileID: -3257444153775110485}
+  - {fileID: -2092027064862174065}
+  - {fileID: -2167984787902283835}
+  - {fileID: -5037258696743786566}
+  - {fileID: -1092116984172448732}
+  - {fileID: 4721665704388218200}
+  - {fileID: 7783463925160001603}
+  - {fileID: 8382139145806799421}
+  - {fileID: 1941205777260104660}
+  - {fileID: 1254280323199405770}
+  - {fileID: -234208681852616450}
+  - {fileID: 7310005000612248322}
+  - {fileID: -554011195238207972}
+  - {fileID: -234621082219317977}
+  - {fileID: 7247181244584131853}
+  - {fileID: 4848961678681453609}
+  - {fileID: 6989044961550207160}
+  - {fileID: -329327209455676199}
+  - {fileID: -2574766186146473625}
+  - {fileID: 2198212227119926838}
+  - {fileID: -7676417307845508365}
+  - {fileID: -3343033178567395366}
+  - {fileID: -7898594770573607321}
+  - {fileID: -2904672376378514740}
+  - {fileID: -334233797433650074}
+  - {fileID: -2089567590851146898}
+  - {fileID: -6573474136406979703}
+  - {fileID: -4392846606787605529}
+  - {fileID: 4464466546046211345}
   EditorParameters: []
   MasterBanks:
   - {fileID: -328780442328273131}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637910516646548038
+  cacheTime: 637910741840276495
   cacheVersion: 131591
+--- !u!114 &817798183069537466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Bougie
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Bougie
+  Guid:
+    Data1: 1074100038
+    Data2: 1129469938
+    Data3: 23849893
+    Data4: 542634436
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1254280323199405770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Bouteille_Prendre
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Bouteille_Prendre
+  Guid:
+    Data1: 1999560087
+    Data2: 1278415135
+    Data3: 1804658816
+    Data4: 701613838
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1373042106889209759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Papier_Prendre/Notes_Xylo
+  m_EditorClassIdentifier: 
+  Name: Notes_Xylo
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 20835100
+    data2: 3775936804
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1941205777260104660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Transition/Transition_IntoFolie
+  m_EditorClassIdentifier: 
+  Path: event:/Transition/Transition_IntoFolie
+  Guid:
+    Data1: 94672023
+    Data2: 1292992883
+    Data3: -1821849177
+    Data4: 580854667
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2113359834706075468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Horloge_Desactivation/Notes_Xylo
+  m_EditorClassIdentifier: 
+  Name: Notes_Xylo
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 20835100
+    data2: 3775936804
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2198212227119926838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_VitrePeinture
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_VitrePeinture
+  Guid:
+    Data1: -1028622657
+    Data2: 1321501796
+    Data3: -1885846881
+    Data4: -1337194240
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3542303677993996781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Bouteille_Casser
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Bouteille_Casser
+  Guid:
+    Data1: 2058405423
+    Data2: 1198093703
+    Data3: -29361518
+    Data4: -1666787719
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4024811747687280309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,8 +1024,195 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 1
   Length: 8810
+--- !u!114 &4464466546046211345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Music
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Music
+  Guid:
+    Data1: 313698302
+    Data2: 1083233983
+    Data3: -910575454
+    Data4: 1486272369
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4587753246254639877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Xylo_Notes/Notes_Xylo
+  m_EditorClassIdentifier: 
+  Name: Notes_Xylo
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 20835100
+    data2: 3775936804
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4721665704388218200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Allumette_Prendre
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Allumette_Prendre
+  Guid:
+    Data1: 1059025544
+    Data2: 1204654302
+    Data3: -2002953809
+    Data4: -371722252
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4791043899245935071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Crypto_Engrenage
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Crypto_Engrenage
+  Guid:
+    Data1: 2058766442
+    Data2: 1265224253
+    Data3: -1673459563
+    Data4: -1097003186
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4848961678681453609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Meuble_Tirroir_Drag
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Meuble_Tirroir_Drag
+  Guid:
+    Data1: -1687900239
+    Data2: 1319632926
+    Data3: -210923385
+    Data4: 1524850026
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6031421484253640653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Papier_Prendre
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Papier_Prendre
+  Guid:
+    Data1: -265565617
+    Data2: 1283565036
+    Data3: 301640856
+    Data4: -858291082
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1373042106889209759}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6088676444843222756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Medoc_Manger
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Medoc_Manger
+  Guid:
+    Data1: -1638401730
+    Data2: 1196775938
+    Data3: -1213818448
+    Data4: 363476356
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6942229746880246844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +1228,170 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637910516646548038
+  lastModified: 637910741840276495
   FileSizes:
   - Name: Desktop
-    Value: 758
+    Value: 2920
   Exists: 1
+--- !u!114 &6989044961550207160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Lampe
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Lampe
+  Guid:
+    Data1: 400468923
+    Data2: 1260147349
+    Data3: -986566501
+    Data4: -1565527438
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7247181244584131853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mecaniques/Allumette_Braise
+  m_EditorClassIdentifier: 
+  Path: event:/Mecaniques/Allumette_Braise
+  Guid:
+    Data1: 24872364
+    Data2: 1079214289
+    Data3: 256314265
+    Data4: 1985128234
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7310005000612248322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Pomme_Manger
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Pomme_Manger
+  Guid:
+    Data1: -330896994
+    Data2: 1308187941
+    Data3: -1486252908
+    Data4: 624484116
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7442509260381752131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Transition/Transition_CassageBouteille
+  m_EditorClassIdentifier: 
+  Path: event:/Transition/Transition_CassageBouteille
+  Guid:
+    Data1: -1523688417
+    Data2: 1131601225
+    Data3: 90345143
+    Data4: 1900605566
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7783463925160001603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Normal/Normal_Collision
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Normal/Normal_Collision
+  Guid:
+    Data1: 1336164498
+    Data2: 1212987397
+    Data3: -1258795879
+    Data4: 140481442
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8382139145806799421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Music
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Music
+  Guid:
+    Data1: -1447382379
+    Data2: 1123031345
+    Data3: 2021931935
+    Data4: -921565194
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
