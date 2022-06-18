@@ -13,7 +13,10 @@ public class PadlockRing : MonoBehaviour
     private int currentDigit = 0;
 
     [SerializeField]
-    private int unlockDigit = 2;
+    private int unlockDigit = 0;
+
+    [SerializeField]
+    private int nbDigit = 2;
     private void Awake() {
         interactable = GetComponent<Interactable>();
         meshCollider = GetComponent<MeshCollider>();  
@@ -35,9 +38,7 @@ public class PadlockRing : MonoBehaviour
         float newRotationY = 0f;
         float yRot = transform.localEulerAngles.y;
 
-        int nbChoice = 6;
-
-        float smallestStep = ((1f/(float)nbChoice)*360);
+        float smallestStep = ((1f/(float)nbDigit)*360);
 
         int yRotInt = Mathf.RoundToInt(yRot);
         int smallestStepInt = Mathf.RoundToInt(smallestStep);
@@ -60,7 +61,9 @@ public class PadlockRing : MonoBehaviour
             newDigit++;
         }
         Debug.Log(yRot + " divided by " + smallestStep +" will become " +newRotationY);
-        currentDigit = newDigit;
+        currentDigit = newDigit%nbDigit;
+        Debug.Log("New digit = " + currentDigit);
+
         transform.localEulerAngles = new Vector3(0f,newRotationY,0f);
     }
 }

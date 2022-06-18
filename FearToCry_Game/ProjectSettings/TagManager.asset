@@ -9,6 +9,7 @@ TagManager:
   - Climbable
   - XylophoneStick
   - scraper
+  - endingCube
   layers:
   - Default
   - TransparentFX

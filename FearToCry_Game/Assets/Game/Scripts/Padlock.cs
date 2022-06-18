@@ -10,12 +10,13 @@ public class Padlock : MonoBehaviour
 
     private MeshCollider meshCollider;
 
-    public ParticleSystem ps;
+    private ParticleSystem ps;
 
     public int[] digitCode;
     private void Awake() {
         meshCollider = GetComponent<MeshCollider>();
         digitCode = new int[padlockRings.Length];
+        ps = GetComponent<ParticleSystem>();
     }
 
     public void OnPickUp(){
@@ -33,6 +34,7 @@ public class Padlock : MonoBehaviour
     }
 
     public void OnNewDigit(){
+        Debug.Log("OnNewDIgit");
         foreach (var ring in padlockRings){
             if(!ring.isCurrentDigitTheUnlockDigit()){
                 return;
