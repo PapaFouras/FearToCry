@@ -109,6 +109,8 @@ namespace Valve.VR.InteractionSystem
 
 		public bool repositionGameObject = true;
 
+		public UnityEvent onDrivingEnd;
+
 		//-------------------------------------------------
 		private void Freeze( Hand hand )
 		{
@@ -280,6 +282,7 @@ namespace Valve.VR.InteractionSystem
 
                 driving = false;
                 grabbedWithType = GrabTypes.None;
+				onDrivingEnd?.Invoke();
 				
 
 
