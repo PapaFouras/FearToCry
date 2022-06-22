@@ -5,15 +5,31 @@ using Valve.VR.InteractionSystem;
 
 public class AlarmClock : MonoBehaviour
 {
-     public void OnButtonDown(Hand fromHand)
+    AudioSource soundClick;
+    bool isPressed;
+    void Start()
+    {
+        soundClick = GetComponent<AudioSource>();
+        isPressed = false;
+    }
+    public void OnButtonDown(Hand fromHand)
         {
-            Debug.Log("Stop Alarm");
-            fromHand.TriggerHapticPulse(1000);
+            if (!isPressed)
+            {
+                soundClick.Play();
+                isPressed = true;
+                Debug.Log("Stop Alarm");
+                fromHand.TriggerHapticPulse(1000);
+            }
         }
 
         public void OnButtonUp(Hand fromHand)
         {
-            Debug.Log("Reset Alarm");
+            if (isPressed)
+            {
+                isPressed = false;
+                Debug.Log("Reset Alarm");
+            }
         }
 
 }

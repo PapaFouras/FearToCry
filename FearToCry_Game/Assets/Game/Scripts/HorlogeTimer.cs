@@ -24,7 +24,6 @@ public class HorlogeTimer : MonoBehaviour
         {
 		   
 		
-        	manager.Noitfy(number);
         }               
        
 	}
