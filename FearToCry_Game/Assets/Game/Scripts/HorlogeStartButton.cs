@@ -8,8 +8,6 @@ using UnityEngine.Events;
 public class HorlogeStartButton : MonoBehaviour
 {
     public GameObject button;
-    public AudioSource soundClick;
-    public AudioSource soundTicTac;
     public UnityEvent onPress;
     public UnityEvent onRelease;
     public HorlogeManager manager;
@@ -19,8 +17,15 @@ public class HorlogeStartButton : MonoBehaviour
     public Material matTictac;
     public Material matNotTictac;
 
+    public FMODUnity.EventReference Horloge_TicTac;
+    FMOD.Studio.EventInstance horloge_TicTac;
+
+    public FMODUnity.EventReference Horloge_Bouton;
+
     void Start()
     {
+        horloge_TicTac = FMODUnity.RuntimeManager.CreateInstance(Horloge_TicTac);
+
         button.GetComponent<Renderer>().material = matNotTictac;
         isPressed = false;
         isTictac = false;
@@ -35,7 +40,7 @@ public class HorlogeStartButton : MonoBehaviour
             Debug.Log("C After : " + button.transform.localPosition);
             presser = other.gameObject;
             onPress.Invoke();
-            soundClick.Play();
+            FMODUnity.RuntimeManager.PlayOneShot(Horloge_Bouton, transform.position);
             isPressed = true;
         }
     }
@@ -61,14 +66,14 @@ public class HorlogeStartButton : MonoBehaviour
     {
         button.GetComponent<Renderer>().material = matTictac;
         isTictac = true;
-        soundTicTac.Play();
+        horloge_TicTac.start();
     }
     
     public void stopTicTac()
     {
         button.GetComponent<Renderer>().material = matNotTictac;
         isTictac = false;
-        soundTicTac.Stop();
+        horloge_TicTac.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         Debug.Log("OK");
     }
 }

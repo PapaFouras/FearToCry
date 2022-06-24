@@ -1121,7 +1121,7 @@ retry:
         {
             try
             {
-                PlayOneShot(eventReference.Guid, position);
+                PlayOneShot(eventReference, position);
             }
             catch (EventNotFoundException)
             {
@@ -1141,7 +1141,7 @@ retry:
             }
         }
 
-        public static void PlayOneShot(Guid guid, string parameterName, float parameterValue, Vector3 position = new Vector3())
+        public static void PlayOneShot(FMOD.GUID guid, string parameterName, float parameterValue, Vector3 position = new Vector3())
         {
             var instance = CreateInstance(guid);
             instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));

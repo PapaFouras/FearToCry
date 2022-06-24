@@ -10,10 +10,13 @@ public class HorlogeManager : MonoBehaviour
     private bool win = false;
     private HorlogeStartButton prievious = new HorlogeStartButton();
     private int nbHorlogeOk = 0;
-    public AudioSource winSound;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -65,7 +68,6 @@ public class HorlogeManager : MonoBehaviour
             }
             if (nbHorlogeOk == originList.Count)
             {
-                winSound.Play();
                 win = true;
             }
         }
