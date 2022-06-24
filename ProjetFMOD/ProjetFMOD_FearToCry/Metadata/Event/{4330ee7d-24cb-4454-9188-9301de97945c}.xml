@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{4330ee7d-24cb-4454-9188-9301de97945c}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>Horloge_Beep</value>
 		</property>
@@ -130,7 +133,7 @@
 	<object class="MixerBusEffectChain" id="{cadacfc0-d34b-4f6d-8634-cdf52f0f842b}">
 		<relationship name="effects">
 			<destination>{aaf72940-77cc-4d04-9858-359261e6fe90}</destination>
-			<destination>{196039aa-76d4-45dd-a4d4-82c139b5ea67}</destination>
+			<destination>{c6aa799e-daae-4c9a-b877-ef472cc530f6}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8ec3244a-10ae-471e-b89a-6f7eff98cd59}" />
@@ -142,12 +145,12 @@
 	</object>
 	<object class="MixerBusPanner" id="{d9d32968-ac19-4eca-b02d-8f6b9377a687}" />
 	<object class="MixerBusFader" id="{aaf72940-77cc-4d04-9858-359261e6fe90}" />
-	<object class="SpatialiserEffect" id="{196039aa-76d4-45dd-a4d4-82c139b5ea67}">
+	<object class="SpatialiserEffect" id="{c6aa799e-daae-4c9a-b877-ef472cc530f6}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="overrideRange">
 			<value>true</value>

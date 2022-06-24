@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{034b0c03-e906-4fdb-98ba-4f4d6c0b4353}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>Folie_AmbianceGeneral</value>
 		</property>
@@ -77,6 +80,9 @@
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{131833eb-877a-4606-afd0-38b3cf837dcc}">
+		<relationship name="modules">
+			<destination>{c6887f15-f4dc-43d9-8a01-d1c1643faed6}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f335e4dd-5fa9-49e7-9cca-bf359de1de31}</destination>
 		</relationship>
@@ -85,6 +91,7 @@
 		<relationship name="modules">
 			<destination>{f8e6c2b9-7d93-4253-a87d-7ac144fe00bc}</destination>
 			<destination>{e403c33e-6fba-4be9-814a-2d6267720097}</destination>
+			<destination>{c6887f15-f4dc-43d9-8a01-d1c1643faed6}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{cc0d11a6-b1e8-4688-af71-11afe14f7cd4}</destination>
@@ -156,9 +163,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1dade04a-591c-4ec6-b3d5-4d63f6ed24e0}">
-		<property name="volume">
-			<value>5</value>
-		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -172,7 +176,24 @@
 			<destination>{b6763a83-d1b8-45a7-bb4c-77eeb10182c0}</destination>
 		</relationship>
 	</object>
+	<object class="SingleSound" id="{c6887f15-f4dc-43d9-8a01-d1c1643faed6}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
+		<property name="length">
+			<value>176.13541950113378</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{0371ba93-1aef-472b-9fdb-608eded360b1}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{f335e4dd-5fa9-49e7-9cca-bf359de1de31}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
 		<property name="name">
 			<value>Audio 3</value>
 		</property>
@@ -203,7 +224,7 @@
 	<object class="MixerBusEffectChain" id="{cb5ddd63-0b34-4576-af9e-78cf0826b793}">
 		<relationship name="effects">
 			<destination>{76f99ee4-ae14-4bbe-8347-87ebd5360499}</destination>
-			<destination>{51bc4260-ff0d-4bdb-bc9a-f1cde06df90a}</destination>
+			<destination>{21358efc-33d9-4c77-a49c-e2d6b1caa98a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1b6d501d-55f4-4977-acec-54107ba94329}" />
@@ -246,16 +267,18 @@
 	<object class="MixerBusEffectChain" id="{e3711eeb-c908-4155-9b2b-cac9034c6f76}">
 		<relationship name="effects">
 			<destination>{e91bbbcf-a361-461c-a983-b8af574761ff}</destination>
+			<destination>{d82906c5-f832-4af2-bad5-1673693e5fd3}</destination>
+			<destination>{820dd9b4-dbee-496e-8519-003441bdac38}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4abfde1f-fc89-4c52-899c-b593af1f0166}" />
 	<object class="MixerBusFader" id="{76f99ee4-ae14-4bbe-8347-87ebd5360499}" />
-	<object class="SpatialiserEffect" id="{51bc4260-ff0d-4bdb-bc9a-f1cde06df90a}">
+	<object class="SpatialiserEffect" id="{21358efc-33d9-4c77-a49c-e2d6b1caa98a}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="overrideRange">
 			<value>true</value>
@@ -264,4 +287,26 @@
 	<object class="MixerBusFader" id="{7dac6148-c81f-4f2f-8d19-bfcc6c989dfe}" />
 	<object class="MixerBusFader" id="{e5b4cbbb-1e01-408f-9e7c-d6bc12deada7}" />
 	<object class="MixerBusFader" id="{e91bbbcf-a361-461c-a983-b8af574761ff}" />
+	<object class="LowpassEffect" id="{d82906c5-f832-4af2-bad5-1673693e5fd3}">
+		<property name="cutoff">
+			<value>5000</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{820dd9b4-dbee-496e-8519-003441bdac38}">
+		<property name="lowGain">
+			<value>6.5</value>
+		</property>
+		<property name="midGain">
+			<value>-1.5</value>
+		</property>
+		<property name="highGain">
+			<value>-7.5</value>
+		</property>
+		<property name="highCrossover">
+			<value>2000</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
+		</property>
+	</object>
 </objects>

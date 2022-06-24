@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{136d7bbe-a8f8-4c71-a925-ee6dec9e5d72}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>Horloge_Desactivation</value>
 		</property>
@@ -116,7 +119,7 @@
 	<object class="MixerBusEffectChain" id="{a6015dc8-d9bb-48af-ad5e-a919a2116bfe}">
 		<relationship name="effects">
 			<destination>{157b1a28-fc27-4fcb-b19f-017a3086b501}</destination>
-			<destination>{f504ac61-94e4-47e4-bc43-98b9950bc187}</destination>
+			<destination>{da3b22a9-a5ec-4d61-a785-a9aaebcc7c55}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{05cf139a-8b35-4bf5-aea4-34f330cd67a1}" />
@@ -128,12 +131,12 @@
 	</object>
 	<object class="MixerBusPanner" id="{250123cc-083c-43f9-bba9-04d7226f728e}" />
 	<object class="MixerBusFader" id="{157b1a28-fc27-4fcb-b19f-017a3086b501}" />
-	<object class="SpatialiserEffect" id="{f504ac61-94e4-47e4-bc43-98b9950bc187}">
+	<object class="SpatialiserEffect" id="{da3b22a9-a5ec-4d61-a785-a9aaebcc7c55}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="overrideRange">
 			<value>true</value>
