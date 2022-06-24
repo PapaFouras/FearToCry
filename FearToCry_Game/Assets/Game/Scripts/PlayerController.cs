@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
 
     public CharacterController characterController;
 
+    public SteamVR_ActionSet climbingActionSet;
+    private SteamVR_Input_Sources leftHandSource = SteamVR_Input_Sources.LeftHand;
+    private SteamVR_Input_Sources rightHandSource = SteamVR_Input_Sources.RightHand;
+
+
     public Hand climbingHand = null;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +35,8 @@ public class PlayerController : MonoBehaviour
             transform.position += ( -velocity * Time.fixedDeltaTime);   
         }
         else{
+            // climbingActionSet.Deactivate(leftHandSource);
+            // climbingActionSet.Deactivate(rightHandSource);
             if(transform.position.y >=0f)
                 transform.position += new Vector3(0,-.05f,0);
         }

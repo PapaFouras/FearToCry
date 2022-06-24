@@ -1023,9 +1023,12 @@ namespace Valve.VR.InteractionSystem
                 }
             }
         }
+        
 
 
         //-------------------------------------------------
+
+
         private void UpdateDebugText()
         {
             if (showDebugText)
@@ -1058,12 +1061,14 @@ namespace Valve.VR.InteractionSystem
                     "Hover Lock: {1}\n" +
                     "Attached: {2}\n" +
                     "Total Attached: {3}\n" +
-                    "Type: {4}\n",
+                    "Type: {4}\n"+
+                    "FrameRate: {5}\n",
                     (hoveringInteractable ? hoveringInteractable.gameObject.name : "null"),
                     hoverLocked,
                     (currentAttachedObject ? currentAttachedObject.name : "null"),
                     attachedObjects.Count,
-                    handType.ToString());
+                    handType.ToString(),
+                    fpstext);
             }
             else
             {
@@ -1111,6 +1116,10 @@ namespace Valve.VR.InteractionSystem
             {
                 hoveringInteractable.SendMessage("HandHoverUpdate", this, SendMessageOptions.DontRequireReceiver);
             }
+
+            deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+            float fps = 1.0f / deltaTime;
+            fpstext = Mathf.Ceil (fps).ToString ();
         }
 
         /// <summary>
@@ -1179,6 +1188,9 @@ namespace Valve.VR.InteractionSystem
                 }
             }
         }
+
+        float deltaTime = 0;
+        string fpstext = "";
 
         protected virtual void FixedUpdate()
         {

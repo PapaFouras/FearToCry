@@ -75,6 +75,8 @@ namespace Valve.VR.InteractionSystem
 		[Tooltip( "The output angle value of the drive in degrees, unlimited will increase or decrease without bound, take the 360 modulus to find number of rotations" )]
 		public float outAngle;
 
+		public bool maintainMomemntum = true;
+
 		private Quaternion start;
 
 		private Vector3 worldPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
@@ -104,6 +106,10 @@ namespace Valve.VR.InteractionSystem
 		private Hand handHoverLocked = null;
 
         private Interactable interactable;
+
+		public bool repositionGameObject = true;
+
+		public UnityEvent onDrivingEnd;
 
 		//-------------------------------------------------
 		private void Freeze( Hand hand )
@@ -262,6 +268,7 @@ namespace Valve.VR.InteractionSystem
 				ComputeAngle( hand );
 				UpdateAll();
 
+
                 hand.HideGrabHint();
 			}
             else if (grabbedWithType != GrabTypes.None && isGrabEnding)
@@ -275,6 +282,10 @@ namespace Valve.VR.InteractionSystem
 
                 driving = false;
                 grabbedWithType = GrabTypes.None;
+				onDrivingEnd?.Invoke();
+				
+
+
             }
 
             if ( driving && isGrabEnding == false && hand.hoveringInteractable == this.interactable )
@@ -284,6 +295,12 @@ namespace Valve.VR.InteractionSystem
 			}
 		}
 
+
+
+	
+
+
+		
 
 		//-------------------------------------------------
 		private Vector3 ComputeToTransformProjected( Transform xForm )

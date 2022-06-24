@@ -60,18 +60,20 @@ namespace Valve.VR.InteractionSystem
 		{
 			onHandHoverEnd.Invoke();
             Debug.Log("hovering hand : " + hand.name);
-             if(hand.name == "LeftHand"){
-                if(playerController.climbingHand == hand){
-                    playerController.climbingHand = null;
+            if(hand.name == "LeftHand"){
+                if(playerController.climbingHand != hand){
+                    //playerController.climbingHand = null;
+                    actionSet.Deactivate(leftHandSource);
                 }
-                actionSet.Deactivate(leftHandSource);
+                
 
             }
             if(hand.name == "RightHand"){
-                if(playerController.climbingHand == hand){
-                    playerController.climbingHand = null;
+                if(playerController.climbingHand != hand){
+                   // playerController.climbingHand = null;
+                    actionSet.Deactivate(rightHandSource);
+
                 }
-                actionSet.Deactivate(rightHandSource);
 
             }
 
@@ -83,6 +85,14 @@ namespace Valve.VR.InteractionSystem
 		{
 			onAttachedToHand.Invoke();
 		}
+
+        /*void LateUpdate()
+        {
+            if(playerController.climbingHand != null)
+            {
+                playerController.climbingHand.transform.position = this.transform.position;
+            }
+        }*/
 
 
 		//-------------------------------------------------
