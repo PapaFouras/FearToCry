@@ -31,9 +31,6 @@
 		<relationship name="timeline">
 			<destination>{f3d8f2a9-60e0-47c4-be73-4d6731c9746c}</destination>
 		</relationship>
-		<relationship name="parameters">
-			<destination>{d8dd3f33-b675-4a9c-9936-674d096c5e10}</destination>
-		</relationship>
 		<relationship name="banks">
 			<destination>{3ef2cf18-3641-484e-82b4-b615da2d32eb}</destination>
 		</relationship>
@@ -62,14 +59,16 @@
 	<object class="EventAutomatableProperties" id="{322f6661-5211-4cd9-938e-b46747a8742e}" />
 	<object class="MarkerTrack" id="{8b9aeeab-9738-489f-8d1c-b799b431f026}" />
 	<object class="GroupTrack" id="{e8e276ea-b949-44d6-89f7-776c7d11c551}">
+		<relationship name="modules">
+			<destination>{c880cec8-84f1-4c7a-9336-55ca6943cbef}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{bad94978-b5e9-4cdb-8a54-b3d0d9cfbc3e}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{f3d8f2a9-60e0-47c4-be73-4d6731c9746c}" />
-	<object class="ParameterProxy" id="{d8dd3f33-b675-4a9c-9936-674d096c5e10}">
-		<relationship name="preset">
-			<destination>{b76e56f9-153b-4440-8582-7c23cdedff20}</destination>
+	<object class="Timeline" id="{f3d8f2a9-60e0-47c4-be73-4d6731c9746c}">
+		<relationship name="modules">
+			<destination>{c880cec8-84f1-4c7a-9336-55ca6943cbef}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f0dad43d-0301-4d48-aad2-38b35c135e47}">
@@ -89,7 +88,18 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6f28e238-799d-4fcb-a187-7911202f9292}" />
+	<object class="SingleSound" id="{c880cec8-84f1-4c7a-9336-55ca6943cbef}">
+		<property name="length">
+			<value>0.53235827664399094</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{f7972a8f-e6cb-4621-bf72-ec18764e37e4}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{bad94978-b5e9-4cdb-8a54-b3d0d9cfbc3e}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
