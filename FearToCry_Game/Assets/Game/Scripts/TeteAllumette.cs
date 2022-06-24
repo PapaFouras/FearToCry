@@ -6,6 +6,7 @@ public class TeteAllumette : MonoBehaviour
 {
     public GameObject boiteAllumette;
     public GameObject allumette;
+    public GameObject allumetteMesh;
 
     private int currentScraperColliderHit = 0;
     public ParticleSystem fire;
@@ -27,11 +28,13 @@ public class TeteAllumette : MonoBehaviour
            Debug.Log("allumette 1 OK");
 
        }
-       if (currentScraperColliderHit >1){
+
+       if (currentScraperColliderHit >1 || other.gameObject.CompareTag("Burning")){
            Debug.Log("L'allumette doit s'allumer !");
            _isTurnedOn = true;
            gameObject.tag = "Burning";
            allumette.tag = "Burning";
+           allumetteMesh.tag = "Burning";
            fire.Play();
        }
    }
