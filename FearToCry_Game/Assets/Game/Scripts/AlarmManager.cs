@@ -17,8 +17,7 @@ public class AlarmManager : MonoBehaviour
        alarmsNotChecked = new List<AlarmClock>();
        foreach (var alarm in alarms)
        {
-           alarm.isChecked = false;
-           alarm.alarmManager = this;
+           
            alarmsNotChecked.Add(alarm);
        }
     }
@@ -27,7 +26,7 @@ public class AlarmManager : MonoBehaviour
         for (var i = 0; i < alarms.Length; i++)
         {
             if(alarm == alarms[i]){
-                alarm.isChecked = true;
+                
                 alarmsNotChecked.Remove(alarm);
             }
         }

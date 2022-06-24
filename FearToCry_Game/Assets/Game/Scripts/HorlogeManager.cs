@@ -7,7 +7,10 @@ public class HorlogeManager : MonoBehaviour
     public List<HorlogeStartButton> originList = new List<HorlogeStartButton>();
     private List<HorlogeStartButton> randomList;
     private bool startGame = false;
+    private bool win = false;
     private HorlogeStartButton prievious = new HorlogeStartButton();
+    private int nbHorlogeOk = 0;
+    public AudioSource winSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,24 +40,35 @@ public class HorlogeManager : MonoBehaviour
             randomList[randomIndex] = temp;
             temp.stopTicTac();
         }
+        nbHorlogeOk = 0;
         randomList[0].startTicTac();
     }
 
     public void Noitfy(HorlogeStartButton notifyer)
     {
-        if (startGame)
+        if(!win)
         {
-            if (notifyer != prievious && notifyer == randomList[0])
+            if (startGame)
             {
-                notifyer.stopTicTac();
-                randomList.Remove(notifyer);
-                randomList[0].startTicTac();
+                if (notifyer != prievious && notifyer == randomList[0])
+                {
+                    notifyer.stopTicTac();
+                    randomList.Remove(notifyer);
+                    randomList[0].startTicTac();
+                    nbHorlogeOk++;
+                }
+                else
+                {
+                    randomList[0].stopTicTac();
+                    Reset();
+                }
             }
-            else
+            if (nbHorlogeOk == originList.Count)
             {
-                randomList[0].stopTicTac();
-                Reset();
+                winSound.Play();
+                win = true;
             }
-        }  	
+        }
+       
     }
 }
