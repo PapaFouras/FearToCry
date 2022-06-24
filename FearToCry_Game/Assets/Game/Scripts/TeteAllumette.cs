@@ -30,6 +30,8 @@ public class TeteAllumette : MonoBehaviour
        if (currentScraperColliderHit >1){
            Debug.Log("L'allumette doit s'allumer !");
            _isTurnedOn = true;
+           gameObject.tag = "Burning";
+           allumette.tag = "Burning";
            fire.Play();
        }
    }
