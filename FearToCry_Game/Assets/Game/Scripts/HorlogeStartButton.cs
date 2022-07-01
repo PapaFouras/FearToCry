@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class HorlogeStartButton : MonoBehaviour
 {
-    public GameObject button;
+    //public GameObject button;
     public AudioSource soundClick;
     public AudioSource soundTicTac;
     public UnityEvent onPress;
@@ -21,52 +21,57 @@ public class HorlogeStartButton : MonoBehaviour
 
     void Start()
     {
-        button.GetComponent<Renderer>().material = matNotTictac;
+        GetComponent<Renderer>().material = matNotTictac;
         isPressed = false;
         isTictac = false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!isPressed)
+    public void Click(){
+        //if (!isPressed)
         {
-            Debug.Log("CLICK : " + button.transform.localPosition);
-            button.transform.localPosition = new Vector3(0, 0.03f, 0);
-            Debug.Log("C After : " + button.transform.localPosition);
-            presser = other.gameObject;
+           // Debug.Log("CLICK : " + transform.localPosition);
+            //transform.localPosition = new Vector3(0, 0.03f, 0);
+           // Debug.Log("C After : " + transform.localPosition);
+           // presser = other.gameObject;
             onPress.Invoke();
             soundClick.Play();
             isPressed = true;
+            spawnSphere();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == presser)
-        {
-            Debug.Log("R Bef : " + button.transform.localPosition);
-            button.transform.localPosition = new Vector3(0, 0.15f, 0);
-            onRelease.Invoke();
-            isPressed = false;
-            Debug.Log("RELEASE : " + button.transform.localPosition);
-        }
+        
     }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject == presser)
+    //     {
+    //         Debug.Log("R Bef : " + button.transform.localPosition);
+    //         button.transform.localPosition = new Vector3(0, 0.15f, 0);
+    //         onRelease.Invoke();
+    //         isPressed = false;
+    //         Debug.Log("RELEASE : " + button.transform.localPosition);
+    //     }
+    // }
 
     public void spawnSphere()
     {
-        manager.Noitfy(this);
+        manager.Notify(this);
     }
 
     public void startTicTac()
     {
-        button.GetComponent<Renderer>().material = matTictac;
+        GetComponent<Renderer>().material = matTictac;
         isTictac = true;
         soundTicTac.Play();
     }
     
     public void stopTicTac()
     {
-        button.GetComponent<Renderer>().material = matNotTictac;
+        GetComponent<Renderer>().material = matNotTictac;
         isTictac = false;
         soundTicTac.Stop();
         Debug.Log("OK");

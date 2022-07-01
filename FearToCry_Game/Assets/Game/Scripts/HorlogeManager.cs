@@ -11,6 +11,9 @@ public class HorlogeManager : MonoBehaviour
     private HorlogeStartButton prievious = new HorlogeStartButton();
     private int nbHorlogeOk = 0;
     public AudioSource winSound;
+
+    public float countDownDuration = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class HorlogeManager : MonoBehaviour
             Reset();
         }
     }
-    public void Reset()
+    public void Reset(bool restart = true)
     {
         randomList = new List<HorlogeStartButton>(originList);
         prievious = new HorlogeStartButton();
@@ -41,27 +44,35 @@ public class HorlogeManager : MonoBehaviour
             temp.stopTicTac();
         }
         nbHorlogeOk = 0;
-        randomList[0].startTicTac();
+        if(restart){
+            randomList[0].startTicTac();
+            ResetCountDown();
+        }
     }
 
-    public void Noitfy(HorlogeStartButton notifyer)
+    public void Notify(HorlogeStartButton notifyer)
     {
         if(!win)
         {
             if (startGame)
             {
-                if (notifyer != prievious && notifyer == randomList[0])
-                {
-                    notifyer.stopTicTac();
-                    randomList.Remove(notifyer);
-                    randomList[0].startTicTac();
-                    nbHorlogeOk++;
+                if(randomList.Count >0){
+
+                    if (notifyer != prievious && notifyer == randomList[0])
+                    {
+                        notifyer.stopTicTac();
+                        randomList.Remove(notifyer);
+                        randomList[0].startTicTac();
+                        nbHorlogeOk++;
+                        ResetCountDown();
+                    }
+                    else
+                    {
+                        randomList[0].stopTicTac();
+                        Reset();
+                    }
                 }
-                else
-                {
-                    randomList[0].stopTicTac();
-                    Reset();
-                }
+                
             }
             if (nbHorlogeOk == originList.Count)
             {
@@ -70,5 +81,16 @@ public class HorlogeManager : MonoBehaviour
             }
         }
        
+    }
+
+    IEnumerator StartCountDown(){
+        yield return new WaitForSeconds(countDownDuration);
+        Reset(false);
+        startGame = false;
+        Debug.Log("Fin timer");
+    }
+    public void ResetCountDown(){
+        StopAllCoroutines();
+        StartCoroutine(StartCountDown());
     }
 }
