@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{65f64da5-5644-489d-9bb2-7a456b1fa70a}">
+		<property name="assetPath">
+			<value>HorrorTransitionCymbal_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.4593877551020409</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8e57cb3d-2816-4f9e-94af-f76a6e92a9d9}</destination>
+		</relationship>
+	</object>
+</objects>
