@@ -11,6 +11,7 @@ TagManager:
   - scraper
   - endingCube
   - Burning
+  - Room
   layers:
   - Default
   - TransparentFX

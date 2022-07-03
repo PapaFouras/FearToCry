@@ -46,6 +46,7 @@ public class Bottle : MonoBehaviour
 
         //_hand.DetachObject(gameObject);
         GameObject go = Instantiate(brokenBottlePrefab,currentHand.transform.position,currentHand.transform.rotation);
+        gameObject.SetActive(false);
         //currentHand.AttachObject(go,GrabTypes.Scripted);
 
 
