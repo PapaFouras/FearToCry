@@ -14136,6 +14136,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ps: {fileID: 7697417725076538386}
   parentGo: {fileID: 0}
+  onEndBurn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MusicSheet, Assembly-CSharp
+        m_MethodName: FillOnePage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isBurning: 0
 --- !u!1 &2635342961496227700
 GameObject:
