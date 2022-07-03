@@ -81,6 +81,10 @@ public static GameManager instance;
         for(int i = 0; i<objectsOfNextRoom.Count; i++){
             objectsOfNextRoom[i].transform.localPosition = objectsOfCurrentRoom[i].transform.localPosition;
             objectsOfNextRoom[i].transform.rotation = objectsOfCurrentRoom[i].transform.rotation;
+
+            if(objectsOfNextRoom[i].transform.localPosition.y < -1 ){
+                objectsOfNextRoom[i].transform.localPosition += new Vector3(0,1,0);
+            }
             if(objectsOfNextRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb1)){
                  if(objectsOfCurrentRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb2)){
                     rb1.velocity = rb2.velocity;
