@@ -5076,6 +5076,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784a7cff621185c449b946e777e5d393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
+  parentGo: {fileID: 0}
+  onEndBurn:
+    m_PersistentCalls:
+      m_Calls: []
+  isBurning: 0
 --- !u!1 &7706360953298069694
 GameObject:
   m_ObjectHideFlags: 0

@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 6347413942940256013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.078065, y: 2.7619894, z: 2.2607288}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.4}
   m_Children:
   - {fileID: 6630026809985140766}
   - {fileID: 3507807965418305074}
@@ -367,7 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bcf9a86382acb43852548985aa0fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 5272128408602354662}
   soundClick: {fileID: 9136146386639456304}
   soundTicTac: {fileID: 5827380939689531847}
   onPress:
