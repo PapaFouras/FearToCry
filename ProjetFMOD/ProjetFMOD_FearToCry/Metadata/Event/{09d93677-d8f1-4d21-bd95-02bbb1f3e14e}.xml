@@ -95,6 +95,12 @@
 	</object>
 	<object class="MixerBusPanner" id="{c565ed6d-49f5-4134-b80a-556029efd888}" />
 	<object class="SoundScatterer" id="{d904f164-0df3-4369-9672-f97d1eac7fce}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>75</value>
+		</property>
 		<property name="length">
 			<value>0.5</value>
 		</property>
