@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 using Valve.VR.InteractionSystem.Sample;
-using UnityEditor.ProBuilder;
 using UnityEngine.ProBuilder;
 
 [RequireComponent(typeof (Interactable))]
