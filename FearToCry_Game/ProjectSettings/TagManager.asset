@@ -10,6 +10,8 @@ TagManager:
   - XylophoneStick
   - scraper
   - endingCube
+  - Burning
+  - Room
   layers:
   - Default
   - TransparentFX

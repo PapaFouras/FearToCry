@@ -7,7 +7,13 @@ using UnityEngine.Events;
 
 public class HorlogeStartButton : MonoBehaviour
 {
+<<<<<<< HEAD
     public GameObject button;
+=======
+    //public GameObject button;
+    public AudioSource soundClick;
+    public AudioSource soundTicTac;
+>>>>>>> master
     public UnityEvent onPress;
     public UnityEvent onRelease;
     public HorlogeManager manager;
@@ -24,54 +30,63 @@ public class HorlogeStartButton : MonoBehaviour
 
     void Start()
     {
+<<<<<<< HEAD
         horloge_TicTac = FMODUnity.RuntimeManager.CreateInstance(Horloge_TicTac);
 
         button.GetComponent<Renderer>().material = matNotTictac;
+=======
+        GetComponent<Renderer>().material = matNotTictac;
+>>>>>>> master
         isPressed = false;
         isTictac = false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!isPressed)
+    public void Click(){
+        //if (!isPressed)
         {
-            Debug.Log("CLICK : " + button.transform.localPosition);
-            button.transform.localPosition = new Vector3(0, 0.03f, 0);
-            Debug.Log("C After : " + button.transform.localPosition);
-            presser = other.gameObject;
+           // Debug.Log("CLICK : " + transform.localPosition);
+            //transform.localPosition = new Vector3(0, 0.03f, 0);
+           // Debug.Log("C After : " + transform.localPosition);
+           // presser = other.gameObject;
             onPress.Invoke();
             FMODUnity.RuntimeManager.PlayOneShot(Horloge_Bouton, transform.position);
             isPressed = true;
+            spawnSphere();
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == presser)
-        {
-            Debug.Log("R Bef : " + button.transform.localPosition);
-            button.transform.localPosition = new Vector3(0, 0.15f, 0);
-            onRelease.Invoke();
-            isPressed = false;
-            Debug.Log("RELEASE : " + button.transform.localPosition);
-        }
+        
     }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject == presser)
+    //     {
+    //         Debug.Log("R Bef : " + button.transform.localPosition);
+    //         button.transform.localPosition = new Vector3(0, 0.15f, 0);
+    //         onRelease.Invoke();
+    //         isPressed = false;
+    //         Debug.Log("RELEASE : " + button.transform.localPosition);
+    //     }
+    // }
 
     public void spawnSphere()
     {
-        manager.Noitfy(this);
+        manager.Notify(this);
     }
 
     public void startTicTac()
     {
-        button.GetComponent<Renderer>().material = matTictac;
+        GetComponent<Renderer>().material = matTictac;
         isTictac = true;
         horloge_TicTac.start();
     }
     
     public void stopTicTac()
     {
-        button.GetComponent<Renderer>().material = matNotTictac;
+        GetComponent<Renderer>().material = matNotTictac;
         isTictac = false;
         horloge_TicTac.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         Debug.Log("OK");
