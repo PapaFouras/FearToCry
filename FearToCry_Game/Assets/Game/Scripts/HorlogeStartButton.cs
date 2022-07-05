@@ -7,13 +7,11 @@ using UnityEngine.Events;
 
 public class HorlogeStartButton : MonoBehaviour
 {
-<<<<<<< HEAD
-    public GameObject button;
-=======
+
     //public GameObject button;
     public AudioSource soundClick;
     public AudioSource soundTicTac;
->>>>>>> master
+
     public UnityEvent onPress;
     public UnityEvent onRelease;
     public HorlogeManager manager;
@@ -30,13 +28,9 @@ public class HorlogeStartButton : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
-        horloge_TicTac = FMODUnity.RuntimeManager.CreateInstance(Horloge_TicTac);
 
-        button.GetComponent<Renderer>().material = matNotTictac;
-=======
         GetComponent<Renderer>().material = matNotTictac;
->>>>>>> master
+
         isPressed = false;
         isTictac = false;
     }

@@ -27,6 +27,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7715566376177383205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Transition/Transition_RangeHandIntoFolie
+  m_EditorClassIdentifier: 
+  Path: event:/Transition/Transition_RangeHandIntoFolie
+  Guid:
+    Data1: 94672023
+    Data2: 1292992883
+    Data3: -1821849177
+    Data4: 580854667
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2766956278226587916}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43910
 --- !u!114 &-7676417307845508365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,7 +77,7 @@ MonoBehaviour:
   - {fileID: -328780442328273131}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -176,19 +204,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Ambiance/Normal/Normal_Oiseau
   Guid:
-    Data1: 1485288259
-    Data2: 1089030874
-    Data3: 1987545278
-    Data4: -1799293254
+    Data1: -735928468
+    Data2: 1233211968
+    Data3: -1874354259
+    Data4: -1196900368
   Banks:
   - {fileID: -328780442328273131}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 120732
 --- !u!114 &-5876756971208367895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,33 +244,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5580925235330337937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/Folie/Folie_AmbianceGeneral
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiance/Folie/Folie_AmbianceGeneral
-  Guid:
-    Data1: 55249923
-    Data2: 1339812102
-    Data3: 1297070744
-    Data4: 1396902764
-  Banks:
-  - {fileID: -328780442328273131}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 176135
 --- !u!114 &-5037258696743786566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,10 +366,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Ambiance/Normal/Normal_AmbianceGeneral
   Guid:
-    Data1: -735928468
-    Data2: 1233211968
-    Data3: -1874354259
-    Data4: -1196900368
+    Data1: 1485288259
+    Data2: 1089030874
+    Data3: 1987545278
+    Data4: -1799293254
   Banks:
   - {fileID: -328780442328273131}
   IsStream: 0
@@ -404,7 +405,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 290
 --- !u!114 &-2904672376378514740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +433,84 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2809417674757468661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_AmbianceGeneralTete
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_AmbianceGeneralTete
+  Guid:
+    Data1: 189089532
+    Data2: 1087423291
+    Data3: 572793510
+    Data4: -2053115198
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 205897
+--- !u!114 &-2766956278226587916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Transition_RangeHandIntoFolie/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 3932580368
+    data2: 1430599924
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2732645664448928993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_AmbianceGeneral3D
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_AmbianceGeneral3D
+  Guid:
+    Data1: 55249923
+    Data2: 1339812102
+    Data3: 1297070744
+    Data4: 1396902764
+  Banks:
+  - {fileID: -328780442328273131}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 176135
 --- !u!114 &-2574766186146473625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,11 +560,11 @@ MonoBehaviour:
   - {fileID: -328780442328273131}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 3000
 --- !u!114 &-2092027064862174065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,13 +666,13 @@ MonoBehaviour:
     Data4: 764011760
   Banks:
   - {fileID: -328780442328273131}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 249609
 --- !u!114 &-334233797433650074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,10 +742,10 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637916912591700313
+  lastModified: 637926606112046630
   FileSizes:
   - Name: Desktop
-    Value: 5570176
+    Value: 14233952
   Exists: 1
 --- !u!114 &-234621082219317977
 MonoBehaviour:
@@ -741,7 +820,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 4024811747687280309}
   - {fileID: -6375327441239447091}
-  - {fileID: -5580925235330337937}
   - {fileID: -5876756971208367895}
   - {fileID: 7442509260381752131}
   - {fileID: 3542303677993996781}
@@ -783,12 +861,15 @@ MonoBehaviour:
   - {fileID: -6573474136406979703}
   - {fileID: -4392846606787605529}
   - {fileID: 4464466546046211345}
+  - {fileID: -2732645664448928993}
+  - {fileID: -7715566376177383205}
+  - {fileID: -2809417674757468661}
   EditorParameters: []
   MasterBanks:
   - {fileID: -328780442328273131}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637916912591730236
+  cacheTime: 637926606112076550
   cacheVersion: 131591
 --- !u!114 &817798183069537466
 MonoBehaviour:
@@ -843,7 +924,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 290
 --- !u!114 &1941205777260104660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,10 +939,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Transition/Transition_IntoFolie
   Guid:
-    Data1: 94672023
-    Data2: 1292992883
-    Data3: -1821849177
-    Data4: 580854667
+    Data1: 722020907
+    Data2: 1219508126
+    Data3: 1246374059
+    Data4: 141350806
   Banks:
   - {fileID: -328780442328273131}
   IsStream: 0
@@ -870,7 +951,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 5156
 --- !u!114 &2198212227119926838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,7 +1005,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1160
 --- !u!114 &4024811747687280309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1110,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 290
 --- !u!114 &4791043899245935071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1137,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 83
 --- !u!114 &4848961678681453609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1191,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 290
 --- !u!114 &6088676444843222756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,12 +1213,12 @@ MonoBehaviour:
   Banks:
   - {fileID: -328780442328273131}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 165
 --- !u!114 &6942229746880246844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,10 +1234,10 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637916912591730236
+  lastModified: 637926606112076550
   FileSizes:
   - Name: Desktop
-    Value: 2920
+    Value: 3072
   Exists: 1
 --- !u!114 &6989044961550207160
 MonoBehaviour:
@@ -1238,7 +1319,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 4970
 --- !u!114 &7442509260381752131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,13 +1340,13 @@ MonoBehaviour:
     Data4: 1900605566
   Banks:
   - {fileID: -328780442328273131}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 14472
 --- !u!114 &7783463925160001603
 MonoBehaviour:
   m_ObjectHideFlags: 0

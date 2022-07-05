@@ -10,14 +10,10 @@ public class HorlogeManager : MonoBehaviour
     private bool win = false;
     private HorlogeStartButton prievious = new HorlogeStartButton();
     private int nbHorlogeOk = 0;
-<<<<<<< HEAD
 
-
-=======
     public AudioSource winSound;
 
     public float countDownDuration = 2;
->>>>>>> master
 
     // Start is called before the first frame update
     void Start()
