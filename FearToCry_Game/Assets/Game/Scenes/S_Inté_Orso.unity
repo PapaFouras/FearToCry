@@ -8501,6 +8501,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1290856304, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: room1
+      value: 
+      objectReference: {fileID: 1811596667}
+    - target: {fileID: 1290856304, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: room2
+      value: 
+      objectReference: {fileID: 162058330}
     - target: {fileID: 1812738542, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: matchStickBox
       value: 
