@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{daca1985-2b82-4780-8e70-20f591e47a87}">
+		<property name="name">
+			<value>Enigme2_Horloge</value>
+		</property>
+		<relationship name="folder">
+			<destination>{020a0966-699e-410e-9f44-e7c1649c3280}</destination>
+		</relationship>
+	</object>
+</objects>

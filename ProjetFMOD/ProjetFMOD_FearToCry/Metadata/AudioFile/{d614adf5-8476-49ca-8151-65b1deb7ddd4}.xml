@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d614adf5-8476-49ca-8151-65b1deb7ddd4}">
+		<property name="assetPath">
+			<value>Normal_Oiseau.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120.73292517006803</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8e57cb3d-2816-4f9e-94af-f76a6e92a9d9}</destination>
+		</relationship>
+	</object>
+</objects>

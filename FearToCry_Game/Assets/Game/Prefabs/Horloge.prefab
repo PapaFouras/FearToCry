@@ -367,8 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bcf9a86382acb43852548985aa0fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundClick: {fileID: 9136146386639456304}
-  soundTicTac: {fileID: 5827380939689531847}
   onPress:
     m_PersistentCalls:
       m_Calls: []
@@ -391,6 +389,20 @@ MonoBehaviour:
   matTictac: {fileID: 2100000, guid: 43ad9dc6c4116834fb9168943fd3dce6, type: 2}
   matNotTictac: {fileID: 4087638707000035700, guid: 4ecdd142774341f4ca71856d72b79137,
     type: 3}
+  Horloge_TicTac:
+    Guid:
+      Data1: 1127280253
+      Data2: 1146365131
+      Data3: 26445969
+      Data4: 1553242078
+    Path: event:/Mecaniques/Horloge_Beep
+  Horloge_Bouton:
+    Guid:
+      Data1: 325942206
+      Data2: 1282517240
+      Data3: 1844323753
+      Data4: 1918738156
+    Path: event:/Mecaniques/Horloge_Desactivation
 --- !u!82 &5827380939689531847
 AudioSource:
   m_ObjectHideFlags: 0

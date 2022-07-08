@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{422ca230-e91c-454d-96c6-3572e59a00bc}">
+		<property name="name">
+			<value>Notes_Xylo</value>
+		</property>
+		<relationship name="folder">
+			<destination>{00ce8bfc-1d72-4527-b165-5db458a232e5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b76e56f9-153b-4440-8582-7c23cdedff20}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b76e56f9-153b-4440-8582-7c23cdedff20}">
+		<property name="maximum">
+			<value>10</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
