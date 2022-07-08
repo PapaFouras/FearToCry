@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2612041856931774979}
   m_Layer: 0
   m_Name: Icosphere
-  m_TagString: XylophoneStick
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2274,7 +2274,7 @@ GameObject:
   - component: {fileID: 3175602314059973622}
   m_Layer: 0
   m_Name: baguette xylo
-  m_TagString: Untagged
+  m_TagString: XylophoneStick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3031,10 +3031,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3873575819141650865}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d582c10d6360ce045b38b98ba35bef60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereCenter: {fileID: 0}
-  sphereCollider: {fileID: 0}
+  sphereCenter: {fileID: 6100064212260085439}
+  sphereCollider: {fileID: 2612041856931774979}
