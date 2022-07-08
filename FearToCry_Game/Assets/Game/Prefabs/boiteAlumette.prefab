@@ -3655,6 +3655,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4f0ebacbc839145a5e58c97473b1ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Prendre_Box:
+    Guid:
+      Data1: 1059025544
+      Data2: 1204654302
+      Data3: -2002953809
+      Data4: -371722252
+    Path: event:/Mecaniques/Allumette_Prendre
 --- !u!1 &8530143530848042608
 GameObject:
   m_ObjectHideFlags: 0
