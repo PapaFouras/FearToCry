@@ -3232,9 +3232,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &115430676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10530,9 +10530,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &366348264
 GameObject:
   m_ObjectHideFlags: 0
@@ -10591,9 +10591,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &372824503
 Mesh:
   m_ObjectHideFlags: 0
@@ -12888,9 +12888,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
+  OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 3
+  OverrideMaxDistance: 20
 --- !u!1001 &470724915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13785,9 +13785,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 2.5
-  OverrideMaxDistance: 2.5
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &485018695 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c9d7b4f2bc20194c9f948a0a3c809f7,
@@ -25858,9 +25858,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 1
 --- !u!4 &787645394
 Transform:
   m_ObjectHideFlags: 0
@@ -26955,25 +26955,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 835342454}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &846611477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 121078, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 284496955}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &846611481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846611477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!43 &851844302
 Mesh:
   m_ObjectHideFlags: 0
@@ -28777,9 +28758,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &945062277
 Mesh:
   m_ObjectHideFlags: 0
@@ -48269,9 +48250,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &1692388098
 Mesh:
   m_ObjectHideFlags: 0
@@ -53514,9 +53495,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.5
-  OverrideMaxDistance: 2
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &1903838956
 Mesh:
   m_ObjectHideFlags: 0
@@ -59792,15 +59773,15 @@ MonoBehaviour:
       Data4: 764011760
     Path: event:/Ambiance/Reel/Reel_Ambiance
   Event: 
-  PlayEvent: 0
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1.5
-  OverrideMaxDistance: 3
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &2004977328
 Mesh:
   m_ObjectHideFlags: 0
@@ -61528,9 +61509,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 2.5
-  OverrideMaxDistance: 2.5
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!43 &2124394482
 Mesh:
   m_ObjectHideFlags: 0

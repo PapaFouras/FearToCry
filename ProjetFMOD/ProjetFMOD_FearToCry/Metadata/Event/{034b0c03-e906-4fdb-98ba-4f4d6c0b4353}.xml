@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{034b0c03-e906-4fdb-98ba-4f4d6c0b4353}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Folie_AmbianceGeneral3D</value>
@@ -61,7 +61,14 @@
 			<destination>{085e4656-d61d-4d76-8c20-fd5c6bf16715}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{7459d341-213a-4bef-9c33-16fbf3a62aa9}" />
+	<object class="EventAutomatableProperties" id="{7459d341-213a-4bef-9c33-16fbf3a62aa9}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ef167cbb-faa5-4931-9e31-67f71fbfa9b3}" />
 	<object class="GroupTrack" id="{0ae93e9d-f6f1-46c1-9e61-1fb57240acdc}">
 		<relationship name="modules">
@@ -224,7 +231,7 @@
 	<object class="MixerBusEffectChain" id="{cb5ddd63-0b34-4576-af9e-78cf0826b793}">
 		<relationship name="effects">
 			<destination>{76f99ee4-ae14-4bbe-8347-87ebd5360499}</destination>
-			<destination>{21358efc-33d9-4c77-a49c-e2d6b1caa98a}</destination>
+			<destination>{99360660-d79f-4a7d-9e75-c0f4072f50db}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1b6d501d-55f4-4977-acec-54107ba94329}" />
@@ -273,15 +280,21 @@
 	</object>
 	<object class="MixerBusPanner" id="{4abfde1f-fc89-4c52-899c-b593af1f0166}" />
 	<object class="MixerBusFader" id="{76f99ee4-ae14-4bbe-8347-87ebd5360499}" />
-	<object class="SpatialiserEffect" id="{21358efc-33d9-4c77-a49c-e2d6b1caa98a}">
+	<object class="SpatialiserEffect" id="{99360660-d79f-4a7d-9e75-c0f4072f50db}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>1</value>
+			<value>10</value>
 		</property>
-		<property name="overrideRange">
-			<value>true</value>
+		<property name="soundSize">
+			<value>2</value>
+		</property>
+		<property name="stereoToSurroundUserPanMode">
+			<value>0</value>
+		</property>
+		<property name="userStereoSeparation">
+			<value>-180</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{7dac6148-c81f-4f2f-8d19-bfcc6c989dfe}" />

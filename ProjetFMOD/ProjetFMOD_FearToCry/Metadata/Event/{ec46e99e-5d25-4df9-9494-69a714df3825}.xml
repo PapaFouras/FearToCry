@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ec46e99e-5d25-4df9-9494-69a714df3825}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Normal_Pomme_Manger</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ab6f0a6d-054f-478e-91ef-c51813ccc4a3}</destination>
@@ -162,7 +162,6 @@
 	<object class="MixerBusEffectChain" id="{98312bbe-8c67-4a15-b7b9-c24b4f17930f}">
 		<relationship name="effects">
 			<destination>{1ad0b6f8-b2c9-433e-946c-d3b24fabf7f3}</destination>
-			<destination>{aad71b99-7866-4c66-a402-790b70533b44}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7d1be98f-308b-492e-bdf5-25c578c2ecc7}" />
@@ -231,17 +230,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{059dde30-c171-4349-bd0a-a1a09f995925}" />
 	<object class="MixerBusFader" id="{1ad0b6f8-b2c9-433e-946c-d3b24fabf7f3}" />
-	<object class="SpatialiserEffect" id="{aad71b99-7866-4c66-a402-790b70533b44}">
-		<property name="minimumDistance">
-			<value>0</value>
-		</property>
-		<property name="maximumDistance">
-			<value>2</value>
-		</property>
-		<property name="overrideRange">
-			<value>true</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{1bd9ba89-174f-4856-aba7-6b6d4ab6d56f}">
 		<property name="position">
 			<value>0</value>

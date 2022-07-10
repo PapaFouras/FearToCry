@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{8db435d8-6947-4057-8c22-5d068f303d13}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Folie_Orage</value>
@@ -59,7 +59,11 @@
 			<destination>{085e4656-d61d-4d76-8c20-fd5c6bf16715}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{65673e91-10b1-4f6c-b146-5814975c13f6}" />
+	<object class="EventAutomatableProperties" id="{65673e91-10b1-4f6c-b146-5814975c13f6}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{dc44a144-1a1c-4fea-8ddf-f1fa75558c88}" />
 	<object class="GroupTrack" id="{21ab3573-b390-42d7-bd8c-534e7b979d88}">
 		<relationship name="modules">
@@ -148,7 +152,7 @@
 	<object class="MixerBusEffectChain" id="{20d41dec-627e-43b1-90e2-d80ead2687c4}">
 		<relationship name="effects">
 			<destination>{255e01b2-6f7a-4d9d-ae6b-061227961fc5}</destination>
-			<destination>{716863d0-e39f-4853-94dd-b3e977ba2bb5}</destination>
+			<destination>{9b916c7b-8be9-4aa8-99fc-abd63997d1a0}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f5fb89ae-0c22-4093-a69a-c59aae75ea16}" />
@@ -170,18 +174,21 @@
 	</object>
 	<object class="MixerBusPanner" id="{be38d2b7-e022-4ae9-851d-f2e89bcf1cfa}" />
 	<object class="MixerBusFader" id="{255e01b2-6f7a-4d9d-ae6b-061227961fc5}" />
-	<object class="SpatialiserEffect" id="{716863d0-e39f-4853-94dd-b3e977ba2bb5}">
+	<object class="SpatialiserEffect" id="{9b916c7b-8be9-4aa8-99fc-abd63997d1a0}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
-		<property name="maximumDistance">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
 			<value>2</value>
 		</property>
-		<property name="overrideRange">
-			<value>true</value>
+		<property name="stereoToSurroundUserPanMode">
+			<value>0</value>
 		</property>
 		<property name="userStereoSeparation">
-			<value>0</value>
+			<value>-180</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{89ec5eaa-d093-4c27-9e12-2299136a7e87}">
