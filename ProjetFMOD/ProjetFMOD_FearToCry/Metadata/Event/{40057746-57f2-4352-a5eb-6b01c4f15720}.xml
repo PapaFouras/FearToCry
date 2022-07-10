@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{40057746-57f2-4352-a5eb-6b01c4f15720}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Folie_Bougie</value>
@@ -60,7 +60,14 @@
 			<destination>{085e4656-d61d-4d76-8c20-fd5c6bf16715}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{071380c0-12c6-4241-95af-a15c66c9e701}" />
+	<object class="EventAutomatableProperties" id="{071380c0-12c6-4241-95af-a15c66c9e701}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>5.5999999</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{034d68ac-fab9-450d-aa3f-80254376ef16}" />
 	<object class="GroupTrack" id="{a40002e4-d572-44b9-884c-09cd6638dc20}">
 		<relationship name="modules">
@@ -85,6 +92,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ccdf1e01-39cd-42d2-a17f-98dfe8a12b5d}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{6b03f03b-a0a9-4e0c-8bb5-f67127caec94}</destination>
 		</relationship>
@@ -136,7 +146,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{75d17acc-b73f-46a5-aa9e-6b3abf7582a9}">
 		<property name="volume">
-			<value>-14.5</value>
+			<value>-10</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -154,7 +164,7 @@
 	<object class="MixerBusEffectChain" id="{6b03f03b-a0a9-4e0c-8bb5-f67127caec94}">
 		<relationship name="effects">
 			<destination>{5d100cd6-2272-41d3-8bc3-e62d2a1c6b35}</destination>
-			<destination>{f41a014c-af15-4d22-9c8f-668bb77c5d89}</destination>
+			<destination>{6de10d91-843a-455e-971b-25d733454035}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fadc0fc8-bfa2-4374-afd9-ed2376b73d2e}" />
@@ -173,15 +183,21 @@
 	</object>
 	<object class="MixerBusPanner" id="{ebb5e700-84d3-47da-8995-766a1e938d96}" />
 	<object class="MixerBusFader" id="{5d100cd6-2272-41d3-8bc3-e62d2a1c6b35}" />
-	<object class="SpatialiserEffect" id="{f41a014c-af15-4d22-9c8f-668bb77c5d89}">
+	<object class="SpatialiserEffect" id="{6de10d91-843a-455e-971b-25d733454035}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>1</value>
+			<value>5.5999999</value>
 		</property>
-		<property name="overrideRange">
-			<value>true</value>
+		<property name="soundSize">
+			<value>2</value>
+		</property>
+		<property name="stereoToSurroundUserPanMode">
+			<value>0</value>
+		</property>
+		<property name="userStereoSeparation">
+			<value>-180</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{d8678a9b-c302-495b-9442-82ed0f42563e}" />

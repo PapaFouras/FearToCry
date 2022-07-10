@@ -18,6 +18,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public bool isGrabbing = false;
 
+        public FMODUnity.EventReference Prendre_BoiteMedoc;
 
         private void OnEnable()
         {
@@ -66,6 +67,9 @@ namespace Valve.VR.InteractionSystem.Sample
                 GameObject prefabObject = Instantiate(prefab,hand.transform.position, hand.transform.rotation);
                 hand.AttachObject(prefabObject,GrabTypes.Grip,Hand.AttachmentFlags.ParentToHand|Hand.AttachmentFlags.SnapOnAttach| Hand.AttachmentFlags.TurnOffGravity);
                 prefabObject.GetComponent<Medicine>().hand = hand;
+
+                FMODUnity.RuntimeManager.PlayOneShot(Prendre_BoiteMedoc, transform.position);
+
             }
             else{
                 hand.DetachObject(hand.currentAttachedObject);

@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B2F3BB1018 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001DF90F98638 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,8 +17,409 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03F81BFF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03F81BFF8
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5E108 : node = 000001DF96A3FAA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5E108
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3FBB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5E108
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE613A8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001E09B6A9488)
+[LOG] SoundI::release                          :     ReelBruitFond (000001E09BACBAA8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5F6F8 : node = 000001DF96A41120
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5F6F8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A41230
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folie_OrageDistant_01', format=5, channels=2, frequency=48000, lengthbytes=103488, lengthpcm=564653, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.571620.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5F6F8
+[LOG] SoundI::release                          : Folie_OrageDistant_02 (000001E03FE5D1D8)
+[LOG] SoundI::release                          :     Folie_OrageDistant_02 (000001E09B6A8FA8)
+[LOG] SoundI::release                          :     Folie_OrageDistant_02 (000001E0959B2538)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5F8A8 : node = 000001DF96A3FD20
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5F8A8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3FE30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Normal_Oiseau2', format=5, channels=2, frequency=48000, lengthbytes=204864, lengthpcm=795573, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.381836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5F8A8
+[LOG] SoundI::release                          : Normal_Oiseau2 (000001E03FE5DDA8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001E09B6A8AC8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001E03F81BC98)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5FA58 : node = 000001DF96A413A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5FA58
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A414B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5FA58
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE5E108)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DFB94A70B8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DF96B4C8E8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE613A8 : node = 000001DF96A414E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE613A8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A415F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folie_OrageDistant_04', format=5, channels=2, frequency=48000, lengthbytes=178624, lengthpcm=905838, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.169510.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE613A8
+[LOG] SoundI::release                          : Folie_OrageDistant_01 (000001E03FE5F6F8)
+[LOG] SoundI::release                          :     Folie_OrageDistant_01 (000001DFB94A6F18)
+[LOG] SoundI::release                          :     Folie_OrageDistant_01 (000001DF96B4CA98)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5F6F8 : node = 000001DF96A41620
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5F6F8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A41730
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Normal_Oiseau2', format=5, channels=2, frequency=48000, lengthbytes=204864, lengthpcm=795573, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.381836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5F6F8
+[LOG] SoundI::release                          : Normal_Oiseau2 (000001E03FE5F8A8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001E09B6A7408)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DF95D1F8D8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE618B8 : node = 000001DF96A41760
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE618B8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A41870
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE618B8
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE5FA58)
+[LOG] SoundI::release                          :     ReelBruitFond (000001E09B6A82A8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DF95D20658)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03F81BFF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03F81BFF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DF96B4C8E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DF96B4C8E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E0959B21D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E0959B21D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E0959B2388
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E0959B2388
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E095C7B208
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E095C7B208
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E095C7B8C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E095C7B8C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E09BACB3E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E09BACB3E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E09BACB8F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E09BACB8F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E095C7BDD8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E095C7BDD8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E09BACBC58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E09BACBC58
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E09AB75758 : node = 000001DFB8AAB9F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E09AB75758
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DFB8AABB00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folie_OrageDistant_03', format=5, channels=2, frequency=48000, lengthbytes=111552, lengthpcm=596538, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.472615.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E09AB75758
+[LOG] SoundI::release                          : Folie_OrageDistant_04 (000001E03FE613A8)
+[LOG] SoundI::release                          :     Folie_OrageDistant_04 (000001DFB94A7738)
+[LOG] SoundI::release                          :     Folie_OrageDistant_04 (000001DF96B4C8E8)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE60B38)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09B6A8788)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09BACB748)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE5D6E8)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09B6A8E08)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09BACB238)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE61048)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09B6A7A88)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09BACB598)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE5D028)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09B6A8928)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E03F81C6B8)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE62488)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E09B6A6D88)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E095C7BA78)
+[LOG] SoundI::release                          : Folie_Bougie (000001E03FE5D898)
+[LOG] SoundI::release                          :     Folie_Bougie (000001DF945B4208)
+[LOG] SoundI::release                          :     Folie_Bougie (000001E095C7B568)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE62488 : node = 000001DF96A41120
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE62488
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A41230
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Normal_Oiseau2', format=5, channels=2, frequency=48000, lengthbytes=204864, lengthpcm=795573, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.381836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE62488
+[LOG] SoundI::release                          : Normal_Oiseau2 (000001E03FE5F6F8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DFB94A6BD8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DF96B4CDF8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE602C8 : node = 000001DF96A40EA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE602C8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A40FB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE602C8
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE618B8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DFB94A7598)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DF96B4CA98)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5D028 : node = 000001DF96A3FAA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5D028
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3FBB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folie_OrageDistant_02', format=5, channels=2, frequency=48000, lengthbytes=141312, lengthpcm=758440, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.404599.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5D028
+[LOG] SoundI::release                          : Folie_OrageDistant_03 (000001E09AB75758)
+[LOG] SoundI::release                          :     Folie_OrageDistant_03 (000001DFB94A6F18)
+[LOG] SoundI::release                          :     Folie_OrageDistant_03 (000001DF96B4CC48)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E09BACBE08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E09BACBE08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DF96B4CDF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DF96B4CDF8
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE61048 : node = 000001DF96A3F460
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE61048
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3F570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE61048
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE602C8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DFB94A78D8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DF96B4CDF8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5F8A8 : node = 000001DF96A41B20
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5F8A8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A41C30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Normal_Oiseau2', format=5, channels=2, frequency=48000, lengthbytes=204864, lengthpcm=795573, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.381836.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5F8A8
+[LOG] SoundI::release                          : Normal_Oiseau2 (000001E03FE62488)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DFB94A7738)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DF96B4C8E8)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5D6E8 : node = 000001DF96A3FD20
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5D6E8
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3FE30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Folie_OrageDistant_01', format=5, channels=2, frequency=48000, lengthbytes=103488, lengthpcm=564653, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.571620.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5D6E8
+[LOG] SoundI::release                          : Folie_OrageDistant_02 (000001E03FE5D028)
+[LOG] SoundI::release                          :     Folie_OrageDistant_02 (000001DFB94A7258)
+[LOG] SoundI::release                          :     Folie_OrageDistant_02 (000001DF96B4CA98)
+[LOG] SystemI::createSound                     : filename = ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001E03FE5D028 : node = 000001DF96A3F6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DFAC3279C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E03FE5D028
+[LOG] SystemI::createSoundInternal             :     Create name='../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 14161664
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 72000
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DF96A3F7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='ReelBruitFond', format=5, channels=2, frequency=48000, lengthbytes=115136, lengthpcm=602920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.003540.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E03FE5D028
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE61048)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DFB94A7598)
+[LOG] SoundI::release                          :     ReelBruitFond (000001DF96B4CC48)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5C2A8)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09B6A7F68)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E095C7BDD8)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5E2B8)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09B6A8C68)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09BACB8F8)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5DBF8)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09B6A7C28)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E095C7B8C8)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5D538)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09B6A8108)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09BACB3E8)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5DF58)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09B6A9148)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E09BACBC58)
+[LOG] SoundI::release                          : Folie_Bougie2 (000001E03FE5D388)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001DF945B5588)
+[LOG] SoundI::release                          :     Folie_Bougie2 (000001E095C7B208)
+[LOG] SoundI::release                          : 510248-EFX_SD_5 (000001E03FE5C968)
+[LOG] SoundI::release                          :     510248-EFX_SD_5 (000001E09B6A7268)
+[LOG] SoundI::release                          :     510248-EFX_SD_5 (000001E03F81BFF8)
+[LOG] SoundI::release                          : ReelBruitFond2 (000001E03FE60CE8)
+[LOG] SoundI::release                          :     ReelBruitFond2 (000001E09B6A9E48)
+[LOG] SoundI::release                          :     ReelBruitFond2 (000001E09BACBE08)
+[LOG] SoundI::release                          : ReelBruitFond (000001E03FE5D028)
+[LOG] SoundI::release                          :     ReelBruitFond (000001E09B7DE0C8)
+[LOG] SoundI::release                          :     ReelBruitFond (000001E097983668)
+[LOG] SoundI::release                          : Folie_VentGlauque (000001E03FE61A68)
+[LOG] SoundI::release                          :     Folie_VentGlauque (000001E09B6A6568)
+[LOG] SoundI::release                          :     Folie_VentGlauque (000001E0959B2388)
+[LOG] SoundI::release                          : Folie_OrageDistant_01 (000001E03FE5D6E8)
+[LOG] SoundI::release                          :     Folie_OrageDistant_01 (000001E095A10338)
+[LOG] SoundI::release                          :     Folie_OrageDistant_01 (000001E0979834B8)
+[LOG] SoundI::release                          : Folie_Rain (000001E03FE5F548)
+[LOG] SoundI::release                          :     Folie_Rain (000001E09B6A78E8)
+[LOG] SoundI::release                          :     Folie_Rain (000001E0959B21D8)
+[LOG] SoundI::release                          : Normal_Oiseau (000001E03FE5F038)
+[LOG] SoundI::release                          :     Normal_Oiseau (000001E09B6A6228)
+[LOG] SoundI::release                          :     Normal_Oiseau (000001E03F81BE48)
+[LOG] SoundI::release                          : Normal_Oiseau2 (000001E03FE5F8A8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DFB94A6BD8)
+[LOG] SoundI::release                          :     Normal_Oiseau2 (000001DF96B4C078)
+[LOG] SoundI::release                          :  (000001E09AD52EE8)
+[LOG] SoundI::release                          :     WoodCrackFloor_01 (000001DFB8F49578)
+[LOG] SoundI::release                          :  (000001E09AD52928)
+[LOG] SoundI::release                          :     WoodCrackFloor_02 (000001DF9E7DE728)
+[LOG] SoundI::release                          :  (000001E09AD538F8)
+[LOG] SoundI::release                          :     WoodCrackFloor_03 (000001DF9E7DE248)
+[LOG] SoundI::release                          :  (000001E09AD51678)
+[LOG] SoundI::release                          :     WoodCrackFloor_04 (000001E09AFE1C08)
+[LOG] SoundI::release                          :  (000001E09AD53BD8)
+[LOG] SoundI::release                          :     WoodCrackFloor_05 (000001DF9E7DE0A8)
+[LOG] SoundI::release                          :  (000001E09AD55E58)
+[LOG] SoundI::release                          :     WoodCrackFloor_06 (000001DF97699328)
+[LOG] SoundI::release                          :  (000001E09AD53EB8)
+[LOG] SoundI::release                          :     WoodCrackFloor_07 (000001E09AFE13E8)
+[LOG] SoundI::release                          :  (000001E09AD53D48)
+[LOG] SoundI::release                          :     WoodCrackFloor_08 (000001DF9E7DEA68)
+[LOG] SoundI::release                          :  (000001E09AD524D8)
+[LOG] SoundI::release                          :     WoodCrackFloor_09 (000001DF9E7DE3E8)
+[LOG] SoundI::release                          :  (000001E09AD555B8)
+[LOG] SoundI::release                          :     WoodCrackFloor_10 (000001DF97699CE8)
+[LOG] SoundI::release                          :  (000001E09AD53788)
+[LOG] SoundI::release                          :     WoodCrackFloor_11 (000001DF97699E88)
+[LOG] SoundI::release                          :  (000001E09AD54BA8)
+[LOG] SoundI::release                          :     WoodCrackFloor_12 (000001DF976994C8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.

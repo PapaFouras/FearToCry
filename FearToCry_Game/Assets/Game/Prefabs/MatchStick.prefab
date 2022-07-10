@@ -1873,6 +1873,13 @@ MonoBehaviour:
   allumette: {fileID: 1550870005930926920}
   allumetteMesh: {fileID: 4101336465445665993}
   fire: {fileID: 1773211858}
+  Braise_Allumette:
+    Guid:
+      Data1: 24872364
+      Data2: 1079214289
+      Data3: 256314265
+      Data4: 1985128234
+    Path: event:/Mecaniques/Allumette_Braise
 --- !u!198 &1773211858
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -6609,6 +6616,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784a7cff621185c449b946e777e5d393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
+  parentGo: {fileID: 0}
+  onEndBurn:
+    m_PersistentCalls:
+      m_Calls: []
+  isBurning: 0
 --- !u!1001 &3759298532246520216
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,9 +6,13 @@ using Valve.VR.InteractionSystem;
 [RequireComponent(typeof(Interactable))]
 public class MatchStickBox : MonoBehaviour
 {
- private void OnAttachedToHand( Hand hand )
+
+	public FMODUnity.EventReference Prendre_Box;
+
+	private void OnAttachedToHand( Hand hand )
 		{
-			hand.GetComponent<HandGOReferences>().matchStickBox = gameObject;
+		FMODUnity.RuntimeManager.PlayOneShot(Prendre_Box, transform.position);
+		hand.GetComponent<HandGOReferences>().matchStickBox = gameObject;
 			hand.otherHand.GetComponent<HandGOReferences>().matchStickBox = gameObject;
 		}
 

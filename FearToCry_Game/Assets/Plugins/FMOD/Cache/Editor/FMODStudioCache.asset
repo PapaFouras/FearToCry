@@ -79,7 +79,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 14164
 --- !u!114 &-7675443435134086699
@@ -214,8 +214,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 10
   Length: 120732
 --- !u!114 &-5876756971208367895
 MonoBehaviour:
@@ -457,8 +457,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 10
   Length: 205897
 --- !u!114 &-2766956278226587916
 MonoBehaviour:
@@ -508,8 +508,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 10
   Length: 176135
 --- !u!114 &-2574766186146473625
 MonoBehaviour:
@@ -670,8 +670,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 10
   Length: 249609
 --- !u!114 &-334233797433650074
 MonoBehaviour:
@@ -742,10 +742,10 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637926606112046630
+  lastModified: 637930596104530785
   FileSizes:
   - Name: Desktop
-    Value: 14233952
+    Value: 14233664
   Exists: 1
 --- !u!114 &-234621082219317977
 MonoBehaviour:
@@ -869,7 +869,7 @@ MonoBehaviour:
   - {fileID: -328780442328273131}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637926606112076550
+  cacheTime: 637930596104570679
   cacheVersion: 131591
 --- !u!114 &817798183069537466
 MonoBehaviour:
@@ -895,8 +895,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 5.6
   Length: 88609
 --- !u!114 &1254280323199405770
 MonoBehaviour:
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637926606112076550
+  lastModified: 637930596104570679
   FileSizes:
   - Name: Desktop
     Value: 3072
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -328780442328273131}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

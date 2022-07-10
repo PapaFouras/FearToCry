@@ -8,7 +8,7 @@ public class MatchStick : MonoBehaviour
     public Hand hand;
 
     public TeteAllumette teteAllumette;
-    
+
     private void Update() {
         if(hand == null){
             return;
