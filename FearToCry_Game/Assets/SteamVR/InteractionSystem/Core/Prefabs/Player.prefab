@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 496744}
   - component: {fileID: 2083460}
   - component: {fileID: 11476190}
+  - component: {fileID: 284496959}
   m_Layer: 0
   m_Name: FallbackObjects
   m_TagString: MainCamera
@@ -466,6 +467,39 @@ MonoBehaviour:
   speed: 4
   shiftSpeed: 16
   showInstructions: 1
+--- !u!114 &284496959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &114188
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +609,7 @@ GameObject:
   - component: {fileID: 2014920}
   - component: {fileID: 11450526}
   - component: {fileID: 12440092}
-  - component: {fileID: 334586504}
+  - component: {fileID: 284496960}
   m_Layer: 0
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -660,7 +694,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125964}
   m_Enabled: 1
---- !u!114 &334586504
+--- !u!114 &284496960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1121,6 +1155,13 @@ MonoBehaviour:
   prefab: {fileID: 6700013328567059, guid: e60b9658be2a3624682ab04852910f8b, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
+  Prendre_BoiteMedoc:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &2125187558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,6 +1182,13 @@ MonoBehaviour:
   prefab: {fileID: 1550870005930926920, guid: 79ec091f8e6f5b148871dc6a583fe0b2, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
+  Prendre_Allumette:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &8124710602560171331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1406,13 @@ MonoBehaviour:
   prefab: {fileID: 6700013328567059, guid: e60b9658be2a3624682ab04852910f8b, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
+  Prendre_BoiteMedoc:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &2125187557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,6 +1433,13 @@ MonoBehaviour:
   prefab: {fileID: 1550870005930926920, guid: 79ec091f8e6f5b148871dc6a583fe0b2, type: 3}
   hand: {fileID: 0}
   isGrabbing: 0
+  Prendre_Allumette:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1812738542
 MonoBehaviour:
   m_ObjectHideFlags: 0

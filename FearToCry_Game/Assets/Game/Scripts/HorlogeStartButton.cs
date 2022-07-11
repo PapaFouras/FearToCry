@@ -9,9 +9,6 @@ public class HorlogeStartButton : MonoBehaviour
 {
 
     //public GameObject button;
-    public AudioSource soundClick;
-    public AudioSource soundTicTac;
-
     public UnityEvent onPress;
     public UnityEvent onRelease;
     public HorlogeManager manager;

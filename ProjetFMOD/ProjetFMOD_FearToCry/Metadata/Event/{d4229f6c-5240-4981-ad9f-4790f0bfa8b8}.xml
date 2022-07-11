@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d4229f6c-5240-4981-ad9f-4790f0bfa8b8}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Normal_Oiseau</value>
@@ -60,7 +60,14 @@
 			<destination>{085e4656-d61d-4d76-8c20-fd5c6bf16715}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{2bdd2c3b-adcc-4ca7-a16d-f42ef6236da2}" />
+	<object class="EventAutomatableProperties" id="{2bdd2c3b-adcc-4ca7-a16d-f42ef6236da2}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{75b206ca-6f2f-4b95-af92-25c12cd164eb}" />
 	<object class="GroupTrack" id="{1eb381a4-b9dd-44be-89ca-3a5c861f77b4}">
 		<relationship name="modules">
@@ -117,7 +124,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{5b9a8d24-94c7-4e6c-b41c-50ca4abb086d}">
 		<property name="volume">
-			<value>-5</value>
+			<value>-10</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -142,7 +149,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{639f0236-d5cd-4268-bb62-3756d94c78c8}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-5</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -174,7 +181,7 @@
 	<object class="MixerBusEffectChain" id="{7a829de3-1f75-4253-81e7-670292ee9c9e}">
 		<relationship name="effects">
 			<destination>{8c36c4ca-904b-429d-8c04-d2663d7e097b}</destination>
-			<destination>{a919a521-12f3-43e7-b791-4c35d37c5b2c}</destination>
+			<destination>{6d3543a8-c5b3-4254-986b-80d84a0543a1}</destination>
 			<destination>{6d6f7f8a-aa18-4636-b4e0-238896bea7c9}</destination>
 		</relationship>
 	</object>
@@ -193,15 +200,24 @@
 	</object>
 	<object class="MixerBusPanner" id="{0e0dd4c9-169d-43d0-8713-8ee7c4db4f28}" />
 	<object class="MixerBusFader" id="{8c36c4ca-904b-429d-8c04-d2663d7e097b}" />
-	<object class="SpatialiserEffect" id="{a919a521-12f3-43e7-b791-4c35d37c5b2c}">
+	<object class="SpatialiserEffect" id="{6d3543a8-c5b3-4254-986b-80d84a0543a1}">
 		<property name="minimumDistance">
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
+			<value>10</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
 			<value>2</value>
 		</property>
-		<property name="overrideRange">
-			<value>true</value>
+		<property name="stereoToSurroundUserPanMode">
+			<value>0</value>
+		</property>
+		<property name="userStereoSeparation">
+			<value>-180</value>
 		</property>
 	</object>
 	<object class="ThreeEQEffect" id="{6d6f7f8a-aa18-4636-b4e0-238896bea7c9}">

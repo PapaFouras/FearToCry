@@ -18,6 +18,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public bool isGrabbing = false;
 
+        public FMODUnity.EventReference Prendre_Allumette;
 
         private void OnEnable()
         {
@@ -69,6 +70,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 prefabObject.GetComponent<MatchStick>().hand = hand;
                 prefabObject.GetComponent<MatchStick>().teteAllumette.boiteAllumette = hand.GetComponent<HandGOReferences>().matchStickBox;
 
+                FMODUnity.RuntimeManager.PlayOneShot(Prendre_Allumette, transform.position);
             }
             else{
                 hand.DetachObject(hand.currentAttachedObject);

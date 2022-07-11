@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{09d93677-d8f1-4d21-bd95-02bbb1f3e14e}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Folie_CraquementPlancher</value>
@@ -104,8 +104,14 @@
 		<property name="length">
 			<value>0.5</value>
 		</property>
+		<property name="spawnRate">
+			<value>70</value>
+		</property>
+		<property name="minimumScatterDistance">
+			<value>0</value>
+		</property>
 		<property name="maximumScatterDistance">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<relationship name="sound">
 			<destination>{d1057a65-013a-49b9-9ff5-c90c269a3a57}</destination>
@@ -131,6 +137,9 @@
 		</property>
 		<property name="length">
 			<value>3</value>
+		</property>
+		<property name="triggerProbability">
+			<value>49.5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{ebf88285-a88a-4e81-aa99-595fc24423fb}</destination>

@@ -13,6 +13,9 @@ public class TeteAllumette : MonoBehaviour
 
     private bool _isTurnedOn = false;
 
+    public FMODUnity.EventReference Braise_Allumette;
+    FMOD.Studio.EventInstance braise_Allumette;
+
     public bool GetIsTurnedOn(){
         return _isTurnedOn;
     }
@@ -35,6 +38,7 @@ public class TeteAllumette : MonoBehaviour
            gameObject.tag = "Burning";
            allumette.tag = "Burning";
            allumetteMesh.tag = "Burning";
+           // braise_Allumette.start(); TODO : trouver l'endroit pour stop le son 
            fire.Play();
        }
    }
