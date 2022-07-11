@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public SteamVR_Fade fade;
 
     [Header("Player")]
-    public GameObject _player;
+    public Player _player;
 
    
     public enum RoomName{
