@@ -12,7 +12,9 @@ public class PlayFmodSoundAtDistance : MonoBehaviour
     public FMODUnity.EventReference fmodEvent;
     FMOD.Studio.EventInstance fmodEventInstance;
 
-    public const float distanceStartSound = .5f; // 50 cm
+
+    [SerializeField]
+    public const float distanceStartSound = .8f; // 50 cm
     
     private void Awake() {
         handLeft = GameManager.instance._player.hands[0];
