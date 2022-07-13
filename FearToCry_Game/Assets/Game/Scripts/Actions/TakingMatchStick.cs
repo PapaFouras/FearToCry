@@ -59,6 +59,7 @@ namespace Valve.VR.InteractionSystem.Sample
         }
 
 
+
         public void SpawnAndAttachMatchStick()
         {
             Debug.Log("ShouldSpawnMatchStick");

@@ -93,7 +93,7 @@
     {
       "name": "/actions/TakingMedicine/in/TakeMedicine",
       "type": "boolean",
-      "requirement": "suggested"
+      "requirement": "optional"
     },
     {
       "name": "/actions/TakingMatchStick/in/TakeMatchStick",
