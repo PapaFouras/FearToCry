@@ -35,35 +35,35 @@ public class PadlockRing : MonoBehaviour
 
     public void OnDetachFromHand(){
         Debug.Log("Hello");
-        float newRotationY = 0f;
-        float yRot = transform.localEulerAngles.y;
+        float newRotationZ = 0f;
+        float zRot = transform.localEulerAngles.z;
 
         float smallestStep = ((1f/(float)nbDigit)*360);
 
-        int yRotInt = Mathf.RoundToInt(yRot);
+        int zRotInt = Mathf.RoundToInt(zRot);
         int smallestStepInt = Mathf.RoundToInt(smallestStep);
 
         float floorStep,ceilStep;
 
-        int newDigit = (yRotInt / smallestStepInt);
+        int newDigit = (zRotInt / smallestStepInt);
         floorStep = newDigit * smallestStep;
         ceilStep = (newDigit + 1) * smallestStep;
 
         float distanceFloorStep,distanceCeilStep;
-        distanceFloorStep = Mathf.Abs(floorStep - yRot);
-        distanceCeilStep = Mathf.Abs(ceilStep - yRot);
+        distanceFloorStep = Mathf.Abs(floorStep - zRot);
+        distanceCeilStep = Mathf.Abs(ceilStep - zRot);
 
         if(distanceFloorStep < distanceCeilStep){
-            newRotationY = floorStep;
+            newRotationZ = floorStep;
         }
         else{
-            newRotationY = ceilStep;
+            newRotationZ = ceilStep;
             newDigit++;
         }
-        Debug.Log(yRot + " divided by " + smallestStep +" will become " +newRotationY);
+        Debug.Log(zRot + " divided by " + smallestStep +" will become " +newRotationZ);
         currentDigit = newDigit%nbDigit;
         Debug.Log("New digit = " + currentDigit);
 
-        transform.localEulerAngles = new Vector3(0f,newRotationY,0f);
+        transform.localEulerAngles = new Vector3(0f,0f,newRotationZ);
     }
 }

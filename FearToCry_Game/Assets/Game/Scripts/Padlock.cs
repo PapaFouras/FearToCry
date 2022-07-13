@@ -1,33 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class Padlock : MonoBehaviour
 {
     [SerializeField]
     public PadlockRing[] padlockRings;
 
-    private MeshCollider meshCollider;
-
-    private ParticleSystem ps;
+    public UnityEvent onChestOpen;
 
     public int[] digitCode;
     private void Awake() {
-        meshCollider = GetComponent<MeshCollider>();
         digitCode = new int[padlockRings.Length];
-        ps = GetComponent<ParticleSystem>();
+        OnPickUp();
     }
 
     public void OnPickUp(){
-        meshCollider.enabled = false;
         foreach (var ring in padlockRings){
             ring.EnableRingComponents(true);
         }
     }
 
     public void OnDetachFromHand(){
-        meshCollider.enabled = true;
         foreach (var ring in padlockRings){
             ring.EnableRingComponents(false);
         }
@@ -40,7 +35,7 @@ public class Padlock : MonoBehaviour
                 return;
             }
         }
-        ps.Play();
+        onChestOpen?.Invoke();
         Debug.Log("Digit Open !");
     }
     
