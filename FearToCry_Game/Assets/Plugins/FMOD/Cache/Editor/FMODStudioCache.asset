@@ -742,7 +742,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637931534942667446
+  lastModified: 637933314672185656
   FileSizes:
   - Name: Desktop
     Value: 14233664
@@ -869,7 +869,7 @@ MonoBehaviour:
   - {fileID: -328780442328273131}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637931534942752768
+  cacheTime: 637933314672230553
   cacheVersion: 131591
 --- !u!114 &817798183069537466
 MonoBehaviour:
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637931534942752768
+  lastModified: 637933314672230553
   FileSizes:
   - Name: Desktop
     Value: 3074

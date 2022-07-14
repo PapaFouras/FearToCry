@@ -1419,7 +1419,7 @@ MonoBehaviour:
   startPosition: {fileID: 5329161187954201468}
   endPosition: {fileID: 1013536729065366485}
   linearMapping: {fileID: 3300520163648159280}
-  repositionGameObject: 1
+  repositionGameObject: 0
   maintainMomemntum: 1
   momemtumDampenRate: 1
 --- !u!114 &8631958094638756221
