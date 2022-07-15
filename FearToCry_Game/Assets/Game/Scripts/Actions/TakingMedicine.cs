@@ -68,11 +68,11 @@ namespace Valve.VR.InteractionSystem.Sample
                 hand.AttachObject(prefabObject,GrabTypes.Grip,Hand.AttachmentFlags.ParentToHand|Hand.AttachmentFlags.SnapOnAttach| Hand.AttachmentFlags.TurnOffGravity);
                 prefabObject.GetComponent<Medicine>().hand = hand;
 
-                FMODUnity.RuntimeManager.PlayOneShot(Prendre_BoiteMedoc, transform.position);
+                //FMODUnity.RuntimeManager.PlayOneShot(Prendre_BoiteMedoc, transform.position);
 
             }
             else{
-                hand.DetachObject(hand.currentAttachedObject);
+               // hand.DetachObject(hand.currentAttachedObject);
             }
             
 			
