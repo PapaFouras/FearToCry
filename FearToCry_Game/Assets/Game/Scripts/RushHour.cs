@@ -12,7 +12,7 @@ public class RushHour : MonoBehaviour
     
     GrabbableCar[] grabbableCars;
 
-    private void Awake() {
+    private void Start() {
         rushHourCarsPositions = new Vector3[rushHourCars.Length];
         int index = 0;
         foreach(var rushHourCar in rushHourCars ){
