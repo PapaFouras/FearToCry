@@ -17,6 +17,7 @@ public class HorlogeStartButton : MonoBehaviour
     bool isTictac;
     public Material matTictac;
     public Material matNotTictac;
+    public GameObject boitier;
 
     public FMODUnity.EventReference Horloge_TicTac;
     FMOD.Studio.EventInstance horloge_TicTac;
@@ -70,13 +71,13 @@ public class HorlogeStartButton : MonoBehaviour
 
     public void startTicTac()
     {
-        GetComponent<Renderer>().material = matTictac;
         isTictac = true;
         horloge_TicTac.start();
     }
     
     public void stopTicTac()
     {
+        boitier.GetComponent<Renderer>().materials[1] = matNotTictac;
         GetComponent<Renderer>().material = matNotTictac;
         isTictac = false;
         horloge_TicTac.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
