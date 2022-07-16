@@ -72,9 +72,7 @@ public static GameManager instance;
         
         foreach (var hand in _player.GetComponent<Player>().hands)
         {
-            if(hand.currentAttachedObject != null){
-                hand.DetachObject(hand.currentAttachedObject);  
-            }
+            hand.DetachAllObjects();
         };
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();

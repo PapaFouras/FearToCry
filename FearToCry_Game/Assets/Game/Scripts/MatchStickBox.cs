@@ -11,7 +11,7 @@ public class MatchStickBox : MonoBehaviour
 
 	private void OnAttachedToHand( Hand hand )
 		{
-		FMODUnity.RuntimeManager.PlayOneShot(Prendre_Box, transform.position);
+		//FMODUnity.RuntimeManager.PlayOneShot(Prendre_Box, transform.position);
 		hand.GetComponent<HandGOReferences>().matchStickBox = gameObject;
 			hand.otherHand.GetComponent<HandGOReferences>().matchStickBox = gameObject;
 		}
