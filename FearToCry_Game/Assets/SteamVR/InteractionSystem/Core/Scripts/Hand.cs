@@ -591,6 +591,7 @@ namespace Valve.VR.InteractionSystem
             hoverLocked = false;
         }
 
+
         //-------------------------------------------------
         // Detach this GameObject from the attached object stack of this Hand
         //
@@ -694,6 +695,16 @@ namespace Valve.VR.InteractionSystem
                 mainRenderModel.MatchHandToTransform(mainRenderModel.transform);
             if (hoverhighlightRenderModel != null)
                 hoverhighlightRenderModel.MatchHandToTransform(hoverhighlightRenderModel.transform);
+        }
+
+        public void DetachAllObjects()
+        {
+
+            AttachedObject[] currentAttachedObjects = attachedObjects.ToArray();
+            for(int i = 0; i< attachedObjects.Count; i++)
+            {
+                DetachObject(currentAttachedObjects[i].attachedObject);
+            }
         }
 
 

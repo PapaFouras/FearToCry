@@ -13,6 +13,7 @@ public class Bottle : MonoBehaviour
     public GameObject brokenBottlePrefab;
 
     private Hand _hand = null;
+    private bool isBroken = false;
     private void Awake()
     {
         ve = GetComponent<VelocityEstimator>();
@@ -23,7 +24,10 @@ public class Bottle : MonoBehaviour
         Debug.Log("Ca a touché !!! : " + velocity);
         if (velocity >= 1f)
         {
-            BreakBottle();
+            if (!isBroken)
+            {
+                BreakBottle();
+            }
         }
     }
 
@@ -40,10 +44,11 @@ public class Bottle : MonoBehaviour
     }
 
     private void BreakBottle(){
+        isBroken = true;
         Debug.Log("Ca va casser !");
         Hand currentHand = _hand;
 
-        //_hand.DetachObject(gameObject);
+        _hand.DetachObject(gameObject);
         GameObject go = Instantiate(brokenBottlePrefab,currentHand.transform.position,currentHand.transform.rotation);
         gameObject.SetActive(false);
         //currentHand.AttachObject(go,GrabTypes.Scripted);
