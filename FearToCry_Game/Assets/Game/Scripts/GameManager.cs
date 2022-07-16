@@ -53,6 +53,8 @@ public static GameManager instance;
             break;
         }        
     }
+
+
     public void ChangeRoom(Room room){
          if(_currentRoom == null){
              //Set position
@@ -72,9 +74,7 @@ public static GameManager instance;
         
         foreach (var hand in _player.GetComponent<Player>().hands)
         {
-            if(hand.currentAttachedObject != null){
-                hand.DetachObject(hand.currentAttachedObject);  
-            }
+            hand.DetachAllObjects();
         };
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();
@@ -129,5 +129,16 @@ public static GameManager instance;
                 break;
         }
         
+    }
+
+    public void ChangeRoomAfterSmallDelay(int roomNumber)
+    {
+        StartCoroutine(ChangeRoomAfterDelay(roomNumber));
+    }
+
+    private IEnumerator ChangeRoomAfterDelay(int room)
+    {
+        yield return new WaitForSeconds(.2f);
+        ChangeRoom(room);
     }
 }

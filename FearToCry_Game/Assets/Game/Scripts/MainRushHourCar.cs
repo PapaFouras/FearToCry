@@ -7,13 +7,22 @@ public class MainRushHourCar : MonoBehaviour
 {
     ParticleSystem ps;
 
+    public Transform endingTransform;
+    public GameObject bottleGO;
+
     private void Awake() {
         ps = GetComponent<ParticleSystem>();
     }
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "endingCube"){
-            Debug.Log("Main Car has arrived ! ");
+
+    private void Update()
+    {
+        if(Vector3.Distance(endingTransform.position,transform.position) < .1f)
+        {
             ps.Play();
+            
+            bottleGO.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
+
 }
