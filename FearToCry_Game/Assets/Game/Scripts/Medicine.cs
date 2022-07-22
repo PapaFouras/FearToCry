@@ -31,6 +31,11 @@ public class Medicine : MonoBehaviour
 
     }
 
+    public void OnPickUp(){
+        Debug.Log("Medicine Picked Up");
+        StopAllCoroutines();
+    }
+
     public void OnDetached(){
 
         Vector3 angularVelocity = Vector3.zero;
