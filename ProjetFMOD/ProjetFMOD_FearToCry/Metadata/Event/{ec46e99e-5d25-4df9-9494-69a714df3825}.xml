@@ -133,7 +133,7 @@
 			<value>0.75</value>
 		</property>
 		<property name="length">
-			<value>4.2199999999999998</value>
+			<value>4.25</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{c31e2f0a-4a01-49c1-8809-deb97f58644e}</destination>
@@ -252,7 +252,7 @@
 	<object class="MixerBusFader" id="{544d1f70-c186-49d2-883f-2ff1138fe7e8}" />
 	<object class="AutomationPoint" id="{93dd28d6-30d7-4bff-9cfb-dcf6c28b4f9b}">
 		<property name="position">
-			<value>0.75</value>
+			<value>0.78000000000000025</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -263,7 +263,7 @@
 	</object>
 	<object class="AutomationPoint" id="{f9e802c0-a36f-403a-840c-4bb4ee8b1640}">
 		<property name="position">
-			<value>4.9700000000000015</value>
+			<value>5.0000000000000018</value>
 		</property>
 		<property name="value">
 			<value>0</value>
