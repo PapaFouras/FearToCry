@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{0e196101-4e52-42b3-8595-d25e01235d4d}">
 		<property name="color">
-			<value>Red</value>
+			<value>Blue</value>
 		</property>
 		<property name="name">
 			<value>Allumette_Allumage</value>
@@ -59,7 +59,14 @@
 			<destination>{085e4656-d61d-4d76-8c20-fd5c6bf16715}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{f3040892-49d3-4c35-987e-4c1e990ad180}" />
+	<object class="EventAutomatableProperties" id="{f3040892-49d3-4c35-987e-4c1e990ad180}">
+		<property name="maxVoices">
+			<value>2</value>
+		</property>
+		<property name="voiceStealing">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{b6cf3fd3-fff0-4dd4-b180-896fa302aaa3}" />
 	<object class="GroupTrack" id="{0116943b-c7f5-4db7-beda-d97877391b8e}">
 		<relationship name="modules">

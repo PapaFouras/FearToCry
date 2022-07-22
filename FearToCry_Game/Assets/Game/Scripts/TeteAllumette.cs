@@ -16,6 +16,8 @@ public class TeteAllumette : MonoBehaviour
     public FMODUnity.EventReference Braise_Allumette;
     FMOD.Studio.EventInstance braise_Allumette;
 
+    public FMODUnity.EventReference Allumette_Scratch;
+
     public bool GetIsTurnedOn(){
         return _isTurnedOn;
     }
@@ -27,7 +29,8 @@ public class TeteAllumette : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
        if(other.tag == "scraper"){
            currentScraperColliderHit++;
-           StartCoroutine(StartTimerAllumette());
+            FMODUnity.RuntimeManager.PlayOneShot(Allumette_Scratch, transform.position);
+            StartCoroutine(StartTimerAllumette());
            Debug.Log("allumette 1 OK");
 
        }
