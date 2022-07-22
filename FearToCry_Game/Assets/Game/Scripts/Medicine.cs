@@ -5,9 +5,13 @@ using Valve.VR.InteractionSystem;
 
 public class Medicine : MonoBehaviour
 {
+
+    public FMODUnity.EventReference MedocManger;
+
     public Hand hand;
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.name == "HeadCollider"){
+            FMODUnity.RuntimeManager.PlayOneShot(MedocManger, transform.position);
             OnDetached();
             GameManager.instance.ChangeRoom(1);
             

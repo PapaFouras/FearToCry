@@ -50,4 +50,10 @@ public class TeteAllumette : MonoBehaviour
        yield return new WaitForSeconds(.6f);
        currentScraperColliderHit = 0;
    }
+
+    private void OnDestroy()
+    {
+        braise_Allumette.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
 }
