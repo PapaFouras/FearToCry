@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XylophoneManager : MonoBehaviour
 {
-    public string code = "ihgf";
+    public string code = "1234";
     public string currentCode ="";
 
    public ParticleSystem ps;

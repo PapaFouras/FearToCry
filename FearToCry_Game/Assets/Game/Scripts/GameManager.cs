@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     [Header("Player")]
     public Player _player;
 
-   
+    public FMODUnity.EventReference Transition_IntoFolie;
+
     public enum RoomName{
         Room1,
         Room2,
@@ -144,7 +145,8 @@ public static GameManager instance;
              case 1: 
                 ChangeRoom(_room1);
                 break;
-            case 2: 
+            case 2:
+                FMODUnity.RuntimeManager.PlayOneShot(Transition_IntoFolie, transform.position);
                 ChangeRoom(_room2);
                 break;
             case 3: 

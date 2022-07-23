@@ -12,6 +12,9 @@ public class Bottle : MonoBehaviour
 
     public GameObject brokenBottlePrefab;
 
+    public FMODUnity.EventReference Transition_BouteilleBrisee;
+    public GameObject PlayerPosSon;
+
     private Hand _hand = null;
     private bool isBroken = false;
     private void Awake()
@@ -26,6 +29,7 @@ public class Bottle : MonoBehaviour
         {
             if (!isBroken)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(Transition_BouteilleBrisee, PlayerPosSon.transform.position);
                 BreakBottle();
             }
         }
