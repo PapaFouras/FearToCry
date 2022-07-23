@@ -70,19 +70,25 @@ public static GameManager instance;
             return;
         }
 
-        
-        
-        foreach (var hand in _player.GetComponent<Player>().hands)
+        List<Hand.AttachedObject>[] attachedGameObjects = new List<Hand.AttachedObject>[_player.GetComponent<Player>().hands.Length];
+        for(int j = 0; j< _player.GetComponent<Player>().hands.Length; j++)
         {
-            hand.DetachAllObjects();
-        };
+            Debug.Log(attachedGameObjects[j] == null);
+            attachedGameObjects[j] = new List<Hand.AttachedObject>();
+            for(int l = 0; l< _player.GetComponent<Player>().hands[j].AttachedObjects.Count; l++)
+            {
+                attachedGameObjects[j].Add(_player.GetComponent<Player>().hands[j].AttachedObjects[l]);
+            }
+        }
+
+        
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();
         for(int i = 0; i<objectsOfNextRoom.Count; i++){
-            objectsOfNextRoom[i].transform.localPosition = objectsOfCurrentRoom[i].transform.localPosition;
+            objectsOfNextRoom[i].transform.position = room.transform.position +  (objectsOfCurrentRoom[i].transform.position - _currentRoom.transform.position);
             objectsOfNextRoom[i].transform.rotation = objectsOfCurrentRoom[i].transform.rotation;
 
-            if(objectsOfNextRoom[i].transform.localPosition.y < -1 ){
+            if(objectsOfNextRoom[i].transform.position.y < -1 ){
                 objectsOfNextRoom[i].transform.localPosition += new Vector3(0,1,0);
             }
             if(objectsOfNextRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb1)){
@@ -99,8 +105,27 @@ public static GameManager instance;
 
         }
         StartCoroutine(FadeOutFadeIn(.2f,.4F,1.5f,()=>{
-             _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
+            foreach (var hand in _player.GetComponent<Player>().hands)
+            {
+                hand.DetachAllObjects();
+            }
+            _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
             _currentRoom = room;
+            for(int j = 0; j< _player.GetComponent<Player>().hands.Length; j++)
+            {
+                foreach(var attachedObject in attachedGameObjects[j])
+                {
+                    for (int k = 0; k < objectsOfCurrentRoom.Count; k++)
+                    {
+                        if (attachedObject.attachedObject == objectsOfCurrentRoom[k])
+                        {
+                            _player.GetComponent<Player>().hands[j].AttachObject(objectsOfNextRoom[k], GrabTypes.Pinch);
+                        }
+                    }
+                    
+                }
+                
+            }
         }));
         
     }
