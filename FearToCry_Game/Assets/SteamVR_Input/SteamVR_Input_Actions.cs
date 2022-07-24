@@ -63,6 +63,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_takingMatchStick_TakeMatchStick;
         
+        private static SteamVR_Action_Boolean p_doingTuto_Tuto;
+        
         public static SteamVR_Action_Boolean default_InteractUI
         {
             get
@@ -247,6 +249,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean doingTuto_Tuto
+        {
+            get
+            {
+                return SteamVR_Actions.p_doingTuto_Tuto.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
         private static void InitializeActionArrays()
         {
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
@@ -272,7 +282,8 @@ namespace Valve.VR
                     SteamVR_Actions.teleporting_Teleport,
                     SteamVR_Actions.climbing_Climb,
                     SteamVR_Actions.takingMedicine_TakeMedicine,
-                    SteamVR_Actions.takingMatchStick_TakeMatchStick};
+                    SteamVR_Actions.takingMatchStick_TakeMatchStick,
+                    SteamVR_Actions.doingTuto_Tuto};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_Teleport,
@@ -295,7 +306,8 @@ namespace Valve.VR
                     SteamVR_Actions.teleporting_Teleport,
                     SteamVR_Actions.climbing_Climb,
                     SteamVR_Actions.takingMedicine_TakeMedicine,
-                    SteamVR_Actions.takingMatchStick_TakeMatchStick};
+                    SteamVR_Actions.takingMatchStick_TakeMatchStick,
+                    SteamVR_Actions.doingTuto_Tuto};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[] {
                     SteamVR_Actions.default_Haptic};
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[] {
@@ -317,7 +329,8 @@ namespace Valve.VR
                     SteamVR_Actions.teleporting_Teleport,
                     SteamVR_Actions.climbing_Climb,
                     SteamVR_Actions.takingMedicine_TakeMedicine,
-                    SteamVR_Actions.takingMatchStick_TakeMatchStick};
+                    SteamVR_Actions.takingMatchStick_TakeMatchStick,
+                    SteamVR_Actions.doingTuto_Tuto};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[] {
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.buggy_Throttle};
@@ -346,7 +359,8 @@ namespace Valve.VR
                     SteamVR_Actions.teleporting_Teleport,
                     SteamVR_Actions.climbing_Climb,
                     SteamVR_Actions.takingMedicine_TakeMedicine,
-                    SteamVR_Actions.takingMatchStick_TakeMatchStick};
+                    SteamVR_Actions.takingMatchStick_TakeMatchStick,
+                    SteamVR_Actions.doingTuto_Tuto};
         }
         
         private static void PreInitActions()
@@ -374,6 +388,7 @@ namespace Valve.VR
             SteamVR_Actions.p_climbing_Climb = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/Climbing/in/Climb")));
             SteamVR_Actions.p_takingMedicine_TakeMedicine = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/TakingMedicine/in/TakeMedicine")));
             SteamVR_Actions.p_takingMatchStick_TakeMatchStick = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/TakingMatchStick/in/TakeMatchStick")));
+            SteamVR_Actions.p_doingTuto_Tuto = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/DoingTuto/in/Tuto")));
         }
     }
 }

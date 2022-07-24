@@ -1880,6 +1880,13 @@ MonoBehaviour:
       Data3: 256314265
       Data4: 1985128234
     Path: event:/Mecaniques/Allumette_Braise
+  Allumette_Scratch:
+    Guid:
+      Data1: 236544257
+      Data2: 1119047250
+      Data3: 1590859141
+      Data4: 1297949441
+    Path: event:/Mecaniques/Allumette_Allumage
 --- !u!198 &1773211858
 ParticleSystem:
   m_ObjectHideFlags: 0

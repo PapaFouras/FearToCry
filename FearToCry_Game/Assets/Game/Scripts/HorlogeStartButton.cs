@@ -73,6 +73,7 @@ public class HorlogeStartButton : MonoBehaviour
     {
         isTictac = true;
         horloge_TicTac.start();
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(horloge_TicTac, GetComponent<Transform>(), GetComponent<Rigidbody>());
     }
     
     public void stopTicTac()

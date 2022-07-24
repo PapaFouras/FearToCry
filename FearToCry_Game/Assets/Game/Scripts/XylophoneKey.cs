@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class XylophoneKey : MonoBehaviour
 {
-    public string note;
+    public int note;
     private ParticleSystem ps;
 
     [SerializeField]
     private XylophoneManager xylophoneManager;
+
+    [SerializeField]
+    public FMODUnity.EventReference XyloNote;
+    FMOD.Studio.EventInstance xyloNote;
 
     private bool canBePLayed = true;
     private void Awake()
@@ -28,7 +32,11 @@ public class XylophoneKey : MonoBehaviour
 
                 StartCoroutine(TimeBeforeCanBeReplayed());
                 ps.Play();
-                xylophoneManager.AddNote(note);
+                xyloNote.setParameterByName("Notes_Xylo", note);
+                xyloNote.start();
+                // parameter note
+                // joue le son
+                xylophoneManager.AddNote(note.ToString());
             }
             
         }

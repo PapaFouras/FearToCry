@@ -33,6 +33,8 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_TakingMatchStick p_TakingMatchStick;
         
+        private static SteamVR_Input_ActionSet_DoingTuto p_DoingTuto;
+        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -97,6 +99,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Input_ActionSet_DoingTuto DoingTuto
+        {
+            get
+            {
+                return SteamVR_Actions.p_DoingTuto.GetCopy<SteamVR_Input_ActionSet_DoingTuto>();
+            }
+        }
+        
         private static void StartPreInitActionSets()
         {
             SteamVR_Actions.p__default = ((SteamVR_Input_ActionSet_default)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_default>("/actions/default")));
@@ -107,6 +117,7 @@ namespace Valve.VR
             SteamVR_Actions.p_Climbing = ((SteamVR_Input_ActionSet_Climbing)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_Climbing>("/actions/Climbing")));
             SteamVR_Actions.p_TakingMedicine = ((SteamVR_Input_ActionSet_TakingMedicine)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_TakingMedicine>("/actions/TakingMedicine")));
             SteamVR_Actions.p_TakingMatchStick = ((SteamVR_Input_ActionSet_TakingMatchStick)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_TakingMatchStick>("/actions/TakingMatchStick")));
+            SteamVR_Actions.p_DoingTuto = ((SteamVR_Input_ActionSet_DoingTuto)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_DoingTuto>("/actions/DoingTuto")));
             Valve.VR.SteamVR_Input.actionSets = new Valve.VR.SteamVR_ActionSet[] {
                     SteamVR_Actions._default,
                     SteamVR_Actions.platformer,
@@ -115,7 +126,8 @@ namespace Valve.VR
                     SteamVR_Actions.Teleporting,
                     SteamVR_Actions.Climbing,
                     SteamVR_Actions.TakingMedicine,
-                    SteamVR_Actions.TakingMatchStick};
+                    SteamVR_Actions.TakingMatchStick,
+                    SteamVR_Actions.DoingTuto};
         }
     }
 }

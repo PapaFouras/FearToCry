@@ -91,8 +91,12 @@ public class DistanceGrabHand : MonoBehaviour
             // Uses sphere cast to find an object to grab
             // If an object found and it is distance grabbable
             if (Physics.SphereCast(pointer.position, searchSphereRadius, pointer.forward, out hit, maxGrabDistance, grabbableObjectsMask) &&
-                    hit.collider.GetComponent<DistanceGrabbableObject>().isDistGrabbable)
+                    hit.collider.TryGetComponent<DistanceGrabbableObject>(out DistanceGrabbableObject distanceGrabbableObject))
             {
+                if (!distanceGrabbableObject.isDistGrabbable)
+                {
+                    return;
+                }
                 grabbableObject = hit.collider.gameObject;
                 GrabTypes startingGrabType = hand.GetGrabStarting();
 
