@@ -308,6 +308,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4255840093172245942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestUnity/TestParaPitch
+  m_EditorClassIdentifier: 
+  Name: TestParaPitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3888270414
+    data2: 970459909
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4097466575335346309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,30 +551,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 10
   Length: 176135
---- !u!114 &-2726802336891700256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TestUnity/TestParaPitch
-  m_EditorClassIdentifier: 
-  Name: TestParaPitch
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3888270414
-    data2: 970459909
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-2574766186146473625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,33 +691,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-597862992437550287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: 
-  Guid:
-    Data1: -47268870
-    Data2: 1151572419
-    Data3: 718909363
-    Data4: 767042173
-  Banks:
-  - {fileID: 4491001943805361417}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 8242
 --- !u!114 &-554011195238207972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,6 +719,35 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 10
   Length: 249609
+--- !u!114 &-378433053546387072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: -47268870
+    Data2: 1151572419
+    Data3: 718909363
+    Data4: 767042173
+  Banks:
+  - {fileID: 4491001943805361417}
+  - {fileID: 4491001943805361417}
+  - {fileID: 4491001943805361417}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8242
 --- !u!114 &-334233797433650074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,7 +818,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637931312114033279
+  lastModified: 637942102981754158
   FileSizes:
   - Name: Desktop
     Value: 14233664
@@ -941,16 +943,16 @@ MonoBehaviour:
   - {fileID: -2732645664448928993}
   - {fileID: -7715566376177383205}
   - {fileID: -2809417674757468661}
-  - {fileID: -597862992437550287}
   - {fileID: 3596337062932384046}
   - {fileID: 6494310087120328621}
+  - {fileID: -378433053546387072}
   EditorParameters: []
   MasterBanks:
   - {fileID: -328780442328273131}
   - {fileID: 4491001943805361417}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637941067665961917
+  cacheTime: 637942137209182614
   cacheVersion: 131591
 --- !u!114 &817798183069537466
 MonoBehaviour:
@@ -1112,7 +1114,6 @@ MonoBehaviour:
     Data4: 767042173
   Banks:
   - {fileID: 4491001943805361417}
-  - {fileID: 4491001943805361417}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1145,7 +1146,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -2726802336891700256}
+  - {fileID: -4255840093172245942}
   MinDistance: 1
   MaxDistance: 1
   Length: 8810
@@ -1191,7 +1192,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637941067665532984
+  lastModified: 637942137209142600
   FileSizes:
   - Name: Desktop
     Value: 15339168
@@ -1381,7 +1382,6 @@ MonoBehaviour:
   Banks:
   - {fileID: 4491001943805361417}
   - {fileID: 4491001943805361417}
-  - {fileID: 4491001943805361417}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1404,7 +1404,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637931312114073049
+  lastModified: 637942102981794169
   FileSizes:
   - Name: Desktop
     Value: 3074

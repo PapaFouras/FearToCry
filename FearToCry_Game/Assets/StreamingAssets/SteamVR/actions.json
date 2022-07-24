@@ -98,6 +98,10 @@
     {
       "name": "/actions/TakingMatchStick/in/TakeMatchStick",
       "type": "boolean"
+    },
+    {
+      "name": "/actions/DoingTuto/in/Tuto",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -131,6 +135,10 @@
     },
     {
       "name": "/actions/TakingMatchStick",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/DoingTuto",
       "usage": "single"
     }
   ],
