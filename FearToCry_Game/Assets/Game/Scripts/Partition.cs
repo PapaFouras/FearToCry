@@ -5,6 +5,7 @@ using UnityEngine;
 public class Partition : MonoBehaviour
 {
     public GameObject notes;
+    public Renderer dissolvePartition;
     public List<Material> matList = new List<Material>();
     private int currentNote = 0;
 
@@ -22,9 +23,32 @@ public class Partition : MonoBehaviour
 
     public void NotifyBurnItem()
     {
-        Debug.Log("New Note");
-        currentNote = currentNote + 1;
-        notes.GetComponent<Renderer>().material = matList[currentNote];
+        StartCoroutine(DissolveAndDisplay());
+       
+    }
+
+    IEnumerator DissolveAndDisplay()
+    {
+        float timeFromStart = 0;
+        
+        while(timeFromStart < .5f)
+        {
+            timeFromStart += Time.deltaTime;
+            dissolvePartition.material.SetFloat("_Dissolve", timeFromStart*2);
+            yield return new WaitForEndOfFrame();
+        }
+        timeFromStart = 0;
+        currentNote++;
+        if (currentNote < matList.Count)
+        {
+            notes.GetComponent<Renderer>().material = matList[currentNote];
+        }
+        while (timeFromStart < .5f)
+        {
+            timeFromStart += Time.deltaTime;
+            dissolvePartition.material.SetFloat("_Dissolve",1- (timeFromStart * 2));
+            yield return new WaitForEndOfFrame();
+        }
     }
 
 }
