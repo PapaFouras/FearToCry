@@ -14,9 +14,14 @@ public class TeteAllumette : MonoBehaviour
     private bool _isTurnedOn = false;
 
     public FMODUnity.EventReference Braise_Allumette;
-    FMOD.Studio.EventInstance braise_Allumette;
+    public FMOD.Studio.EventInstance braise_Allumette;
 
     public FMODUnity.EventReference Allumette_Scratch;
+
+    private void Awake()
+    {
+        braise_Allumette = FMODUnity.RuntimeManager.CreateInstance(Braise_Allumette);
+    }
 
     public bool GetIsTurnedOn(){
         return _isTurnedOn;
@@ -29,7 +34,7 @@ public class TeteAllumette : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
        if(other.tag == "scraper"){
            currentScraperColliderHit++;
-            FMODUnity.RuntimeManager.PlayOneShot(Allumette_Scratch, transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot(Allumette_Scratch, transform.position);
             StartCoroutine(StartTimerAllumette());
            Debug.Log("allumette 1 OK");
 
@@ -41,7 +46,7 @@ public class TeteAllumette : MonoBehaviour
            gameObject.tag = "Burning";
            allumette.tag = "Burning";
            allumetteMesh.tag = "Burning";
-           // braise_Allumette.start(); TODO : trouver l'endroit pour stop le son 
+           braise_Allumette.start(); //TODO : trouver l'endroit pour stop le son 
            fire.Play();
        }
    }

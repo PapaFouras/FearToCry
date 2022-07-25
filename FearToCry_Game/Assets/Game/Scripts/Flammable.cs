@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Valve.VR.InteractionSystem;
 
 public class Flammable : MonoBehaviour
 {
     public ParticleSystem ps;
     public GameObject parentGo;
 
+    public UnityEvent onStartBurn;
     public UnityEvent onEndBurn;
 
-    private float burnDuration = 5f;
-    
+    private float burnDuration = 3f;
     [HideInInspector]
     public bool isBurning = false;
     private void Awake() {
@@ -27,6 +28,7 @@ public class Flammable : MonoBehaviour
         }
         ps.Play();
         isBurning = true;
+        onStartBurn?.Invoke();
         StartCoroutine(EndBurn());
 
     }
@@ -34,18 +36,41 @@ public class Flammable : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         Debug.Log(gameObject.name + " is TAGGING:: " + other.gameObject.tag);
         if(other.gameObject.CompareTag("Burning")){
-            StartBurning();
+            if (!isBurning)
+            {
+                StartBurning();
+            }
         }
     }
 
     private IEnumerator EndBurn(){
         yield return new WaitForSeconds(burnDuration);
-        if(parentGo != null){
+        if (parentGo != null)
+        {
             parentGo.SetActive(false);
         }
-        else{
+        else 
+        { 
+            bool isAttached = false;
+            int handIndex = 0;
+            for(int i = 0;i< Player.instance.hands.Length; i++)
+            {
+                for(int j = 0; j< Player.instance.hands[i].AttachedObjects.Count; j++)
+                {
+                    if(Player.instance.hands[i].AttachedObjects[j].attachedObject == this.gameObject)
+                    {
+                        isAttached = true;
+                    }
+                }
+            }
+            if (isAttached)
+            {
+                Player.instance.hands[handIndex].DetachObject(gameObject);
+            }
             gameObject.SetActive(false);
         }
         onEndBurn?.Invoke();
     }
+
+
 }
