@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5c0a6a47-2269-4949-9f14-b8a279f20d18}">
+		<property name="assetPath">
+			<value>322048-Ghostly_female_voice_whispering_and_saying_-ghost_whispering-1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>27.036734693877552</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8e57cb3d-2816-4f9e-94af-f76a6e92a9d9}</destination>
+		</relationship>
+	</object>
+</objects>
