@@ -282,13 +282,17 @@ namespace Valve.VR.InteractionSystem
 
                 driving = false;
                 grabbedWithType = GrabTypes.None;
+				Debug.Log("transform x rotation before : " + transform.localEulerAngles.x);
+				Debug.Log("linear rotation before : " + linearMapping.value);
+
 				onDrivingEnd?.Invoke();
-				
+				Debug.Log("transform x rotation after : " + transform.localEulerAngles.x);
+				Debug.Log("linear rotation after : " + linearMapping.value);
 
 
-            }
+			}
 
-            if ( driving && isGrabEnding == false && hand.hoveringInteractable == this.interactable )
+			if ( driving && isGrabEnding == false && hand.hoveringInteractable == this.interactable )
 			{
 				ComputeAngle( hand );
 				UpdateAll();
