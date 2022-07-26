@@ -16,7 +16,7 @@ public class PadlockRing : MonoBehaviour
     private int unlockDigit = 0;
 
     [SerializeField]
-    private int nbDigit = 2;
+    private int nbDigit = 26;
     private void Awake() {
         interactable = GetComponent<Interactable>();
         meshCollider = GetComponent<MeshCollider>();  
@@ -34,24 +34,24 @@ public class PadlockRing : MonoBehaviour
     }
 
     public void OnDetachFromHand(){
-        Debug.Log("Hello");
+        Debug.Log("Hello rotation x = " + transform.localEulerAngles.x);
         float newRotationX = 0f;
-        float xRot = transform.localEulerAngles.x;
+        
+        float xRot = GetCircularLinearValue();
 
-        float smallestStep = ((1f/(float)nbDigit)*360);
 
-        int xRotInt = Mathf.RoundToInt(xRot);
-        int smallestStepInt = Mathf.RoundToInt(smallestStep);
+        float smallestStep = (1f/(float)nbDigit);
+
 
         float floorStep,ceilStep;
 
-        int newDigit = (xRotInt / smallestStepInt);
-        floorStep = newDigit * smallestStep;
-        ceilStep = (newDigit + 1) * smallestStep;
+        int newDigit = Mathf.RoundToInt(xRot / smallestStep);
+        floorStep = newDigit * (smallestStep*360);
+        ceilStep = (newDigit + 1) * (smallestStep * 360);
 
         float distanceFloorStep,distanceCeilStep;
-        distanceFloorStep = Mathf.Abs(floorStep - xRot);
-        distanceCeilStep = Mathf.Abs(ceilStep - xRot);
+        distanceFloorStep = Mathf.Abs(floorStep - xRot * 360);
+        distanceCeilStep = Mathf.Abs(ceilStep - xRot * 360);
 
         if(distanceFloorStep < distanceCeilStep){
             newRotationX = floorStep;
@@ -60,10 +60,18 @@ public class PadlockRing : MonoBehaviour
             newRotationX = ceilStep;
             newDigit++;
         }
-        Debug.Log(xRot + " divided by " + smallestStep +" will become " +newRotationX);
+        //newRotationX = (newRotationX < 0) ? newRotationX + 180 : newRotationX;
+        Debug.Log(xRot + " divided by " + smallestStep +" will become " + newRotationX);
         currentDigit = newDigit%nbDigit;
         Debug.Log("New digit = " + currentDigit);
 
         transform.localEulerAngles = new Vector3(newRotationX, 0f,0f);
+        GetComponent<LinearMapping>().value = newRotationX / 360f;
+
+    }
+    public float GetCircularLinearValue()
+    {
+
+        return GetComponent<LinearMapping>().value;
     }
 }
