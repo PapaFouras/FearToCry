@@ -7,7 +7,6 @@ using Valve.VR.InteractionSystem;
 
 public class Flammable : MonoBehaviour
 {
-    public ParticleSystem ps;
     public GameObject parentGo;
 
     public UnityEvent onStartBurn;
@@ -16,17 +15,12 @@ public class Flammable : MonoBehaviour
     private float burnDuration = 3f;
     [HideInInspector]
     public bool isBurning = false;
-    private void Awake() {
-        if(TryGetComponent<ParticleSystem>(out ParticleSystem ps1)){
-            ps = ps1;
-        }
-    }
+
     public void StartBurning(){
         gameObject.tag = "Burning";
         if(parentGo != null){
             parentGo.tag = "Burning";
         }
-        ps.Play();
         isBurning = true;
         onStartBurn?.Invoke();
         StartCoroutine(EndBurn());

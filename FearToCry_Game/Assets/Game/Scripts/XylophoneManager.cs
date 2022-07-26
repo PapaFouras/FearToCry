@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class XylophoneManager : MonoBehaviour
 {
     public string code = "1234";
     public string currentCode ="";
+    public UnityEvent onMusicPlayed;
 
-   public ParticleSystem ps;
    public void AddNote(string note){
         currentCode += note;
         Debug.Log("currentcode length : " + currentCode.Length);
@@ -22,7 +23,7 @@ public class XylophoneManager : MonoBehaviour
 
    public void CheckCode(){
         if(currentCode == code ){
-            ps.Play();
+            onMusicPlayed?.Invoke();
         }
    }
 }

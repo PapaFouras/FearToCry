@@ -26,7 +26,7 @@ public class XylophoneKey : MonoBehaviour
         Debug.Log("Gameobject colliding : " + other.gameObject.name);
         Debug.Log("Gameobject tag colliding : " + other.gameObject.tag);
          if(other.gameObject.CompareTag("XylophoneStick")  && canBePLayed){
-            if(Vector2.Distance(other.gameObject.GetComponent<XylophoneStick>().sphereCenter.transform.position,other.GetContact(0).point) < other.gameObject.GetComponent<XylophoneStick>().sphereCollider.radius * 1.05f){
+            if(Vector2.Distance(other.gameObject.GetComponent<XylophoneStick>().sphereCenter.transform.position,other.GetContact(0).point) < other.gameObject.GetComponent<XylophoneStick>().sphereCollider.radius * 1.001f){
                 Debug.Log("should play note: "+note);
                canBePLayed = false;
 

@@ -146,7 +146,7 @@ public static GameManager instance;
                 ChangeRoom(_room1);
                 break;
             case 2:
-                FMODUnity.RuntimeManager.PlayOneShot(Transition_IntoFolie, transform.position);
+                //FMODUnity.RuntimeManager.PlayOneShot(Transition_IntoFolie, transform.position);
                 ChangeRoom(_room2);
                 break;
             case 3: 

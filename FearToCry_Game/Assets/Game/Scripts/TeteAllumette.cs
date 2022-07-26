@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Valve.VR.InteractionSystem;
 public class TeteAllumette : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class TeteAllumette : MonoBehaviour
     public FMOD.Studio.EventInstance braise_Allumette;
 
     public FMODUnity.EventReference Allumette_Scratch;
+
+    public UnityEvent onStartBurn;
 
     private void Awake()
     {
@@ -43,6 +46,7 @@ public class TeteAllumette : MonoBehaviour
        if (currentScraperColliderHit >1 || other.gameObject.CompareTag("Burning")){
            Debug.Log("L'allumette doit s'allumer !");
            _isTurnedOn = true;
+            onStartBurn?.Invoke();
            gameObject.tag = "Burning";
            allumette.tag = "Burning";
            allumetteMesh.tag = "Burning";
