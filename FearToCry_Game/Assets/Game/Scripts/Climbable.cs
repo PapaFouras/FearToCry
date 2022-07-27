@@ -15,7 +15,7 @@ namespace Valve.VR.InteractionSystem
 	public class Climbable : MonoBehaviour
 	{
         public SteamVR_ActionSet actionSet = SteamVR_Input.GetActionSet("default");
-        public GameObject player;
+        private GameObject player;
 
         private PlayerController playerController;
 
@@ -32,6 +32,7 @@ namespace Valve.VR.InteractionSystem
 		public UnityEvent onDetachedFromHand;
 
         private void Start() {
+            player = Player.instance.gameObject;
             playerController = player.GetComponent<PlayerController>();
         }
 

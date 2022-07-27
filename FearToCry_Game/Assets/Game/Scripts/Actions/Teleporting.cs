@@ -59,14 +59,18 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public void Teleport()
         {
-            if(roomNb%3 == 0){
+            if(roomNb%4 == 0){
                 GameManager.instance.ChangeRoom(GameManager.instance._room1);
             }
-            else if(roomNb%3 == 1){
+            else if(roomNb%4 == 1){
                 GameManager.instance.ChangeRoom(GameManager.instance._room2);
             }
-            else if (roomNb%3 == 2){
+            else if (roomNb%4 == 2){
                 GameManager.instance.ChangeRoom(GameManager.instance._room3);
+            }
+            else if (roomNb % 4 == 3)
+            {
+                GameManager.instance.ChangeRoom(GameManager.instance._room4);
             }
             roomNb ++;
         }

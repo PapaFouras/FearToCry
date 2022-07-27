@@ -18,6 +18,7 @@ public class XylophoneKey : MonoBehaviour
     private void Awake()
     {
         ps = GetComponent<ParticleSystem>();
+        xyloNote = FMODUnity.RuntimeManager.CreateInstance(XyloNote);
     }
 
 
