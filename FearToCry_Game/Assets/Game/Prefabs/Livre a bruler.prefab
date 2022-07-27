@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7465504996310164632}
   - component: {fileID: 4629888225151747387}
   - component: {fileID: 7089089904343263853}
+  - component: {fileID: 6024396050739607412}
   m_Layer: 0
   m_Name: Livre a bruler
   m_TagString: Untagged
@@ -382,6 +383,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isBurning: 0
+--- !u!65 &6024396050739607412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4994534526663260313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.040849686, y: 0.29281324, z: 0.21262294}
+  m_Center: {x: 0, y: 0.13968387, z: -0.102329165}
 --- !u!1001 &4117115132182147162
 PrefabInstance:
   m_ObjectHideFlags: 0
