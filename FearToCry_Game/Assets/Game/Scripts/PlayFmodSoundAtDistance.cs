@@ -43,7 +43,6 @@ public class PlayFmodSoundAtDistance : MonoBehaviour
         if(currentDistance <= distanceStartSound){
             float distanceInPercent =100 - ((currentDistance/distanceStartSound) * 100);
             fmodEventInstance.setParameterByName("VarRangeHand",distanceInPercent);
-            Debug.Log(gameObject.name + " is at distance in percent: " + distanceInPercent);
             return;
         }
     }

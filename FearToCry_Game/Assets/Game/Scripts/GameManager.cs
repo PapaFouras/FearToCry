@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     public FMODUnity.EventReference Transition_IntoFolie;
 
     public enum RoomName{
-        Room1,
-        Room2,
-        Room3
+        Normal,
+        Folie,
+        Hopital
     }
 public static GameManager instance;
 
@@ -40,21 +40,38 @@ public static GameManager instance;
     
     [SerializeField]
     [Header("Starting room")]
-    private RoomName _roomName = RoomName.Room1;
+    private RoomName _roomName = RoomName.Normal;
     [SerializeField]
     private Vector3 _relativeStartingPosition;
     void Start()
     {
         switch(_roomName){
-            case RoomName.Room1 : ChangeRoom(_room1);
+            case RoomName.Normal : ChangeRoom(_room1);
             break;
-            case RoomName.Room2 : ChangeRoom(_room2);
+            case RoomName.Folie : ChangeRoom(_room2);
             break; 
-            case RoomName.Room3 : ChangeRoom(_room3);
+            case RoomName.Hopital : ChangeRoom(_room3);
             break;
         }        
     }
 
+    public RoomName GetCurrentRoomEnum()
+    {
+        if(_currentRoom == _room1)
+        {
+            return RoomName.Normal;
+        }
+        if (_currentRoom == _room2)
+        {
+            return RoomName.Folie;
+        }
+        if (_currentRoom == _room3)
+        {
+            return RoomName.Hopital;
+        }
+        return RoomName.Normal;
+
+    }
 
     public void ChangeRoom(Room room){
          if(_currentRoom == null){

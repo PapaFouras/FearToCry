@@ -28,7 +28,7 @@ public class Bottle : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         float velocity = ve.GetVelocityEstimate().magnitude;
-        Debug.Log("Ca a touché !!! : " + velocity);
+       
         if (velocity >= 1f)
         {
             if (!isBroken)

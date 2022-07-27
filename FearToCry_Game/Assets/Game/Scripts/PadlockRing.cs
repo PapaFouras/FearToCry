@@ -6,7 +6,7 @@ using Valve.VR.InteractionSystem;
 public class PadlockRing : MonoBehaviour
 {
     private Interactable interactable;
-    private MeshCollider meshCollider;
+    private Collider boxCollider;
     private CircularDrive circularDrive;
     private LinearMapping linearMapping;
 
@@ -19,14 +19,14 @@ public class PadlockRing : MonoBehaviour
     private int nbDigit = 26;
     private void Awake() {
         interactable = GetComponent<Interactable>();
-        meshCollider = GetComponent<MeshCollider>();  
+        boxCollider = GetComponent<Collider>();  
         circularDrive = GetComponent<CircularDrive>();
         linearMapping = GetComponent<LinearMapping>();
     }
     public void EnableRingComponents(bool enable = true){
         interactable.enabled = enable;
         circularDrive.enabled = enable;
-        meshCollider.enabled = enable;
+        boxCollider.enabled = enable;
     }
 
     public bool isCurrentDigitTheUnlockDigit(){

@@ -12,6 +12,7 @@ TagManager:
   - endingCube
   - Burning
   - Room
+  - Hand
   layers:
   - Default
   - TransparentFX
