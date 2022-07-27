@@ -33,7 +33,7 @@ public class Bottle : MonoBehaviour
         {
             if (!isBroken)
             {
-                //FMODUnity.RuntimeManager.PlayOneShot(Transition_BouteilleBrisee, PlayerPosSon.transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot(Transition_BouteilleBrisee, PlayerPosSon.transform.position);
                 BreakBottle();
             }
         }
