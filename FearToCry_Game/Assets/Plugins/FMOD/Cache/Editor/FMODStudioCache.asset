@@ -197,6 +197,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 980
+--- !u!114 &-6158064037543533823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: 
+  Guid:
+    Data1: -47268870
+    Data2: 1151572419
+    Data3: 718909363
+    Data4: 767042173
+  Banks:
+  - {fileID: 4061933152553937299}
+  - {fileID: 4061933152553937299}
+  - {fileID: 4061933152553937299}
+  - {fileID: 4061933152553937299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8242
 --- !u!114 &-6046275539128086408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,13 +951,14 @@ MonoBehaviour:
   - {fileID: 6494310087120328621}
   - {fileID: -378433053546387072}
   - {fileID: 1617408649555230343}
+  - {fileID: -6158064037543533823}
   EditorParameters: []
   MasterBanks:
   - {fileID: -328780442328273131}
   - {fileID: 4061933152553937299}
   StringsBanks:
   - {fileID: 6942229746880246844}
-  cacheTime: 637943363797791764
+  cacheTime: 637943376597623941
   cacheVersion: 131591
 --- !u!114 &817798183069537466
 MonoBehaviour:
@@ -1004,7 +1035,6 @@ MonoBehaviour:
     Data3: 718909363
     Data4: 767042173
   Banks:
-  - {fileID: 4061933152553937299}
   - {fileID: 4061933152553937299}
   - {fileID: 4061933152553937299}
   - {fileID: 4061933152553937299}
@@ -1126,7 +1156,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 6701547276120212520}
+  - {fileID: 6113554806311473972}
   MinDistance: 1
   MaxDistance: 1
   Length: 8810
@@ -1145,7 +1175,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637943363797761849
+  lastModified: 637943376597594019
   FileSizes:
   - Name: Desktop
     Value: 16866240
@@ -1341,6 +1371,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 165
+--- !u!114 &6113554806311473972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TestUnity/TestParaPitch
+  m_EditorClassIdentifier: 
+  Name: TestParaPitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3888270414
+    data2: 970459909
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6494310087120328621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,30 +1422,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8242
---- !u!114 &6701547276120212520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TestUnity/TestParaPitch
-  m_EditorClassIdentifier: 
-  Name: TestParaPitch
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3888270414
-    data2: 970459909
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &6942229746880246844
 MonoBehaviour:
   m_ObjectHideFlags: 0
