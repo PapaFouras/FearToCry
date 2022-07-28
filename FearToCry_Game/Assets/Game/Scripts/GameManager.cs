@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public Room _room1;
     public Room _room2;
     public Room _room3;
+    public Room _room4;
+
+    public InitManager tutoInitManager;
+    public Transform startRoom1;
+    public Transform porteRoom1;
 
     private Room _currentRoom;
 
@@ -23,9 +28,10 @@ public class GameManager : MonoBehaviour
     public FMODUnity.EventReference Transition_IntoFolie;
 
     public enum RoomName{
-        Room1,
-        Room2,
-        Room3
+        Normal,
+        Folie,
+        Hopital,
+        Tuto
     }
 public static GameManager instance;
 
@@ -35,30 +41,67 @@ public static GameManager instance;
             return;
         }
         instance = this;
+        _player = Player.instance;
     
     }
     
     [SerializeField]
     [Header("Starting room")]
-    private RoomName _roomName = RoomName.Room1;
+    private RoomName _roomName = RoomName.Normal;
     [SerializeField]
-    private Vector3 _relativeStartingPosition;
+    public Vector3 _relativeStartingPosition;
     void Start()
     {
         switch(_roomName){
-            case RoomName.Room1 : ChangeRoom(_room1);
+            case RoomName.Normal : ChangeRoom(_room1);
             break;
-            case RoomName.Room2 : ChangeRoom(_room2);
+            case RoomName.Folie : ChangeRoom(_room2);
             break; 
-            case RoomName.Room3 : ChangeRoom(_room3);
+            case RoomName.Hopital : ChangeRoom(_room3);
             break;
+            case RoomName.Tuto: ChangeRoom(_room4);
+                break;
         }        
     }
 
+    public RoomName GetCurrentRoomEnum()
+    {
+        if(_currentRoom == _room1)
+        {
+            return RoomName.Normal;
+        }
+        if (_currentRoom == _room2)
+        {
+            return RoomName.Folie;
+        }
+        if (_currentRoom == _room3)
+        {
+            return RoomName.Hopital;
+        }
+        if (_currentRoom == _room4)
+        {
+            return RoomName.Tuto;
+        }
+        return RoomName.Normal;
+
+    }
 
     public void ChangeRoom(Room room){
-         if(_currentRoom == null){
+        if(_currentRoom == _room4)
+        {
+            _relativeStartingPosition = _room1.transform.position - startRoom1.position;
+        }
+        if (room == _room4)
+        {
+            _player.transform.position = tutoInitManager.startPoint.position;
+            _player.transform.LookAt(tutoInitManager.StartLookAt);
+            _player.transform.localEulerAngles = new Vector3(0, _player.transform.localEulerAngles.y, _player.transform.localEulerAngles.z);
+            _currentRoom = _room4;
+            return;
+        }
+        if (_currentRoom == null){
              //Set position
+             
              StartCoroutine(FadeOutFadeIn(.2f,1f,1.5f,()=>{
                 _player.transform.position = room.transform.position + _relativeStartingPosition;
                 _currentRoom = room;    
@@ -71,48 +114,78 @@ public static GameManager instance;
             return;
         }
 
-        List<Hand.AttachedObject>[] attachedGameObjects = new List<Hand.AttachedObject>[_player.GetComponent<Player>().hands.Length];
-        for(int j = 0; j< _player.GetComponent<Player>().hands.Length; j++)
+        List<Hand.AttachedObject>[] attachedGameObjects = new List<Hand.AttachedObject>[_player.hands.Length];
+        for(int j = 0; j< _player.hands.Length; j++)
         {
             Debug.Log(attachedGameObjects[j] == null);
             attachedGameObjects[j] = new List<Hand.AttachedObject>();
-            for(int l = 0; l< _player.GetComponent<Player>().hands[j].AttachedObjects.Count; l++)
+            for(int l = 0; l< _player.hands[j].AttachedObjects.Count; l++)
             {
-                attachedGameObjects[j].Add(_player.GetComponent<Player>().hands[j].AttachedObjects[l]);
+                attachedGameObjects[j].Add(_player.hands[j].AttachedObjects[l]);
             }
         }
-
-        
         List<GameObject> objectsOfCurrentRoom = _currentRoom.GetObjectsInRoom();
         List<GameObject> objectsOfNextRoom = room.GetObjectsInRoom();
-        for(int i = 0; i<objectsOfNextRoom.Count; i++){
-            objectsOfNextRoom[i].transform.position = room.transform.position +  (objectsOfCurrentRoom[i].transform.position - _currentRoom.transform.position);
-            objectsOfNextRoom[i].transform.rotation = objectsOfCurrentRoom[i].transform.rotation;
+        if (_currentRoom != _room4)
+        {
+            for (int i = 0; i < objectsOfNextRoom.Count; i++)
+            {
+                objectsOfNextRoom[i].transform.position = room.transform.position + (objectsOfCurrentRoom[i].transform.position - _currentRoom.transform.position);
+                objectsOfNextRoom[i].transform.rotation = objectsOfCurrentRoom[i].transform.rotation;
 
-            if(objectsOfNextRoom[i].transform.position.y < -1 ){
-                objectsOfNextRoom[i].transform.localPosition += new Vector3(0,1,0);
-            }
-            if(objectsOfNextRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb1)){
-                 if(objectsOfCurrentRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb2)){
-                    rb1.velocity = rb2.velocity;
-                 } 
-            }
-            objectsOfNextRoom[i].SetActive(objectsOfCurrentRoom[i].activeSelf);
-            if(objectsOfCurrentRoom[i].TryGetComponent<Flammable>(out Flammable flammable)){
-                if(flammable.isBurning){
-                    objectsOfNextRoom[i].SetActive(false);
+                if (objectsOfNextRoom[i].transform.position.y < -1)
+                {
+                    objectsOfNextRoom[i].transform.localPosition += new Vector3(0, 1, 0);
                 }
-            }
+                if (objectsOfNextRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb1))
+                {
+                    if (objectsOfCurrentRoom[i].TryGetComponent<Rigidbody>(out Rigidbody rb2))
+                    {
+                        rb1.velocity = rb2.velocity;
+                    }
+                }
+                objectsOfNextRoom[i].SetActive(objectsOfCurrentRoom[i].activeSelf);
+                if (objectsOfCurrentRoom[i].TryGetComponent<Flammable>(out Flammable flammable))
+                {
+                    if (flammable.isBurning)
+                    {
+                        objectsOfNextRoom[i].SetActive(false);
+                    }
+                }
 
+            }
         }
+       
+        
         StartCoroutine(FadeOutFadeIn(.2f,.4F,1.5f,()=>{
-            foreach (var hand in _player.GetComponent<Player>().hands)
+            foreach (var hand in _player.hands)
             {
                 hand.DetachAllObjects();
             }
-            _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
+            if(_currentRoom != _room4)
+            {
+                _player.transform.position = room.transform.position + _player.transform.position - _currentRoom.transform.position;
+                
+            }
+            if(_currentRoom == _room4)
+            {
+                 _relativeStartingPosition = startRoom1.position - _room1.transform.position ;
+                _player.transform.position = room.transform.position + _relativeStartingPosition;
+                _player.transform.LookAt(porteRoom1);
+                _player.transform.eulerAngles = new Vector3(0f, _player.transform.eulerAngles.y, _player.transform.eulerAngles.z);
+            }
+            bool ok = false;
+            if(_currentRoom != _room4)
+            {
+                ok = true;
+            }
             _currentRoom = room;
-            for(int j = 0; j< _player.GetComponent<Player>().hands.Length; j++)
+
+            if (!ok)
+            {
+                return;
+            }
+            for(int j = 0; j< _player.hands.Length; j++)
             {
                 foreach(var attachedObject in attachedGameObjects[j])
                 {
@@ -120,7 +193,7 @@ public static GameManager instance;
                     {
                         if (attachedObject.attachedObject == objectsOfCurrentRoom[k])
                         {
-                            _player.GetComponent<Player>().hands[j].AttachObject(objectsOfNextRoom[k], GrabTypes.Pinch);
+                            _player.hands[j].AttachObject(objectsOfNextRoom[k], GrabTypes.Pinch);
                         }
                     }
                     
@@ -146,13 +219,16 @@ public static GameManager instance;
                 ChangeRoom(_room1);
                 break;
             case 2:
-                FMODUnity.RuntimeManager.PlayOneShot(Transition_IntoFolie, transform.position);
+                //FMODUnity.RuntimeManager.PlayOneShot(Transition_IntoFolie, transform.position);
                 ChangeRoom(_room2);
                 break;
             case 3: 
                 ChangeRoom(_room3);
                 break;
-             default : Debug.Log("room number not valid");
+            case 4:
+                ChangeRoom(_room4);
+                break;
+            default : Debug.Log("room number not valid");
                 break;
         }
         

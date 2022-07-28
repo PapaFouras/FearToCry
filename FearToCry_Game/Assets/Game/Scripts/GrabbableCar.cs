@@ -18,6 +18,7 @@ public class GrabbableCar : MonoBehaviour
      float currentDistance = Vector3.Distance(ld.startPosition.position, car.transform.position);
      float value = currentDistance/totalDistance;
      GetComponent<LinearMapping>().value = value;
+        GetComponent<DistanceLinearDrive>().linearMappingValue = value;
 
  }
 }

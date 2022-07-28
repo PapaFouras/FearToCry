@@ -36,7 +36,6 @@ public class Padlock : MonoBehaviour
             }
         }
         onChestOpen?.Invoke();
-        Debug.Log("Digit Open !");
     }
     
 }

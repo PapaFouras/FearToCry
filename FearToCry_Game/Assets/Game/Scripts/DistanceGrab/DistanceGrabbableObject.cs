@@ -46,4 +46,9 @@ public class DistanceGrabbableObject : MonoBehaviour
     {
         isHighlighted = true;
     }
+
+    public void SetIdDistGrabbable(bool risDistGrabbable)
+    {
+        isDistGrabbable = risDistGrabbable;
+    }
 }

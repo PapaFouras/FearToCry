@@ -6,7 +6,7 @@ using Valve.VR.InteractionSystem;
 public class PadlockRing : MonoBehaviour
 {
     private Interactable interactable;
-    private MeshCollider meshCollider;
+    private Collider boxCollider;
     private CircularDrive circularDrive;
     private LinearMapping linearMapping;
 
@@ -16,17 +16,17 @@ public class PadlockRing : MonoBehaviour
     private int unlockDigit = 0;
 
     [SerializeField]
-    private int nbDigit = 2;
+    private int nbDigit = 26;
     private void Awake() {
         interactable = GetComponent<Interactable>();
-        meshCollider = GetComponent<MeshCollider>();  
+        boxCollider = GetComponent<Collider>();  
         circularDrive = GetComponent<CircularDrive>();
         linearMapping = GetComponent<LinearMapping>();
     }
     public void EnableRingComponents(bool enable = true){
         interactable.enabled = enable;
         circularDrive.enabled = enable;
-        meshCollider.enabled = enable;
+        boxCollider.enabled = enable;
     }
 
     public bool isCurrentDigitTheUnlockDigit(){
@@ -34,36 +34,44 @@ public class PadlockRing : MonoBehaviour
     }
 
     public void OnDetachFromHand(){
-        Debug.Log("Hello");
-        float newRotationZ = 0f;
-        float zRot = transform.localEulerAngles.z;
+        Debug.Log("Hello rotation x = " + transform.localEulerAngles.x);
+        float newRotationX = 0f;
+        
+        float xRot = GetCircularLinearValue();
 
-        float smallestStep = ((1f/(float)nbDigit)*360);
 
-        int zRotInt = Mathf.RoundToInt(zRot);
-        int smallestStepInt = Mathf.RoundToInt(smallestStep);
+        float smallestStep = (1f/(float)nbDigit);
+
 
         float floorStep,ceilStep;
 
-        int newDigit = (zRotInt / smallestStepInt);
-        floorStep = newDigit * smallestStep;
-        ceilStep = (newDigit + 1) * smallestStep;
+        int newDigit = Mathf.RoundToInt(xRot / smallestStep);
+        floorStep = newDigit * (smallestStep*360);
+        ceilStep = (newDigit + 1) * (smallestStep * 360);
 
         float distanceFloorStep,distanceCeilStep;
-        distanceFloorStep = Mathf.Abs(floorStep - zRot);
-        distanceCeilStep = Mathf.Abs(ceilStep - zRot);
+        distanceFloorStep = Mathf.Abs(floorStep - xRot * 360);
+        distanceCeilStep = Mathf.Abs(ceilStep - xRot * 360);
 
         if(distanceFloorStep < distanceCeilStep){
-            newRotationZ = floorStep;
+            newRotationX = floorStep;
         }
         else{
-            newRotationZ = ceilStep;
+            newRotationX = ceilStep;
             newDigit++;
         }
-        Debug.Log(zRot + " divided by " + smallestStep +" will become " +newRotationZ);
+        //newRotationX = (newRotationX < 0) ? newRotationX + 180 : newRotationX;
+        Debug.Log(xRot + " divided by " + smallestStep +" will become " + newRotationX);
         currentDigit = newDigit%nbDigit;
         Debug.Log("New digit = " + currentDigit);
 
-        transform.localEulerAngles = new Vector3(0f,0f,newRotationZ);
+        transform.localEulerAngles = new Vector3(newRotationX, 0f,0f);
+        GetComponent<LinearMapping>().value = newRotationX / 360f;
+
+    }
+    public float GetCircularLinearValue()
+    {
+
+        return GetComponent<LinearMapping>().value;
     }
 }

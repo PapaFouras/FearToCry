@@ -64,7 +64,7 @@ public class DistanceGrabHand : MonoBehaviour
                     // If the object is close enough to the hand - reattach it to standard grab script
                     if (Vector3.Distance(grabbableObject.transform.position, transform.position) < stopLerpDistance)
                     {
-                        hand.AttachObject(grabbableObject, GrabTypes.Pinch);
+                        hand.AttachObject(grabbableObject, GrabTypes.Pinch,Hand.AttachmentFlags.SnapOnAttach| Hand.AttachmentFlags.VelocityMovement | Hand.AttachmentFlags.DetachFromOtherHand);
                         grabbableObject = null;
                         isAttached = false;
                     }

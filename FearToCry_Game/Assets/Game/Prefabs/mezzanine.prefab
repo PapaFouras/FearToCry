@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2812340524306073079, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: 3d046879d3497e44d9029709885f126c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -276,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1960346661337600137, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: 9c80572db0ad51c4baa4e8be39c0955b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -334,7 +334,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3292416436007548634}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.377, y: -1.508, z: 1.499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -423,7 +423,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: af43cb594bca7cc4585272f5b91d03a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -713,7 +713,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1960346661337600137, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: 9c80572db0ad51c4baa4e8be39c0955b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -809,7 +809,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8542156595334428731, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: 1ed106d589336db4d92570da08108af4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -904,7 +904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 506192745225412680, guid: bb3cf2d719b408d4790296cd8bda1e3f, type: 3}
+  - {fileID: 2100000, guid: 6a30a528cbe73a44aa2fa1976dbc9ea0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1400,6 +1400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: marcheEchelle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259920103847039997, guid: d75b3243a06e2924cab735eab6098ed7,
+        type: 3}
+      propertyPath: outlineMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4365395133825578002, guid: d75b3243a06e2924cab735eab6098ed7,
         type: 3}

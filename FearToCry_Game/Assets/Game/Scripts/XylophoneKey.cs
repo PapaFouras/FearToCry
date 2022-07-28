@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XylophoneKey : MonoBehaviour
 {
-    public int note;
+    public float note;
     private ParticleSystem ps;
 
     [SerializeField]
@@ -18,6 +18,9 @@ public class XylophoneKey : MonoBehaviour
     private void Awake()
     {
         ps = GetComponent<ParticleSystem>();
+        xyloNote = FMODUnity.RuntimeManager.CreateInstance(XyloNote);
+        xyloNote.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+
     }
 
 
@@ -26,14 +29,15 @@ public class XylophoneKey : MonoBehaviour
         Debug.Log("Gameobject colliding : " + other.gameObject.name);
         Debug.Log("Gameobject tag colliding : " + other.gameObject.tag);
          if(other.gameObject.CompareTag("XylophoneStick")  && canBePLayed){
-            if(Vector2.Distance(other.gameObject.GetComponent<XylophoneStick>().sphereCenter.transform.position,other.GetContact(0).point) < other.gameObject.GetComponent<XylophoneStick>().sphereCollider.radius * 1.05f){
+            if(Vector2.Distance(other.gameObject.GetComponent<XylophoneStick>().sphereCenter.transform.position,other.GetContact(0).point) < other.gameObject.GetComponent<XylophoneStick>().sphereCollider.radius * 1.001f){
                 Debug.Log("should play note: "+note);
                canBePLayed = false;
 
                 StartCoroutine(TimeBeforeCanBeReplayed());
                 ps.Play();
-                xyloNote.setParameterByName("Notes_Xylo", note);
                 xyloNote.start();
+                xyloNote.setParameterByName("Notes_Xylo", note);
+
                 // parameter note
                 // joue le son
                 xylophoneManager.AddNote(note.ToString());

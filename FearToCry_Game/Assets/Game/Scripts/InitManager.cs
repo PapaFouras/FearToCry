@@ -8,6 +8,9 @@ using Valve.VR.InteractionSystem;
 
 public class InitManager : MonoBehaviour
 {
+    public Transform startDoor;
+    public Transform startPoint;
+    public Transform StartLookAt;
 
     public GameObject[] objectsToDestroy;
     void Start()
@@ -23,12 +26,7 @@ public class InitManager : MonoBehaviour
 
     public void SkipTuto()
     {
-        Destroy(Player.instance.gameObject);
-        for(int i = 0;i< objectsToDestroy.Length; i++)
-        {
-            Destroy(objectsToDestroy[i]);
-        }
-        SceneManager.LoadScene("S_Inté_Orso");
+        GameManager.instance.ChangeRoom(1);
     }
     public void ShowDebugHint()
     {
