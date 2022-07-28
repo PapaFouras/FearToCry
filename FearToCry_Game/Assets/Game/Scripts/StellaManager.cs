@@ -11,11 +11,11 @@ public class StellaManager : MonoBehaviour
     public Transform fenetre;
 
     public bool followingPlayer = false;
-    public float durationToReachPlayer = 6f;
+    float durationToReachPlayer = 6f;
 
     private float lastMeetingWithPlayer = 0;
 
-    public float timeBeforeRespawn = 60;
+    float timeBeforeRespawn = 120;
 
 
     public enum Location
@@ -103,7 +103,8 @@ public class StellaManager : MonoBehaviour
         followingPlayer = true;
         while(followingPlayer && Vector3.Distance(transform.position, player.headCollider.transform.position) > 0.1f)
         {
-            transform.position = Vector3.Lerp(startPos, player.headCollider.transform.position, tValue) ;
+            //transform.position = Vector3.Lerp(startPos, player.headCollider.transform.position, tValue) ;
+            transform.position = Vector3.Lerp(player.headCollider.transform.forward * 3 + player.headCollider.transform.position, player.headCollider.transform.position, tValue) ;
             transform.LookAt(player.headCollider.transform.position);
             yield return new WaitForEndOfFrame();
             tValue += Time.deltaTime / durationToReachPlayer;

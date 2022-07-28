@@ -13,13 +13,19 @@ public class XylophoneManager : MonoBehaviour
         currentCode += note;
         Debug.Log("currentcode length : " + currentCode.Length);
         Debug.Log("code length : " + code.Length);
-        if(currentCode.Length > code.Length){
-            Debug.Log("Remove first char");
-            currentCode = currentCode.Remove(0,1);
-        }
+        RemoveFirstChar();
         CheckCode();
 
    }
+    public void RemoveFirstChar()
+    {
+        if (currentCode.Length > code.Length)
+        {
+            Debug.Log("Remove first char");
+            currentCode = currentCode.Remove(0, 1);
+            RemoveFirstChar();
+        }
+    }
 
    public void CheckCode(){
         if(currentCode == code ){

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public InitManager tutoInitManager;
     public Transform startRoom1;
     public Transform porteRoom1;
+    public Transform stellaRoomReel;
 
     private Room _currentRoom;
 
@@ -99,6 +100,7 @@ public static GameManager instance;
             _currentRoom = _room4;
             return;
         }
+        
         if (_currentRoom == null){
              //Set position
              
@@ -106,7 +108,7 @@ public static GameManager instance;
                 _player.transform.position = room.transform.position + _relativeStartingPosition;
                 _currentRoom = room;    
              }));
-           
+            
             return;
         }
 
@@ -173,6 +175,14 @@ public static GameManager instance;
                 _player.transform.position = room.transform.position + _relativeStartingPosition;
                 _player.transform.LookAt(porteRoom1);
                 _player.transform.eulerAngles = new Vector3(0f, _player.transform.eulerAngles.y, _player.transform.eulerAngles.z);
+            }
+            if (room == _room3)
+            {
+
+                _player.transform.LookAt(stellaRoomReel);
+                _player.transform.localEulerAngles = new Vector3(0, _player.transform.localEulerAngles.y, _player.transform.localEulerAngles.z);
+
+
             }
             bool ok = false;
             if(_currentRoom != _room4)

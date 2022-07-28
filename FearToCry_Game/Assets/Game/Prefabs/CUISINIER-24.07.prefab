@@ -2915,6 +2915,7 @@ GameObject:
   - component: {fileID: 5465585083775758026}
   - component: {fileID: 6700618517717778638}
   - component: {fileID: 2395252627322990948}
+  - component: {fileID: 24854304495866178}
   m_Layer: 0
   m_Name: CUSINE.006
   m_TagString: Untagged
@@ -3023,8 +3024,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00040920614, y: 0.0060787397, z: 0.0074254014}
-  m_Center: {x: -0.0119733475, y: 0.00024169296, z: 0.0011979467}
+  m_Size: {x: 0.0004130876, y: 0.0060787397, z: 0.0074254014}
+  m_Center: {x: -0.011975286, y: 0.00024169296, z: 0.0011979467}
 --- !u!65 &8516276387030031350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3116,6 +3117,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0007514536, y: 0.0060787397, z: 0.00053362595}
   m_Center: {x: -0.011800013, y: 0.00024169296, z: 0.0046438314}
+--- !u!65 &24854304495866178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596351876772420758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0076846634, y: 0.0060787397, z: 0.00048117933}
+  m_Center: {x: -0.0010700774, y: 0.00024169295, z: 0.0046700523}
 --- !u!1 &8071581700531328192
 GameObject:
   m_ObjectHideFlags: 0
