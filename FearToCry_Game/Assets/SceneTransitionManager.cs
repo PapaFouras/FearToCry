@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeOutTp fadeScreen;
     public GameManager gm;
-
+    public PlayableDirector stella;
     public void goToRoom(int iRoom)
     {
         StartCoroutine(GoToSceneRoutine(iRoom));
@@ -21,7 +22,7 @@ public class SceneTransitionManager : MonoBehaviour
         gm.ChangeRoom(iRoom);
 
         fadeScreen.FadeIn();
-
+        stella.Play();
     }
 
 }
