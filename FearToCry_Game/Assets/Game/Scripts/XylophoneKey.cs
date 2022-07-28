@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class XylophoneKey : MonoBehaviour
 {
-    public int note;
+    public float note;
     private ParticleSystem ps;
 
     [SerializeField]
@@ -19,6 +19,8 @@ public class XylophoneKey : MonoBehaviour
     {
         ps = GetComponent<ParticleSystem>();
         xyloNote = FMODUnity.RuntimeManager.CreateInstance(XyloNote);
+        xyloNote.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+
     }
 
 
@@ -33,8 +35,9 @@ public class XylophoneKey : MonoBehaviour
 
                 StartCoroutine(TimeBeforeCanBeReplayed());
                 ps.Play();
-                xyloNote.setParameterByName("Notes_Xylo", note);
                 xyloNote.start();
+                xyloNote.setParameterByName("Notes_Xylo", note);
+
                 // parameter note
                 // joue le son
                 xylophoneManager.AddNote(note.ToString());
