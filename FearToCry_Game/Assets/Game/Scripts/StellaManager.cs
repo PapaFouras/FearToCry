@@ -10,6 +10,13 @@ public class StellaManager : MonoBehaviour
     public Transform oreiller;
     public Transform fenetre;
 
+    public FMODUnity.EventReference Stella_Idle;
+    public FMOD.Studio.EventInstance stellaIdleInstance;
+
+    public FMODUnity.EventReference Stella_Scream;
+    public FMOD.Studio.EventInstance stellaScreamInstance;
+
+
     public bool followingPlayer = false;
     float durationToReachPlayer = 6f;
 
@@ -30,6 +37,11 @@ public class StellaManager : MonoBehaviour
     {
         player = Player.instance;
         lastMeetingWithPlayer = Time.time;
+        stellaScreamInstance = FMODUnity.RuntimeManager.CreateInstance(Stella_Scream);
+        stellaIdleInstance = FMODUnity.RuntimeManager.CreateInstance(Stella_Idle);
+        stellaScreamInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        stellaIdleInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+
     }
 
     public void SetFollowingPlayer(bool isFollowing)
@@ -82,6 +94,7 @@ public class StellaManager : MonoBehaviour
         {
             if (Time.time - lastMeetingWithPlayer > timeBeforeRespawn)
             {
+
                 float rand = Random.Range(0, 1);
                 if(rand < 0.5)
                 {
@@ -101,16 +114,22 @@ public class StellaManager : MonoBehaviour
     {
         float tValue = 0;
         followingPlayer = true;
+        stellaScreamInstance.start();
+        stellaIdleInstance.start();
         while(followingPlayer && Vector3.Distance(transform.position, player.headCollider.transform.position) > 0.1f)
         {
             //transform.position = Vector3.Lerp(startPos, player.headCollider.transform.position, tValue) ;
             transform.position = Vector3.Lerp(player.headCollider.transform.forward * 3 + player.headCollider.transform.position, player.headCollider.transform.position, tValue) ;
             transform.LookAt(player.headCollider.transform.position);
+            stellaScreamInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            stellaIdleInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
             yield return new WaitForEndOfFrame();
             tValue += Time.deltaTime / durationToReachPlayer;
         }
         if (Vector3.Distance(transform.position, player.headCollider.transform.position) <= 0.1f || tValue >= 1)
         {
+            stellaIdleInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
             GameManager.instance.ChangeRoom(1);
             lastMeetingWithPlayer = Time.time;
         }
@@ -124,6 +143,8 @@ public class StellaManager : MonoBehaviour
         {
             transform.position = porte.transform.position;
             followingPlayer = false;
+            stellaIdleInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
             lastMeetingWithPlayer = Time.time;
         }
     }

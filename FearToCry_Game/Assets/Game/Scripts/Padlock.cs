@@ -13,20 +13,25 @@ public class Padlock : MonoBehaviour
     public int[] digitCode;
     private void Awake() {
         digitCode = new int[padlockRings.Length];
+    }
+    private void Start()
+    {
         OnPickUp();
     }
 
-    public void OnPickUp(){
-        foreach (var ring in padlockRings){
+    public void OnPickUp()
+    {
+        foreach (var ring in padlockRings)
+        {
             ring.EnableRingComponents(true);
         }
     }
 
-    public void OnDetachFromHand(){
-        foreach (var ring in padlockRings){
-            ring.EnableRingComponents(false);
-        }
-    }
+    //public void OnDetachFromHand(){
+    //    foreach (var ring in padlockRings){
+    //        ring.EnableRingComponents(false);
+    //    }
+    //}
 
     public void OnNewDigit(){
         Debug.Log("OnNewDIgit");

@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     public FMODUnity.EventReference Transition_IntoFolie;
 
+    private VoiceLineManager voiceLineManager;
+
     public enum RoomName{
         Normal,
         Folie,
@@ -43,6 +45,7 @@ public static GameManager instance;
         }
         instance = this;
         _player = Player.instance;
+        voiceLineManager = GetComponent<VoiceLineManager>();
     
     }
     
@@ -86,6 +89,10 @@ public static GameManager instance;
         return RoomName.Normal;
 
     }
+
+    bool roomOneVisited = false;
+    bool roomTwoVisited = false;
+
 
     public void ChangeRoom(Room room){
         if(_currentRoom == _room4)
@@ -175,6 +182,40 @@ public static GameManager instance;
                 _player.transform.position = room.transform.position + _relativeStartingPosition;
                 _player.transform.LookAt(porteRoom1);
                 _player.transform.eulerAngles = new Vector3(0f, _player.transform.eulerAngles.y, _player.transform.eulerAngles.z);
+            }
+            if(room == _room1)
+            {
+                if (!roomOneVisited)
+                {
+                    IEnumerator PlayRDVMedecin()
+                    {
+                        yield return new WaitForSeconds(2f);
+                        voiceLineManager.PlayRDVMedecin();
+                    }
+                    StartCoroutine(PlayRDVMedecin());
+                    roomOneVisited = true;
+                    IEnumerator PlayRemainder()
+                    {
+                        yield return new WaitForSeconds(60);
+                        if(_currentRoom == _room1)
+                        {
+                            voiceLineManager.PlayFautVrmt();
+                        }
+                    }
+                    StartCoroutine(PlayRemainder());
+                }
+            }
+            if (room == _room2)
+            {
+                if (!roomTwoVisited)
+                {
+                    IEnumerator PlayOuSuisje()
+                    {
+                        yield return new WaitForSeconds(2f);
+                        voiceLineManager.PlayOuSuisJe();
+                    }
+                    StartCoroutine(PlayOuSuisje());
+                }
             }
             if (room == _room3)
             {

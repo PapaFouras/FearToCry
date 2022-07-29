@@ -17,13 +17,14 @@ public class PlayFmodSoundAtDistance : MonoBehaviour
     public const float distanceStartSound = .8f; // 50 cm
     
     private void Awake() {
-        handLeft = GameManager.instance._player.hands[0];
-        handRight = GameManager.instance._player.hands[1];
+       
     }
     
     // Start is called before the first frame update
     void Start()
     {
+        handLeft = GameManager.instance._player.hands[0];
+        handRight = GameManager.instance._player.hands[1];
         fmodEventInstance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         fmodEventInstance.start();
         fmodEventInstance.setParameterByName("VarRangeHand",0f);

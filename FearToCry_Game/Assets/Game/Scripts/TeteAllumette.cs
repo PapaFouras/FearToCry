@@ -25,7 +25,7 @@ public class TeteAllumette : MonoBehaviour
     private void Awake()
     {
         braise_Allumette = FMODUnity.RuntimeManager.CreateInstance(Braise_Allumette);
-        FMODUnity.RuntimeManager.CreateInstance(Allumette_Scratch.Path);
+        FMODUnity.RuntimeManager.CreateInstance(Allumette_Scratch);
     }
 
     public bool GetIsTurnedOn(){
@@ -34,6 +34,16 @@ public class TeteAllumette : MonoBehaviour
 
     public void SetIsTurnedOn(bool isTurnedOn){
         _isTurnedOn = isTurnedOn;
+    }
+
+    public void TurnOff()
+    {
+        _isTurnedOn = false;
+        gameObject.tag = "Untagged";
+        allumette.tag = "Untagged";
+        allumetteMesh.tag = "Untagged";
+        braise_Allumette.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //TODO : trouver l'endroit pour stop le son 
+        fire.Stop();
     }
 
     private void OnTriggerEnter(Collider other) {

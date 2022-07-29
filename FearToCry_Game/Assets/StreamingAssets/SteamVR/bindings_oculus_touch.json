@@ -403,7 +403,7 @@
          "sources" : [
             {
                "inputs" : {
-                  "click" : {
+                  "long" : {
                      "output" : "/actions/teleporting/in/teleport"
                   }
                },
@@ -412,7 +412,7 @@
             },
             {
                "inputs" : {
-                  "click" : {
+                  "long" : {
                      "output" : "/actions/teleporting/in/teleport"
                   }
                },

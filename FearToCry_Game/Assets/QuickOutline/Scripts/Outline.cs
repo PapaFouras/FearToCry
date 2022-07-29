@@ -102,6 +102,10 @@ public class Outline : MonoBehaviour {
   void OnEnable() {
     foreach (var renderer in renderers) {
 
+        if(renderer == null)
+            {
+                continue;
+            }
       // Append outline shaders
       var materials = renderer.sharedMaterials.ToList();
 
@@ -139,7 +143,10 @@ public class Outline : MonoBehaviour {
 
   void OnDisable() {
     foreach (var renderer in renderers) {
-
+            if(renderer == null)
+            {
+                continue;
+            }
       // Remove outline shaders
       var materials = renderer.sharedMaterials.ToList();
 
@@ -205,6 +212,10 @@ public class Outline : MonoBehaviour {
     // Clear UV3 on skinned mesh renderers
     foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>()) {
 
+    if(skinnedMeshRenderer == null)
+            {
+                continue;
+            }
       // Skip if UV3 has already been reset
       if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh)) {
         continue;

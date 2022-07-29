@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
@@ -12,6 +13,8 @@ public class InitManager : MonoBehaviour
     public Transform startPoint;
     public Transform StartLookAt;
 
+    public PlayableDirector playableDirector2;
+
     public GameObject[] objectsToDestroy;
     void Start()
     {
@@ -22,6 +25,15 @@ public class InitManager : MonoBehaviour
     public void StartTuto()
     {
 
+    }
+    bool hasPlayed = false;
+    public void PlaySequence2()
+    {
+        if (!hasPlayed)
+        {
+            playableDirector2.Play();
+            hasPlayed = true;
+        }
     }
 
     public void SkipTuto()

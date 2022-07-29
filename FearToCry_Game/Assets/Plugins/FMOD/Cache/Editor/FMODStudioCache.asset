@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8671604720495347526
+--- !u!114 &-8160360024967124861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_03_StellaTuMeManque
+  m_Name: event:/Voice Lines/VL_07_OuSuisJe
   m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_03_StellaTuMeManque
+  Path: event:/Voice Lines/VL_07_OuSuisJe
   Guid:
-    Data1: 680020867
-    Data2: 1285861934
-    Data3: 682369951
-    Data4: -312154767
+    Data1: 684441356
+    Data2: 1189012817
+    Data3: -227699009
+    Data4: -1169770911
   Banks:
   - {fileID: -2271885360112121202}
   IsStream: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3570
+  Length: 1630
 --- !u!114 &-7898594770573607321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 223
+--- !u!114 &-7548048140599661075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Stella_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Stella_Idle
+  Guid:
+    Data1: -590773929
+    Data2: 1321831927
+    Data3: 735307143
+    Data4: 1283545492
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 8.2
+  Length: 132440
 --- !u!114 &-7129781172569222787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +598,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7558
+--- !u!114 &-4753860844640716771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voice Lines/VL_06_ParvenirObj
+  m_EditorClassIdentifier: 
+  Path: event:/Voice Lines/VL_06_ParvenirObj
+  Guid:
+    Data1: 1398996456
+    Data2: 1296358951
+    Data3: -468664408
+    Data4: 556703062
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2730
 --- !u!114 &-4598908896683362103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +706,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 223
+--- !u!114 &-3908271273005055254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voice Lines/VL_05_TresorStella
+  m_EditorClassIdentifier: 
+  Path: event:/Voice Lines/VL_05_TresorStella
+  Guid:
+    Data1: -666354393
+    Data2: 1269368473
+    Data3: 752405941
+    Data4: -1795445629
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2126
 --- !u!114 &-3804508493177794221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,10 +938,6 @@ MonoBehaviour:
   - {fileID: -2271885360112121202}
   - {fileID: -2271885360112121202}
   - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1000,33 +1077,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 10
   Length: 176135
---- !u!114 &-2705628493524486904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_07_OuSuisJe
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_07_OuSuisJe
-  Guid:
-    Data1: 684441356
-    Data2: 1189012817
-    Data3: -227699009
-    Data4: -1169770911
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1630
 --- !u!114 &-2574766186146473625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,7 +1119,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637946178966775347
+  lastModified: 637946530691030300
   FileSizes:
   - Name: Desktop
     Value: 17317824
@@ -1093,10 +1143,6 @@ MonoBehaviour:
     Data3: 718909363
     Data4: 767042173
   Banks:
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
-  - {fileID: -2271885360112121202}
   - {fileID: -2271885360112121202}
   - {fileID: -2271885360112121202}
   - {fileID: -2271885360112121202}
@@ -1137,33 +1183,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
---- !u!114 &-2155717357165334493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_05_TresorStella
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_05_TresorStella
-  Guid:
-    Data1: -666354393
-    Data2: 1269368473
-    Data3: 752405941
-    Data4: -1795445629
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2126
 --- !u!114 &-2092027064862174065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,33 +1345,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-956245509517194743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_06_ParvenirObj
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_06_ParvenirObj
-  Guid:
-    Data1: 1398996456
-    Data2: 1296358951
-    Data3: -468664408
-    Data4: 556703062
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2730
 --- !u!114 &-865159642749614713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,52 +1696,25 @@ MonoBehaviour:
   - {fileID: -816123101888256039}
   - {fileID: -2195063973502378382}
   - {fileID: -3184452872141835424}
-  - {fileID: -2705628493524486904}
-  - {fileID: -2155717357165334493}
-  - {fileID: 2610007838598299436}
-  - {fileID: 5051701048003547511}
-  - {fileID: 1570437461025591202}
-  - {fileID: -8671604720495347526}
   - {fileID: 3263221889861440001}
-  - {fileID: 458733063517008617}
   - {fileID: -829970023676957049}
-  - {fileID: -956245509517194743}
-  - {fileID: 6982236600701469439}
   - {fileID: -567417646333807577}
+  - {fileID: -8160360024967124861}
+  - {fileID: -3908271273005055254}
+  - {fileID: -7548048140599661075}
+  - {fileID: 1738133331422566482}
+  - {fileID: 8140264541771510253}
+  - {fileID: 5835737445100658185}
+  - {fileID: 6573433240001933411}
+  - {fileID: -4753860844640716771}
+  - {fileID: 7986648581792643401}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2271885360112121202}
   StringsBanks:
   - {fileID: 8800281379950501564}
-  cacheTime: 637946178966825212
+  cacheTime: 637946530691070306
   cacheVersion: 131591
---- !u!114 &458733063517008617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_01_RDVMedecin
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_01_RDVMedecin
-  Guid:
-    Data1: -1543091527
-    Data2: 1249137919
-    Data3: -1840458859
-    Data4: 1950239799
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2810
 --- !u!114 &817798183069537466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1804,33 +1769,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 290
---- !u!114 &1570437461025591202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_02_FautVrmt
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_02_FautVrmt
-  Guid:
-    Data1: 134994804
-    Data2: 1129717801
-    Data3: -1629964160
-    Data4: 1168436991
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1200
 --- !u!114 &1695731337049701449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1796,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1738133331422566482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voice Lines/VL_04_LivrePrefStella
+  m_EditorClassIdentifier: 
+  Path: event:/Voice Lines/VL_04_LivrePrefStella
+  Guid:
+    Data1: 1344676972
+    Data2: 1292014368
+    Data3: -425503811
+    Data4: -528729704
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3140
 --- !u!114 &1767810824079941705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,33 +1986,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1160
---- !u!114 &2610007838598299436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/Folie/Folie_Stella_Idle
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiance/Folie/Folie_Stella_Idle
-  Guid:
-    Data1: -590773929
-    Data2: 1321831927
-    Data3: 735307143
-    Data4: 1283545492
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 2
-  Length: 132440
 --- !u!114 &3042466513024974820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2370,33 +2308,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5051701048003547511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voice Lines/VL_04_LivrePrefStella
-  m_EditorClassIdentifier: 
-  Path: event:/Voice Lines/VL_04_LivrePrefStella
-  Guid:
-    Data1: 1344676972
-    Data2: 1292014368
-    Data3: -425503811
-    Data4: -528729704
-  Banks:
-  - {fileID: -2271885360112121202}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3140
 --- !u!114 &5296614353634144484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2479,6 +2390,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5835737445100658185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voice Lines/VL_03_StellaTuMeManque
+  m_EditorClassIdentifier: 
+  Path: event:/Voice Lines/VL_03_StellaTuMeManque
+  Guid:
+    Data1: 680020867
+    Data2: 1285861934
+    Data3: 682369951
+    Data4: -312154767
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3570
 --- !u!114 &5935570902282342313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,7 +2522,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8242
---- !u!114 &6982236600701469439
+--- !u!114 &6573433240001933411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2594,23 +2532,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiance/Folie/Folie_Stella_Cri
+  m_Name: event:/Voice Lines/VL_01_RDVMedecin
   m_EditorClassIdentifier: 
-  Path: event:/Ambiance/Folie/Folie_Stella_Cri
+  Path: event:/Voice Lines/VL_01_RDVMedecin
   Guid:
-    Data1: 1233642479
-    Data2: 1082429496
-    Data3: -1854642498
-    Data4: -172005285
+    Data1: -1543091527
+    Data2: 1249137919
+    Data3: -1840458859
+    Data4: 1950239799
   Banks:
   - {fileID: -2271885360112121202}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 2
-  Length: 4058
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2810
 --- !u!114 &6989044961550207160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3014,6 +2952,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8242
+--- !u!114 &7986648581792643401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiance/Folie/Folie_Stella_Cri
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiance/Folie/Folie_Stella_Cri
+  Guid:
+    Data1: 1233642479
+    Data2: 1082429496
+    Data3: -1854642498
+    Data4: -172005285
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 8.2
+  Length: 4058
 --- !u!114 &8000003857538001547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3038,6 +3003,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8140264541771510253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voice Lines/VL_02_FautVrmt
+  m_EditorClassIdentifier: 
+  Path: event:/Voice Lines/VL_02_FautVrmt
+  Guid:
+    Data1: 134994804
+    Data2: 1129717801
+    Data3: -1629964160
+    Data4: 1168436991
+  Banks:
+  - {fileID: -2271885360112121202}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
 --- !u!114 &8264207889119958866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3080,7 +3072,7 @@ MonoBehaviour:
   Path: ../ProjetFMOD/ProjetFMOD_FearToCry/Build/Desktop/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637946178966825212
+  lastModified: 637946530691070306
   FileSizes:
   - Name: Desktop
     Value: 3478

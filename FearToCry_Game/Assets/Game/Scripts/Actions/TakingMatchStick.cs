@@ -65,11 +65,12 @@ namespace Valve.VR.InteractionSystem.Sample
             Debug.Log("ShouldSpawnMatchStick");
 
             if(hand.currentAttachedObject == null){
-                
-                GameObject prefabObject = Instantiate(prefab,hand.transform.position, hand.transform.rotation);
-                hand.AttachObject(prefabObject,GrabTypes.Grip,Hand.AttachmentFlags.ParentToHand|Hand.AttachmentFlags.SnapOnAttach | Hand.AttachmentFlags.TurnOffGravity);
-                prefabObject.GetComponent<MatchStick>().hand = hand;
-                prefabObject.GetComponent<MatchStick>().teteAllumette.boiteAllumette = hand.GetComponent<HandGOReferences>().matchStickBox;
+
+                //GameObject prefabObject = Instantiate(prefab,hand.transform.position, hand.transform.rotation);
+                prefab.SetActive(true);
+                hand.AttachObject(prefab,GrabTypes.Pinch);
+                prefab.GetComponent<MatchStick>().hand = hand;
+                prefab.GetComponent<MatchStick>().teteAllumette.boiteAllumette = hand.GetComponent<HandGOReferences>().matchStickBox;
 
                // FMODUnity.RuntimeManager.PlayOneShot(Prendre_Allumette, transform.position);
             }

@@ -28,22 +28,16 @@ public class MatchStick : MonoBehaviour
 
     public void OnDetached(){
 
-        Vector3 angularVelocity = Vector3.zero;
-        Vector3 velocity = Vector3.zero;
-        hand.GetEstimatedPeakVelocities(out velocity, out angularVelocity);
-        GetComponent<Rigidbody>().velocity = velocity;
-        GetComponent<Rigidbody>().angularVelocity = angularVelocity;
-        
-        StartCoroutine(DestroyAfterSeconds(1f));
+        //Vector3 angularVelocity = Vector3.zero;
+        //Vector3 velocity = Vector3.zero;
+        //hand.GetEstimatedPeakVelocities(out velocity, out angularVelocity);
+        //GetComponent<Rigidbody>().velocity = velocity;
+        //GetComponent<Rigidbody>().angularVelocity = angularVelocity;
+
+        teteAllumette.TurnOff();
     }
 
-    IEnumerator DestroyAfterSeconds(float duration){
-        GetComponent<Interactable>().enabled = false;
-        
-        yield return new WaitForSeconds(duration);
-        Destroy(gameObject);
-        
-    }
+
 
 
 }

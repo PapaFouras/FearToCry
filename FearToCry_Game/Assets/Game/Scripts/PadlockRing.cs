@@ -23,7 +23,8 @@ public class PadlockRing : MonoBehaviour
         circularDrive = GetComponent<CircularDrive>();
         linearMapping = GetComponent<LinearMapping>();
     }
-    public void EnableRingComponents(bool enable = true){
+    public void EnableRingComponents(bool enable = true)
+    {
         interactable.enabled = enable;
         circularDrive.enabled = enable;
         boxCollider.enabled = enable;
