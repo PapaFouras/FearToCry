@@ -68,7 +68,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
                 //GameObject prefabObject = Instantiate(prefab,hand.transform.position, hand.transform.rotation);
                 prefab.SetActive(true);
-                hand.AttachObject(prefab,GrabTypes.Pinch);
+                hand.AttachObject(prefab,GrabTypes.Pinch,Hand.AttachmentFlags.VelocityMovement| Hand.AttachmentFlags.SnapOnAttach | Hand.AttachmentFlags.TurnOffGravity);
                 prefab.GetComponent<MatchStick>().hand = hand;
                 prefab.GetComponent<MatchStick>().teteAllumette.boiteAllumette = hand.GetComponent<HandGOReferences>().matchStickBox;
 
